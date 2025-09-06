@@ -2,9 +2,9 @@
 
 namespace App\Filament\Admin\Resources\Activities\Pages;
 
-use App\Filament\Admin\Resources\Activities\ActivityResource;
 use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
+use App\Filament\Admin\Resources\Activities\ActivityResource;
 
 class ViewActivity extends ViewRecord
 {

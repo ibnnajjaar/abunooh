@@ -2,17 +2,17 @@
 
 namespace App\Filament\Admin\Resources\Activities;
 
-use App\Models\Activity;
-use App\Filament\Admin\Resources\Activities\Pages\ListActivities;
-use App\Filament\Admin\Resources\Activities\Pages\ViewActivity;
-use App\Filament\Admin\Resources\Activities\Schemas\ActivityInfolist;
-use App\Filament\Admin\Resources\Activities\Tables\ActivitiesTable;
 use UnitEnum;
 use BackedEnum;
-use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use App\Models\Activity;
 use Filament\Tables\Table;
+use Filament\Schemas\Schema;
+use Filament\Resources\Resource;
+use Filament\Support\Icons\Heroicon;
+use App\Filament\Admin\Resources\Activities\Pages\ViewActivity;
+use App\Filament\Admin\Resources\Activities\Pages\ListActivities;
+use App\Filament\Admin\Resources\Activities\Tables\ActivitiesTable;
+use App\Filament\Admin\Resources\Activities\Schemas\ActivityInfolist;
 
 class ActivityResource extends Resource
 {

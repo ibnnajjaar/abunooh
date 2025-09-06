@@ -2,8 +2,8 @@
 
 namespace App\Filament\Admin\Resources\Roles\Pages;
 
-use App\Filament\Admin\Resources\Roles\RoleResource;
 use Filament\Resources\Pages\CreateRecord;
+use App\Filament\Admin\Resources\Roles\RoleResource;
 
 class CreateRole extends CreateRecord
 {

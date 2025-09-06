@@ -3,19 +3,16 @@
 namespace App\Filament\Admin\Resources\Activities\Tables;
 
 use App\Models\Activity;
+use Filament\Tables\Table;
 use Filament\Actions\Action;
+use Filament\Actions\ViewAction;
 use Filament\Support\Enums\Width;
 use Filament\Tables\Filters\Filter;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\ViewAction;
-use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
-use Filament\Forms\Components\DatePicker;
 
 class ActivitiesTable
 {
@@ -23,7 +20,7 @@ class ActivitiesTable
     {
         return $table
             ->modifyQueryUsing(
-                fn($query) => $query->orderBy('created_at', 'desc')->with(['causer', 'subject'])
+                fn ($query) => $query->orderBy('created_at', 'desc')->with(['causer', 'subject'])
             )
             ->columns([
                 TextColumn::make('formatted_created_at')
@@ -33,15 +30,15 @@ class ActivitiesTable
                           ->searchable(),
                 TextColumn::make('description'),
                 TextColumn::make('causer.name')
-                          ->url(fn(Activity $activity) => $activity->causer?->admin_url)
+                          ->url(fn (Activity $activity) => $activity->causer?->admin_url)
                           ->color('primary')
                           ->label('Causer')
-                          ->description(fn(Activity $activity) => $activity->formatted_causer_meta)
+                          ->description(fn (Activity $activity) => $activity->formatted_causer_meta)
                           ->searchable(),
                 TextColumn::make('subject.name')
-                          ->url(fn(Activity $activity) => $activity->subject?->admin_url)
+                          ->url(fn (Activity $activity) => $activity->subject?->admin_url)
                           ->color('primary')
-                          ->description(fn(Activity $activity) => $activity->formatted_subject_meta)
+                          ->description(fn (Activity $activity) => $activity->formatted_subject_meta)
                           ->searchable(),
             ])
             ->filters([
@@ -57,7 +54,7 @@ class ActivitiesTable
                           return $query
                               ->when(
                                   $data['causer_id'],
-                                  fn(Builder $query, $causer_id): Builder => $query->where('causer_id', $causer_id)
+                                  fn (Builder $query, $causer_id): Builder => $query->where('causer_id', $causer_id)
                               );
                       }),
                 SelectFilter::make('subject_type')
@@ -74,7 +71,7 @@ class ActivitiesTable
                           return $query
                               ->when(
                                   $data['subject_id'],
-                                  fn(Builder $query, $subject_id): Builder => $query->where('subject_id', $subject_id)
+                                  fn (Builder $query, $subject_id): Builder => $query->where('subject_id', $subject_id)
                               );
                       }),
                 Filter::make('created_at')
@@ -86,11 +83,11 @@ class ActivitiesTable
                           return $query
                               ->when(
                                   $data['created_from'],
-                                  fn(Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
+                                  fn (Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
                               )
                               ->when(
                                   $data['created_until'],
-                                  fn(Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
+                                  fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
                               );
                       })->columns(2)->columnSpan(2),
 
@@ -98,7 +95,7 @@ class ActivitiesTable
             ->filtersFormColumns(2)
             ->filtersFormWidth(Width::TwoExtraLarge)
             ->filtersTriggerAction(
-                fn(Action $action) => $action
+                fn (Action $action) => $action
                     ->button()
                     ->label('Filter'),
             )

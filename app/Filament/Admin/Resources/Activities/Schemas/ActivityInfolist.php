@@ -3,9 +3,7 @@
 namespace App\Filament\Admin\Resources\Activities\Schemas;
 
 use App\Models\Activity;
-use Filament\Tables\Table;
 use Filament\Schemas\Schema;
-use Filament\Actions\Action;
 use App\Livewire\ChangeLogList;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Livewire;
@@ -26,10 +24,10 @@ class ActivityInfolist
                                     ->inlineLabel(),
                            TextEntry::make('causer.name')->label('Causer')
                                     ->color('primary')
-                                    ->url(fn(Activity $record) => $record->causer?->admin_url)
+                                    ->url(fn (Activity $record) => $record->causer?->admin_url)
                                     ->inlineLabel(),
                            TextEntry::make('subject.name')
-                                    ->url(fn(Activity $record) => $record->subject?->admin_url)
+                                    ->url(fn (Activity $record) => $record->subject?->admin_url)
                                     ->color('primary')
                                     ->label('Subject')
                                     ->inlineLabel(),

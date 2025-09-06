@@ -2,25 +2,23 @@
 
 namespace App\Livewire;
 
-use App\Models\User;
 use Livewire\Component;
 use App\Models\Activity;
 use Filament\Tables\Table;
 use Illuminate\Support\Collection;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Contracts\HasTable;
 use Filament\Actions\Contracts\HasActions;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Actions\Concerns\InteractsWithActions;
-use Filament\Support\Contracts\TranslatableContentDriver;
 
 class ChangeLogList extends Component implements HasTable, HasForms, HasActions
 {
-    use InteractsWithTable;
-    use InteractsWithForms;
     use InteractswithActions;
+    use InteractsWithForms;
+    use InteractsWithTable;
 
     protected Collection $properties;
 

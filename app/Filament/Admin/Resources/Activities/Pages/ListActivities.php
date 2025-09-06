@@ -2,9 +2,8 @@
 
 namespace App\Filament\Admin\Resources\Activities\Pages;
 
-use App\Filament\Admin\Resources\Activities\ActivityResource;
-use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
+use App\Filament\Admin\Resources\Activities\ActivityResource;
 
 class ListActivities extends ListRecords
 {

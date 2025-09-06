@@ -2,20 +2,20 @@
 
 namespace App\Filament\Admin\Resources\Roles;
 
-use App\Models\Role;
-use App\Filament\Admin\Resources\Roles\Pages\CreateRole;
-use App\Filament\Admin\Resources\Roles\Pages\EditRole;
-use App\Filament\Admin\Resources\Roles\Pages\ListRoles;
-use App\Filament\Admin\Resources\Roles\Pages\ViewRole;
-use App\Filament\Admin\Resources\Roles\Schemas\RoleForm;
-use App\Filament\Admin\Resources\Roles\Schemas\RoleInfolist;
-use App\Filament\Admin\Resources\Roles\Tables\RolesTable;
-use BackedEnum;
 use UnitEnum;
-use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use BackedEnum;
+use App\Models\Role;
 use Filament\Tables\Table;
+use Filament\Schemas\Schema;
+use Filament\Resources\Resource;
+use Filament\Support\Icons\Heroicon;
+use App\Filament\Admin\Resources\Roles\Pages\EditRole;
+use App\Filament\Admin\Resources\Roles\Pages\ViewRole;
+use App\Filament\Admin\Resources\Roles\Pages\ListRoles;
+use App\Filament\Admin\Resources\Roles\Pages\CreateRole;
+use App\Filament\Admin\Resources\Roles\Schemas\RoleForm;
+use App\Filament\Admin\Resources\Roles\Tables\RolesTable;
+use App\Filament\Admin\Resources\Roles\Schemas\RoleInfolist;
 
 class RoleResource extends Resource
 {

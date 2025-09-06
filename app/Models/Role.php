@@ -1,6 +1,6 @@
 <?php
 
-namespace  App\Models;
+namespace App\Models;
 
 use App\Support\Traits\HasActivityLogs;
 use Spatie\Permission\Models\Role as SpatieRole;

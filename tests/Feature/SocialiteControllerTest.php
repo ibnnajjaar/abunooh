@@ -1,19 +1,28 @@
 <?php
 
 use App\Models\User;
+use Laravel\Socialite\AbstractUser;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
-use Laravel\Socialite\AbstractUser;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 
 // use lazily refresh database
 uses(LazilyRefreshDatabase::class);
 
 it('denies access if user does not exist', function () {
-    $socialiteUser = new class extends AbstractUser {
-        public function getId(): string { return 'google-id-123'; }
-        public function getName(): string { return 'No User'; }
-        public function getEmail(): string { return 'nouser@example.com'; }
+    $socialiteUser = new class () extends AbstractUser {
+        public function getId(): string
+        {
+            return 'google-id-123';
+        }
+        public function getName(): string
+        {
+            return 'No User';
+        }
+        public function getEmail(): string
+        {
+            return 'nouser@example.com';
+        }
         public string $token = 'token-abc';
         public string $refreshToken = 'refresh-xyz';
     };
@@ -32,10 +41,19 @@ it('updates user info and logs in admin', function () {
         'email_verified_at' => null,
     ]);
 
-    $socialiteUser = new class extends AbstractUser {
-        public function getId(): string { return 'google-id-123'; }
-        public function getName(): string { return 'Admin User'; }
-        public function getEmail(): string { return 'admin@example.com'; }
+    $socialiteUser = new class () extends AbstractUser {
+        public function getId(): string
+        {
+            return 'google-id-123';
+        }
+        public function getName(): string
+        {
+            return 'Admin User';
+        }
+        public function getEmail(): string
+        {
+            return 'admin@example.com';
+        }
         public string $token = 'token-abc';
         public string $refreshToken = 'refresh-xyz';
     };

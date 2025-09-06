@@ -3,8 +3,8 @@
 namespace App\Filament\Admin\Resources\Roles\Schemas;
 
 use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\CheckboxList;
 
 class RoleForm
@@ -26,7 +26,7 @@ class RoleForm
                            CheckboxList::make('permissions')
                                        ->hiddenLabel()
                                        ->relationship('permissions', 'name')
-                                       ->getOptionLabelFromRecordUsing(fn($record) => str($record->name)->title())
+                                       ->getOptionLabelFromRecordUsing(fn ($record) => str($record->name)->title())
                                        ->searchable()
                                        ->searchPrompt('Start typing to search for permissions...')
                                        ->noSearchResultsMessage('No permissions found.')

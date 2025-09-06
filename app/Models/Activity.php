@@ -3,11 +3,9 @@
 namespace App\Models;
 
 use Spatie\Activitylog\Models\Activity as SpatieActivity;
-use function Termwind\parse;
 
 class Activity extends SpatieActivity
 {
-
     public static function boot(): void
     {
         parent::boot();

@@ -8,7 +8,6 @@ use App\Support\Enums\UserStatus;
 use Spatie\Permission\Traits\HasRoles;
 use App\Support\Traits\HasActivityLogs;
 use Illuminate\Notifications\Notifiable;
-use Spatie\Activitylog\Traits\LogsActivity;
 use Filament\Models\Contracts\FilamentUser;
 use App\Filament\Admin\Resources\Users\UserResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,11 +15,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements FilamentUser
 {
+    use HasActivityLogs;
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
     use HasRoles;
     use Notifiable;
-    use HasActivityLogs;
 
     /**
      * The attributes that are mass assignable.

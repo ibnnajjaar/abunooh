@@ -3,10 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Employee;
 use Illuminate\Database\Seeder;
 
-use App\Support\Enums\EmployeeStatus;
 use function Laravel\Prompts\password;
 
 class DefaultUserSeeder extends Seeder
