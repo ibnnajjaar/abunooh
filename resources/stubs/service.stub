@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Services;
+
+use App\Models\{{ ModelName }};
+use App\DataObjects\{{ DataObjectName }};
+
+class {{ ServiceClassName }}
+{
+
+    public function create({{ DataObjectName }} ${{ $data_object_variable }}): {{ ModelName }}
+    {
+        //
+    }
+
+    public function update({{ ModelName }} ${{ $model_name_variable }}, {{ DataObjectName }} ${{ $data_object_variable }}): {{ ModelName }}
+    {
+        //
+    }
+}
