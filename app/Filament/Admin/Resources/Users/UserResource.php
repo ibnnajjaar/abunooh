@@ -24,6 +24,8 @@ class UserResource extends Resource
     protected static string | UnitEnum | null $navigationGroup = 'User Management';
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
+    protected static ?int $navigationSort = 500;
+
     public static function form(Schema $schema): Schema
     {
         return UserForm::configure($schema);
