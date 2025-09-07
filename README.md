@@ -1,7 +1,6 @@
 # My Personal Blog
 A simple personal blog built with Laravel.
 
-[![Tests](./.github/workflows/run-tests.yml/badge.svg)](./.github/workflows/run-tests.yml)
 [![Tests](https://github.com/ibnnajjaar/abunoohv2/actions/workflows/run-tests.yml/badge.svg)](https://github.com/ibnnajjaar/abunoohv2/actions/workflows/run-tests.yml)
 ![Code Coverage Badge](./.github/coverage.svg)
 
