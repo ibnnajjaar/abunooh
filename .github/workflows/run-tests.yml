@@ -1,0 +1,50 @@
+name: tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ startsWith(github.event.head_commit.message, 'coverage') && 20 || 5 }}
+
+    steps:
+      -   name: Checkout code
+          uses: actions/checkout@v4
+
+      -   name: Install SQLite 3
+          run: |
+            sudo apt-get update
+            sudo apt-get install sqlite3 -y
+
+      -   name: Setup PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            php-version: 8.4
+            extensions: curl, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, iconv, gd, simplexml, soap
+            coverage: ${{ startsWith(github.event.head_commit.message, 'coverage') && 'xdebug' || 'none' }}
+
+      -   name: Install dependencies
+          run: |
+            composer install --no-scripts --no-interaction
+
+      -   name: Execute tests
+          run: |
+            if [[ "${{ github.event.head_commit.message }}" == coverage* ]]; then
+              vendor/bin/pest --coverage --coverage-clover=clover.xml
+            else
+              vendor/bin/pest
+            fi
+
+      -   name: Make code coverage badge
+          if: startsWith(github.event.head_commit.message, 'coverage')
+          uses: timkrase/phpunit-coverage-badge@v1.2.1
+          with:
+            coverage_badge_path: .github/coverage.svg
+            push_badge: true
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
