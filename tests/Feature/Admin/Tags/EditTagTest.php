@@ -65,3 +65,37 @@ it('can update a tag through the form', function () {
         'color' => '#ffffff',
     ]);
 })->group('tags', 'tags.update');
+
+it('can validate tag form data', function () {
+    $this->actingAsAdmin(['view tags', 'update tags']);
+
+    $tag = Tag::create(['name' => 'Test', 'slug' => 'test', 'color' => '#000000']);
+
+    Livewire::test(EditTag::class, [
+        'record' => $tag->getKey(),
+    ])->fillForm([
+        'name'  => '',
+        'slug'  => '',
+        'color' => '',
+    ])->call('save')
+            ->assertHasFormErrors([
+                'name'  => 'required',
+                'slug'  => 'required',
+                'color' => 'required',
+            ]);
+
+    Livewire::test(EditTag::class, [
+        'record' => $tag->getKey(),
+    ])->fillForm([
+        'name'  => str_repeat('a', 258),
+        'slug'  => str_repeat('a', 258),
+        'color' => 'invalid-color',
+    ])->call('save')
+            ->assertHasFormErrors([
+                'name'  => 'max',
+                'slug'  => 'max',
+                'color' => 'regex',
+            ]);
+})->group('tags', 'tags.update');
+
+
