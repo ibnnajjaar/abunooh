@@ -27,6 +27,12 @@ class PermissionsSeeder extends Seeder
     public function getData(): array
     {
         return [
+            'projects' => [
+                'view projects',
+                'create projects',
+                'update projects',
+                'delete projects',
+            ],
             'tags' => [
                 'view tags',
                 'create tags',
