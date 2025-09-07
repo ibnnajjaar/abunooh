@@ -26,15 +26,19 @@ class TagForm
 
                        TextInput::make('name')
                                 ->required()
+                           ->maxLength(255)
                                 ->live(debounce: 1000)
                                 ->afterStateUpdated(function ($state, callable $set) {
                                     $set('slug', $state ? \Illuminate\Support\Str::slug($state) : null);
                                 }),
                        TextInput::make('slug')
                                 ->unique(ignoreRecord: true)
+                                ->required()
+                           ->maxLength(255)
                                 ->readonly(),
                        ColorPicker::make('color')
-                                  ->nullable(),
+                           ->regex('/^#(?:[0-9a-fA-F]{3}){1,2}$/')
+                                  ->required(),
                    ]),
         ];
     }

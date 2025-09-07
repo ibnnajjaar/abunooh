@@ -5,8 +5,6 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-use function Laravel\Prompts\password;
-
 class DefaultUserSeeder extends Seeder
 {
     /**
@@ -18,7 +16,7 @@ class DefaultUserSeeder extends Seeder
         if (! $user) {
             User::create([
                 'email' => 'hussain.afeef@ium.edu.mv',
-                'password' => password('miee varah dhigu password eh'),
+                'password' => \Hash::make('password'),
                 'name' => 'Administrator',
             ]);
         }
