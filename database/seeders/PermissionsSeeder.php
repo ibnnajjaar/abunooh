@@ -27,6 +27,12 @@ class PermissionsSeeder extends Seeder
     public function getData(): array
     {
         return [
+            'tags' => [
+                'view tags',
+                'create tags',
+                'update tags',
+                'delete tags',
+            ],
             'time_entries' => [
                 'view time entries',
                 'view any time entry',
