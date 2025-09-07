@@ -1,6 +1,8 @@
-# [Project Name]
+# My Personal Blog
+A simple personal blog built with Laravel.
 
-Project Description
+[![Tests](./.github/workflows/run-tests.yml/badge.svg)](./.github/workflows/run-tests.yml)
+![Code Coverage Badge](./.github/coverage.svg)
 
 ## Installation
 
