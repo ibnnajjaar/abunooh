@@ -20,15 +20,22 @@ class TagForm
     {
         return [
             Section::make()
-                ->columnSpanFull()
-                ->schema([
-                    TextInput::make('name')
-                        ->required(),
-                    TextInput::make('slug')
-                        ->unique(ignoreRecord: true),
-                    ColorPicker::make('color')
-                        ->nullable(),
-                ]),
+                   ->inlineLabel()
+                   ->columnSpanFull()
+                   ->schema([
+
+                       TextInput::make('name')
+                                ->required()
+                                ->live(debounce: 1000)
+                                ->afterStateUpdated(function ($state, callable $set) {
+                                    $set('slug', $state ? \Illuminate\Support\Str::slug($state) : null);
+                                }),
+                       TextInput::make('slug')
+                                ->unique(ignoreRecord: true)
+                                ->readonly(),
+                       ColorPicker::make('color')
+                                  ->nullable(),
+                   ]),
         ];
     }
 }
