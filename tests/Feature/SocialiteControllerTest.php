@@ -15,20 +15,34 @@ it('denies access if user does not exist', function () {
         {
             return 'google-id-123';
         }
+
         public function getName(): string
         {
             return 'No User';
         }
+
         public function getEmail(): string
         {
             return 'nouser@example.com';
         }
+
         public string $token = 'token-abc';
         public string $refreshToken = 'refresh-xyz';
     };
 
-    Socialite::shouldReceive('driver->user')
-             ->andReturn($socialiteUser);
+    // Create a mock for the driver that handles the method chain
+    $mockDriver = Mockery::mock();
+    $mockDriver->shouldReceive('redirectUrl')
+               ->with(config('services.google.admin_redirect'))
+               ->andReturnSelf(); // Return self to allow method chaining
+
+    $mockDriver->shouldReceive('user')
+               ->andReturn($socialiteUser);
+
+    // Mock Socialite to return our mock driver
+    Socialite::shouldReceive('driver')
+             ->with('google')
+             ->andReturn($mockDriver);
 
     $response = $this->get('/admin/auth/google/callback');
     $response->assertRedirect(route('filament.admin.auth.login'));
@@ -37,7 +51,7 @@ it('denies access if user does not exist', function () {
 
 it('updates user info and logs in admin', function () {
     $user = User::factory()->create([
-        'email' => 'admin@example.com',
+        'email'             => 'admin@example.com',
         'email_verified_at' => null,
     ]);
 
@@ -46,20 +60,34 @@ it('updates user info and logs in admin', function () {
         {
             return 'google-id-123';
         }
+
         public function getName(): string
         {
             return 'Admin User';
         }
+
         public function getEmail(): string
         {
             return 'admin@example.com';
         }
+
         public string $token = 'token-abc';
         public string $refreshToken = 'refresh-xyz';
     };
 
-    Socialite::shouldReceive('driver->user')
-             ->andReturn($socialiteUser);
+    // Create a mock for the driver that handles the method chain
+    $mockDriver = Mockery::mock();
+    $mockDriver->shouldReceive('redirectUrl')
+               ->with(config('services.google.admin_redirect'))
+               ->andReturnSelf(); // Return self to allow method chaining
+
+    $mockDriver->shouldReceive('user')
+               ->andReturn($socialiteUser);
+
+    // Mock Socialite to return our mock driver
+    Socialite::shouldReceive('driver')
+             ->with('google')
+             ->andReturn($mockDriver);
 
     $response = $this->get('/admin/auth/google/callback');
     $response->assertRedirect(route('filament.admin.pages.dashboard'));
@@ -71,5 +99,5 @@ it('updates user info and logs in admin', function () {
                        ->and($user->provider_token)->toBe('token-abc')
                        ->and($user->provider_refresh_token)->toBe('refresh-xyz')
                        ->and($user->email_verified_at)->not->toBeNull()
-                                                           ->and(Auth::check())->toBeTrue();
+                                                           ->and(Auth::guard('web_admin')->check())->toBeTrue();
 });

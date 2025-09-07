@@ -34,6 +34,7 @@ class AdminSocialiteController
             $socialite_user = Socialite::driver($provider)
                                        ->redirectUrl(config('services.google.admin_redirect'))
                                        ->user();
+
         } catch (\Exception $e) {
             return to_route('filament.admin.auth.login')->withErrors([
                 'provider' => ['Something went wrong. Please refresh the page and try again.']
