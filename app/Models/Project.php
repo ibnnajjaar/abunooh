@@ -17,8 +17,8 @@ class Project extends Model implements HasMedia
 
     protected $guarded = [];
 
-    protected $casts = [
-        'publish_status' => PublishStatuses::class
+    protected $attributes = [
+        'order_column' => 1,
     ];
 
     public function tags(): BelongsToMany
