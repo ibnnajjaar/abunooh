@@ -1,6 +1,7 @@
 @extends('layouts.web')
 
 @section('content')
+
     <x-web.title :title="get_setting('home_page_title')"/>
     <x-web.sub-title>
         {{ get_setting('home_page_description') }}

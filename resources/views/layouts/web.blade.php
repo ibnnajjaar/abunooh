@@ -62,6 +62,9 @@
 </head>
 <body class="min-h-screen">
 <div class="min-h-screen bg-gray-50 dark:bg-neutral-800">
+    <div class="bg-red-400 text-white text-center p-4">
+        Yo! Mandatory yearly update incoming. If you’re seeing this banner, expect some bugs — because what’s programming without debugging in production? Gotta update the site before I can even think about blogging!
+    </div>
     <div class="max-w-screen-lg mx-auto min-h-screen px-4">
         <x-web.header/>
         @yield('content')
