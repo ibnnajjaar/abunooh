@@ -64,7 +64,7 @@
 <div class="min-h-screen bg-gray-50 dark:bg-neutral-800">
     <div class="max-w-screen-lg mx-auto min-h-screen px-4">
         <x-web.header/>
-        {{ $slot }}
+        @yield('content')
         <div class="flex justify-center items-center py-10 text-slate-500 dark:text-slate-400 font-light text-lg">
             {{ __("All Rights Reserved. :year © Hussain Afeef", ['year' => now()->format('Y')]) }}
         </div>

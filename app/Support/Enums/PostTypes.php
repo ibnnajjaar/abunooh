@@ -11,7 +11,7 @@ enum PostTypes: string implements IsEnum
     case CASE_STUDY = 'case_study';
     case LOGO = 'logo';
 
-    public static function options(): array
+    public static function labels(): array
     {
         return [
             self::POST->value     => __("Post"),
@@ -24,20 +24,15 @@ enum PostTypes: string implements IsEnum
     public static function colors(): array
     {
         return [
-            'success'   => 'post',
-            'warning' => 'page',
-            'danger'    => 'case_study',
-            'primary'  => 'logo',
+            self::POST->value     => 'success',
+            self::PAGE->value   => 'warning',
+            self::CASE_STUDY->value  => 'danger',
+            self::LOGO->value => 'primary',
         ];
     }
 
-    public static function getColor($status): string
+    public function getColor(): string
     {
-        return match ($status) {
-            'post' => 'success',
-            'page' => 'warning',
-            'case_study' => 'danger',
-            'logo' => 'primary',
-        };
+        return self::colors()[$this->value] ?? 'secondary';
     }
 }

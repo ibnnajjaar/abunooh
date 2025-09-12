@@ -1,7 +1,7 @@
 <div class="flex flex-row justify-between py-10 items-center">
     <div class="space-x-6">
         <x-web.menu-item :link="route('web.home.index')">{{ __('Blog') }}</x-web.menu-item>
-        <x-web.menu-item :link="route('web.projects.index')">{{ __('Portfolio') }}</x-web.menu-item>
+{{--        <x-web.menu-item :link="route('web.projects.index')">{{ __('Portfolio') }}</x-web.menu-item>--}}
         @php
             $menu_items = \App\Models\Post::query()
                 ->published()

@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Project;
 use Livewire\Livewire;
+use App\Models\Project;
 
 use function Pest\Livewire\livewire;
 
@@ -10,7 +10,7 @@ use App\Filament\Admin\Resources\Projects\Pages\ListProjects;
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
 it('can view the list projects page', function () {
-    $this->actingAsAdmin();
+    $this->actingAsAdmin(['view projects']);
 
     $projects = collect([
         Project::create([
@@ -54,7 +54,7 @@ it('can view the list projects page', function () {
 })->group('projects');
 
 it('shows the create action on list page', function () {
-    $this->actingAsAdmin();
+    $this->actingAsAdmin(['view projects', 'create projects']);
 
     Livewire::test(ListProjects::class)
         ->assertActionVisible('create');

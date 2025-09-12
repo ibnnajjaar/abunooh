@@ -1,10 +1,10 @@
-<div>
+@extends('layouts.web')
+
+@section('content')
     <x-web.title :title="get_setting('home_page_title')"/>
     <x-web.sub-title>
         {{ get_setting('home_page_description') }}
     </x-web.sub-title>
-
-    <x-web.search />
 
     <div>
         @foreach ($posts as $year_posts)
@@ -21,5 +21,4 @@
             </div>
         @endforeach
     </div>
-
-</div>
+@endsection

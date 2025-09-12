@@ -1,23 +1,23 @@
 <?php
 
 use Livewire\Livewire;
+use App\Support\Enums\PublishStatuses;
 
 use function Pest\Laravel\assertDatabaseHas;
 
-use App\Support\Enums\PublishStatuses;
 use App\Filament\Admin\Resources\Projects\Pages\CreateProject;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
 it('can access project create page', function () {
-    $this->actingAsAdmin();
+    $this->actingAsAdmin(['view projects', 'create projects']);
 
     Livewire::test(CreateProject::class)
         ->assertOk();
 })->group('projects', 'projects.create');
 
 it('can create a project through the form', function () {
-    $this->actingAsAdmin();
+    $this->actingAsAdmin(['view projects', 'create projects']);
 
     $title = 'New Portfolio Site';
 
@@ -44,7 +44,7 @@ it('can create a project through the form', function () {
 })->group('projects', 'projects.create');
 
 it('validates project create form data', function () {
-    $this->actingAsAdmin();
+    $this->actingAsAdmin(['view projects', 'create projects']);
 
     // Required validation
     Livewire::test(CreateProject::class)

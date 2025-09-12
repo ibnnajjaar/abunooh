@@ -15,7 +15,8 @@
         "spatie/laravel-activitylog": "^4.10",
         "spatie/laravel-medialibrary": "^11.14",
         "spatie/laravel-permission": "^6.20",
-        "spatie/laravel-settings": "^3.4"
+        "spatie/laravel-settings": "^3.4",
+        "ibnnajjaar/workshop": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -29,6 +30,12 @@
         "pestphp/pest-plugin-laravel": "^3.2",
         "pestphp/pest-plugin-livewire": "^3.0"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../workshop"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",

@@ -11,7 +11,7 @@ enum PublishStatuses: string implements IsEnum
     case REJECTED = 'rejected';
     case PUBLISHED = 'published';
 
-    public static function options(): array
+    public static function labels(): array
     {
         return [
             self::DRAFT->value     => __("Draft"),
@@ -24,20 +24,15 @@ enum PublishStatuses: string implements IsEnum
     public static function colors(): array
     {
         return [
-            'secondary'   => 'draft',
-            'warning' => 'pending',
-            'danger'    => 'rejected',
-            'success'  => 'published',
+            self::DRAFT->value => 'secondary',
+            self::PENDING->value => 'warning',
+            self::REJECTED->value => 'danger',
+            self::PUBLISHED->value => 'success',
         ];
     }
 
-    public static function getColor($status): string
+    public function getColor(): string
     {
-        return match ($status) {
-            'draft' => 'secondary',
-            'pending' => 'warning',
-            'rejected' => 'danger',
-            'published' => 'success',
-        };
+        return self::colors()[$this->value] ?? 'secondary';
     }
 }
