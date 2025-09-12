@@ -1,0 +1,172 @@
+@import 'tailwindcss';
+
+html, body {
+    font-family: 'Outfit', sans-serif;
+}
+
+/*code {*/
+/*    display: block;*/
+/*    padding: 20px;*/
+/*    border-radius: 10px;*/
+/*    margin: 20px 0;*/
+/*}*/
+
+.post-content {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+    font-weight: 300;
+}
+
+.project-content {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.dark .post-content, .dark .project-content {
+    color: #e2e8f0;
+}
+
+.post-content p {
+    margin-bottom: 2rem;
+}
+.project-content p {
+    margin-bottom: 0.5rem;
+}
+
+.post-content a, .project-content a {
+    color: #f97316;
+    font-weight: 400;
+}
+
+.post-content a:hover, .project-content a:hover {
+    color: #c2410c;
+}
+
+.post-content strong, .project-content strong {
+    font-weight: 400;
+}
+
+.post-content h1, .project-content h1 {
+    font-size: 3rem; /* 48px */
+    line-height: 1;
+    font-weight: 900;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content h2, .project-content h2 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #f97316;
+}
+
+.post-content h3, .project-content h3 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #f97316;
+}
+
+.post-content ul, .project-content ul {
+    list-style-type: none;
+    padding-left: 1.625em;
+    margin-bottom: 0.875rem;
+}
+
+.post-content ul li::before, .project-content ul li:before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #cbd5e1; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+    position: absolute;
+}
+
+.post-content ol, .project-content ol {
+    list-style-type: decimal;
+    padding-left: 1.625em;
+    margin-bottom: 0.875rem;
+}
+
+.post-content li, .project-content li {
+    padding-left: 0.375em;
+    margin-bottom: 0.3rem;
+    position: relative;
+}
+
+
+.post-content blockquote, .project-content blockquote {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    position: relative;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.dark .post-content blockquote, .dark .project-content blockquote {
+    background-color: #171717;
+}
+
+.post-content blockquote:before, .project-content blockquote:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #e2e8f0;
+}
+
+.post-content blockquote p, .project-content blockquote p {
+    margin-bottom: 0;
+}
+
+.dark .post-content blockquote:before, .dark .project-content blockquote:before {
+    background-color: #525252;
+}
+
+.post-content img, .project-content img {
+    margin: 20px 0 10px;
+    border-radius: 0.375rem;
+}
+
+.post-content hr, .project-content hr {
+    margin: 35px 0;
+}
+
+.code-toolbar {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+pre {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.code-toolbar code {
+    font-family: 'JetBrains Mono', monospace !important;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+code {
+    font-size: 1rem;
+    background-color: #e5e7eb;
+    /*color: #334155;*/
+    color: #f87171;
+    padding: 2px 10px 3px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-style: normal;
+}

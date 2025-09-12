@@ -55,7 +55,7 @@
         <meta name="twitter:creator" content="@hucenafeef">
     @endif
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/web.css', 'resources/js/web.js'])
     @livewireStyles
     @livewireScripts
     @stack('scripts')
