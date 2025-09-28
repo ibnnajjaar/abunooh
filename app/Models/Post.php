@@ -88,7 +88,7 @@ class Post extends Model
         return route('posts.show', $this);
     }
 
-    public function getFormattedContentAttribute()
+    public function getFormattedContentAttribute(): string
     {
         return str($this->content)->markdown();
     }
@@ -116,5 +116,11 @@ class Post extends Model
     public function registerMediaCollections(): void
     {
         $this->registerGraphifyMediaCollection();
+    }
+
+    public function getIsPublishedAttribute(): bool
+    {
+        return $this->status == PublishStatuses::PUBLISHED
+            && $this->published_at?->isNowOrPast();
     }
 }

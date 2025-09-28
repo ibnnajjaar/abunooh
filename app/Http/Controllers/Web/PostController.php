@@ -9,6 +9,10 @@ class PostController
 {
     public function show(Post $post)
     {
+        if (! $post->is_published) {
+            abort(404, 'Post not found');
+        }
+
         if ($post->post_type == PostTypes::PAGE) {
 
             return view('web.pages.show', [

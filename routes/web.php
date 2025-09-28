@@ -15,11 +15,5 @@ Route::get('/admin/auth/{provider}/callback', [AdminSocialiteController::class, 
 Route::name('web.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
-    Route::get('/{post_slug}', [PostController::class, 'show'])->name('posts.show');
-    Route::bind('post_slug', function ($value) {
-        return Post::where('slug', $value)
-                   ->published()
-                   ->pastSchedule()
-                   ->firstOrFail();
-    });
+    Route::get('/{post:slug}', [PostController::class, 'show'])->name('posts.show');
 });
