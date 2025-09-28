@@ -28,15 +28,7 @@ class RolesSeeder extends Seeder
         $role->syncPermissions($permissions);
         $role->save();
 
-        $user = User::where('email', 'hussain.afeef@ium.edu.mv')->first();
+        $user = User::where('email', 'ibnahnajjaar@gmail.com')->first();
         $user?->roles()->sync([$role->id]);
-
-        Role::updateOrCreate(
-            ['name' => 'guest'],
-            [
-                'guard_name' => 'web',
-                'description' => 'Guest User',
-            ]
-        );
     }
 }

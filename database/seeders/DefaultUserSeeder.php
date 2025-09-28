@@ -12,11 +12,11 @@ class DefaultUserSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = User::where('email', 'hussain.afeef@ium.edu.mv')->first();
+        $user = User::where('email', 'ibnahnajjaar@gmail.com')->first();
         if (! $user) {
             User::create([
-                'email' => 'hussain.afeef@ium.edu.mv',
-                'password' => \Hash::make('password'),
+                'email' => 'ibnahnajjaar@gmail.com',
+                'password' => \Hash::make('aharen mi jahanee v gadha password eh'),
                 'name' => 'Administrator',
             ]);
         }
