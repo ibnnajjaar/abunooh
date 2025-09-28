@@ -26,13 +26,13 @@ class PostsTable
                     ->sortable(),
                 TextColumn::make('status')
                     ->badge()
-                    ->color(fn ($state): string => PublishStatuses::getColor(is_string($state) ? $state : ($state?->value ?? '')))
-                    ->formatStateUsing(fn ($state): string => is_string($state) ? str($state)->title() : (method_exists($state, 'value') ? str($state->value)->title() : ''))
+                    ->color(fn ($state): string => $state->getColor())
+                    ->formatStateUsing(fn ($state): string => $state->getLabel())
                     ->sortable(),
                 TextColumn::make('post_type')
                     ->badge()
-                    ->color(fn ($state): string => PostTypes::getColor(is_string($state) ? $state : ($state?->value ?? '')))
-                    ->formatStateUsing(fn ($state): string => is_string($state) ? str($state)->title() : (method_exists($state, 'value') ? str($state->value)->title() : ''))
+                    ->color(fn ($state): string => $state->getColor())
+                    ->formatStateUsing(fn ($state): string => $state->getLabel())
                     ->sortable(),
                 TextColumn::make('published_at')
                     ->dateTime()
