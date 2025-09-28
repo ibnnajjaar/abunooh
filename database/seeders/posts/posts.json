@@ -10,7 +10,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "laravel-customizing-route-binding-logic.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:00:57.000000Z",
         "updated_at": "2023-05-23T22:00:57.000000Z"
     },
@@ -25,7 +25,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "style-your-command-outputs-the-laravel-way.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:00:58.000000Z",
         "updated_at": "2023-05-23T22:00:58.000000Z"
     },
@@ -40,7 +40,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "eloquent-one-to-one-relationships.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:01:00.000000Z",
         "updated_at": "2023-05-23T22:01:00.000000Z"
     },
@@ -55,7 +55,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "consider-an-intermediate-level-refactor.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:01:02.000000Z",
         "updated_at": "2023-05-23T22:01:02.000000Z"
     },
@@ -70,7 +70,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "how-to-implement-model-states-using-spaties-laravel-model-state-package.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:01:04.000000Z",
         "updated_at": "2023-05-23T22:01:04.000000Z"
     },
@@ -85,7 +85,7 @@
         "post_type": "page",
         "is_menu_item": true,
         "og_image_url": "about-me.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:01:05.000000Z",
         "updated_at": "2023-05-25T03:01:33.000000Z"
     },
@@ -100,7 +100,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "adding-a-custom-open-graph-image-to-posts.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:01:07.000000Z",
         "updated_at": "2023-05-23T22:01:07.000000Z"
     },
@@ -115,7 +115,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "how-to-add-translatable-enum-options-in-laravel.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2023-05-23T22:01:09.000000Z",
         "updated_at": "2023-05-23T22:01:09.000000Z"
     },
@@ -130,7 +130,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "securing-your-files-in-laravel.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2024-06-07T10:19:48.000000Z",
         "updated_at": "2024-06-07T10:21:22.000000Z"
     },
@@ -145,7 +145,7 @@
         "post_type": "post",
         "is_menu_item": false,
         "og_image_url": "laravel-hasonethrough-relationship-with-a-twist.png",
-        "author_id": 1,
+        "author_id": 2,
         "created_at": "2025-09-06T13:53:19.000000Z",
         "updated_at": "2025-09-06T13:53:19.000000Z"
     }
