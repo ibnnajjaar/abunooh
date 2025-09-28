@@ -67,11 +67,11 @@ class PostForm
                                        DateTimePicker::make('published_at'),
                                        Select::make('status')
                                              ->searchable()
-                                             ->options(PublishStatuses::options())
+                                             ->options(PublishStatuses::labels())
                                              ->required(),
                                        Select::make('post_type')
                                              ->searchable()
-                                             ->options(PostTypes::options())
+                                             ->options(PostTypes::labels())
                                              ->required(),
                                        Checkbox::make('is_menu_item')
                                                ->label('Show this post in the menu'),

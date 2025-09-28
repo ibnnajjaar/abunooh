@@ -38,9 +38,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => null,
-        'admin_redirect' => env('GOOGLE_ADMIN_REDIRECT'),
-        'employee_redirect' => env('GOOGLE_EMPLOYEE_REDIRECT'),
+        'redirect' => env('GOOGLE_REDIRECT'),
     ],
 
 ];
