@@ -19,7 +19,7 @@ class AdminSocialiteController
     {
         if ($provider === 'google') {
             try {
-                return Socialite::driver($provider)->redirectUrl(config('services.google.admin_redirect'))->redirect();
+                return Socialite::driver($provider)->redirectUrl(config('services.google.redirect'))->redirect();
             } catch (\Exception $e) {
                 Log::info($e->getMessage());
             }
@@ -32,7 +32,7 @@ class AdminSocialiteController
     {
         try {
             $socialite_user = Socialite::driver($provider)
-                                       ->redirectUrl(config('services.google.admin_redirect'))
+                                       ->redirectUrl(config('services.google.redirect'))
                                        ->user();
 
         } catch (\Exception $e) {
