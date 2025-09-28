@@ -14,24 +14,27 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        $original_posts = DB::connection('xmysql')->table('posts')->get();
+        $jsonPath = database_path('seeders/posts/posts.json');
 
-        foreach ($original_posts as $original_post) {
-            $post = new Post();
-            $post->title = $original_post->title;
-            $post->slug = $original_post->slug;
-            $post->excerpt = $original_post->excerpt;
-            $post->content = $original_post->content;
-            $post->published_at = $original_post->published_at;
-            $post->status = $original_post->status;
-            $post->post_type = $original_post->post_type;
-            $post->is_menu_item = $original_post->is_menu_item;
-            $post->og_image_url = $original_post->og_image_url;
-            $post->author_id = $original_post->author_id;
-            $post->created_at = $original_post->created_at;
-            $post->updated_at = $original_post->updated_at;
-            $post->save();
+        if (! file_exists($jsonPath)) {
+            throw new \RuntimeException('Posts JSON file not found');
         }
 
+        $posts = json_decode(file_get_contents($jsonPath), true);
+
+        foreach ($posts as $post) {
+            Post::create($post);
+        }
     }
 }
+
+//        $posts = Post::all();
+//
+//        if (! file_exists(database_path('seeders/posts'))) {
+//            mkdir(database_path('seeders/posts'), 0755, true);
+//        }
+//
+//        file_put_contents(
+//            database_path('seeders/posts/posts.json'),
+//            json_encode($posts, JSON_PRETTY_PRINT)
+//        );
