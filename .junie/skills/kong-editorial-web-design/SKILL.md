@@ -42,7 +42,7 @@ Start with these values. Change them only when the target brand requires a delib
 
 ```css
 :root {
-  --lime: #ccff00;
+  --lime: oklch(70.5% .213 47.604);
   --ink: #001408;
   --text: #4a4d49;
   --canvas: #cdd4cb;
@@ -266,7 +266,7 @@ Hover/focus state:
   z-index: -1;
   opacity: 0;
   background:
-    radial-gradient(220px circle at var(--mx) var(--my), rgb(204 255 0 / 22%), transparent 72%),
+    radial-gradient(220px circle at var(--mx) var(--my), oklch(70.5% .213 47.604 / 22%), transparent 72%),
     linear-gradient(155deg, rgb(255 255 255 / 28%) -57.71%, transparent 100.25%);
   transition: opacity .35s;
 }
@@ -313,8 +313,8 @@ Render one fixed, pointer-events-none glow for the entire page. Keep it subtle e
   opacity: 0;
   transform: translate3d(-500px, -500px, 0);
   background: radial-gradient(circle,
-    rgb(204 255 0 / 13%) 0%,
-    rgb(204 255 0 / 5.5%) 34%,
+    oklch(70.5% .213 47.604 / 13%) 0%,
+    oklch(70.5% .213 47.604 / 5.5%) 34%,
     transparent 70%);
   filter: blur(9px);
   mix-blend-mode: multiply;
