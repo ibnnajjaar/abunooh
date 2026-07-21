@@ -23,15 +23,15 @@
     </section>
 
     <div class="section-stack">
-        <div class="stack-header" style="--index: 0">
-            <span class="mono text-[13px] font-bold border-r border-[var(--grid)] h-full flex items-center justify-center">01</span>
-            <span class="technical-label px-6">Archive // Journal</span>
-            <span class="mono text-[var(--lime)] border-l border-[var(--grid)] h-full flex items-center justify-center">+</span>
-        </div>
+        @foreach ($posts as $index => $year_group)
+            <div class="stack-header" style="--index: {{ $index }}">
+                <span class="mono text-[13px] font-bold border-r border-[var(--grid)] h-full flex items-center justify-center">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="technical-label px-6">{{ $year_group['year'] }} // Journal</span>
+                <span class="mono text-[var(--lime)] border-l border-[var(--grid)] h-full flex items-center justify-center">+</span>
+            </div>
 
-        <section id="articles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] border-b border-[var(--grid)]">
-            @foreach ($posts as $year_posts)
-                @foreach ($year_posts['posts'] as $post)
+            <section id="articles-{{ $year_group['year'] }}" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] border-b border-[var(--grid)]">
+                @foreach ($year_group['posts'] as $post)
                     <a href="{{ route('web.posts.show', $post->slug) }}" class="kong-card flex flex-col justify-between group min-h-[400px]">
                          <div class="junction tl"></div>
                          <div class="junction tr"></div>
@@ -47,7 +47,7 @@
                          </div>
                     </a>
                 @endforeach
-            @endforeach
-        </section>
+            </section>
+        @endforeach
     </div>
 @endsection
