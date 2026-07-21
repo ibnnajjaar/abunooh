@@ -1,28 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNB382RXF1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-TNB382RXF1');
-    </script>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Outfit:wght@100;200;300;400;500;600&display=swap"
-        rel="stylesheet">
+
     <link rel="icon" href="{{ asset('favicon.ico') }}"/>
     <title>{{ get_setting('site_name') }}</title>
     <style>
@@ -60,19 +43,82 @@
     @livewireScripts
     @stack('scripts')
 </head>
-<body class="min-h-screen">
-<div class="min-h-screen bg-gray-50 dark:bg-neutral-800">
-    <div class="bg-red-400 text-white text-center p-4">
-        Yo! Mandatory yearly update incoming. If you’re seeing this banner, expect some bugs — because what’s programming without debugging in production? Gotta update the site before I can even think about blogging!
+<body class="antialiased selection:bg-[#ccff00] selection:text-[#001408]">
+
+    <div class="framed-canvas">
+        <!-- Junctions -->
+        <div class="junction tl"></div>
+        <div class="junction tr"></div>
+
+        <nav class="site-nav flex justify-between items-center">
+            <div class="">
+                <a href="{{ route('web.home.index') }}" class="font-extrabold text-2xl tracking-tighter text-ink">
+                    ABU NOOH
+                </a>
+            </div>
+            <div class="flex gap-6">
+                <div>
+                <a href="{{ route('web.home.index') }}" class="technical-label hover:text-ink transition-colors">Blog</a>
+                @php
+                    $menu_items = \App\Models\Post::query()
+                        ->published()
+                        ->pastSchedule()
+                        ->where('post_type', \App\Support\Enums\PostTypes::PAGE)
+                        ->where('is_menu_item', true)
+                        ->select('slug', 'title')
+                        ->get();
+                @endphp
+                @foreach ($menu_items as $menu_item)
+                    <a href="{{ route('web.posts.show', $menu_item->slug) }}" class="technical-label hover:text-ink transition-colors">{{ $menu_item->title }}</a>
+                @endforeach
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            @yield('content')
+        </main>
+
+        <footer class="mt-20 border-t border-[#aeb5a7] bg-[#d7ded4] p-[var(--page-gutter)]">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                <div>
+                    <h2 class="font-extrabold text-3xl tracking-tighter text-ink mb-4">ABU NOOH</h2>
+                    <p class="max-w-md text-[17px] leading-relaxed">
+                        Hussain Afeef is a Laravel developer at Javaabu. Exploring the intersection of design and code.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="technical-label">Connectivity</span>
+                    <a href="https://x.com/hucenafeef" class="text-ink hover:underline">X / Twitter</a>
+                    <a href="https://github.com/hucenafeef" class="text-ink hover:underline">GitHub</a>
+                    <a href="https://linkedin.com/in/hucenafeef" class="text-ink hover:underline">LinkedIn</a>
+                </div>
+            </div>
+            <div class="mt-20 flex justify-between items-center text-[13px] uppercase tracking-widest text-[#4a4d49] font-bold mono">
+                <span>© {{ now()->year }} HUSSAIN AFEEF</span>
+                <span>BUILT WITH LARAVEL + FILAMENT</span>
+            </div>
+        </footer>
+
+        <div class="junction bl"></div>
+        <div class="junction br"></div>
     </div>
-    <div class="max-w-screen-lg mx-auto min-h-screen px-4">
-        <x-web.header/>
-        @yield('content')
-        <div class="flex justify-center items-center py-10 text-slate-500 dark:text-slate-400 font-light text-lg">
-            {{ __("All Rights Reserved. :year © Hussain Afeef", ['year' => now()->format('Y')]) }}
-        </div>
-    </div>
-</div>
-@livewire('notifications')
+
+    @livewire('notifications')
+
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-marquee {
+                animation: none;
+            }
+        }
+    </style>
 </body>
 </html>
