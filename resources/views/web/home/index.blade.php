@@ -1,7 +1,7 @@
 @extends('layouts.web')
 
 @section('content')
-    <section class="hero min-h-[250px] flex flex-col items-center justify-center text-center border-b border-[var(--grid)] py-20 px-8 relative overflow-hidden bg-[var(--surface-high)]">
+    <section class="hero min-h-[250px] flex flex-col items-center justify-center text-center border-b border-[var(--grid)] py-12 px-8 relative overflow-hidden bg-[var(--surface-high)]">
         <div class="junction tl"></div>
         <div class="junction tr"></div>
         <div class="junction bl"></div>
@@ -16,7 +16,7 @@
                 Great software <br /> begins with <br>
                 <span class="bg-[var(--lime)] px-4">clear thinking.</span>
             </h1>
-            <p class="font-light text-2xl max-w-2xl mx-auto text-[var(--text)] italic">
+            <p class="font-light text-xl max-w-2xl mx-auto text-[var(--text)] italic">
                 Thoughts on Laravel, architecture, and building software that's simple, scalable, and built to last.
             </p>
         </div>
