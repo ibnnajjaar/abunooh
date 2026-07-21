@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kong Editorial Web Design"
+  short_description: "Build tactile grid-based lime editorial websites"
+  default_prompt: "Use $kong-editorial-web-design to design and implement this website with the complete tactile grid, sticky-stack, cursor, and interaction system."
