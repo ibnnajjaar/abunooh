@@ -16,9 +16,9 @@
                 Great software <br /> begins with <br>
                 <span class="bg-[var(--lime)] px-4">clear thinking.</span>
             </h1>
-            <p class="font-light text-xl max-w-2xl mx-auto text-[var(--text)] italic">
-                Thoughts on Laravel, architecture, and building software that's simple, scalable, and built to last.
-            </p>
+{{--            <p class="font-light text-xl max-w-2xl mx-auto text-[var(--text)] italic">--}}
+{{--                Thoughts on Laravel, architecture, and building software that's simple, scalable, and built to last.--}}
+{{--            </p>--}}
         </div>
     </section>
 

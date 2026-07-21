@@ -66,8 +66,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
   background-image:
-          linear-gradient(to bottom, rgb(255 255 255 / 85%), rgb(255 255 255 / 85%)),
-          url("/images/hero.png");
+          linear-gradient(to bottom, rgb(255 255 255 / 70%), rgb(255 255 255 / 70%)),
+          url("../images/hero.png");
   background-size: cover;
   background-position: center;
 }
