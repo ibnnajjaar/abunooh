@@ -43,7 +43,7 @@
     @livewireScripts
     @stack('scripts')
 </head>
-<body class="antialiased selection:bg-[#ccff00] selection:text-[#001408]">
+<body class="antialiased selection:bg-[oklch(70.5%_.213_47.604)] selection:text-[#001408]">
 
     <div class="framed-canvas">
         <!-- Junctions -->
