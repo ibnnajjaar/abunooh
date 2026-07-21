@@ -16,6 +16,32 @@ import '../css/theme.css';
 
 Prism.highlightAll();
 
+// Theme Switcher
+const themeSwitcher = () => {
+    const html = document.documentElement;
+    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    if (theme === 'dark') {
+        html.classList.add('dark');
+    } else {
+        html.classList.remove('dark');
+    }
+
+    const toggleTheme = () => {
+        if (html.classList.contains('dark')) {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    };
+
+    window.toggleTheme = toggleTheme;
+};
+
+themeSwitcher();
+
 // Kong Editorial Interactivity
 document.addEventListener('DOMContentLoaded', () => {
     // Global Cursor Glow

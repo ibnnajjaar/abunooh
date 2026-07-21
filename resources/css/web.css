@@ -39,6 +39,16 @@
   --ease-smooth: cubic-bezier(.19, 1, .22, 1);
 }
 
+.dark {
+  --ink: #e7ede5;
+  --text: #aeb5a7;
+  --canvas: #001408;
+  --surface: #001c0b;
+  --surface-high: #00250e;
+  --grid: #1a2e22;
+  --cross: #aeb5a7;
+}
+
 html, body {
   background: var(--canvas);
   color: var(--text);
@@ -67,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
   background-image:
-          linear-gradient(to bottom, rgb(255 255 255 / 70%), rgb(255 255 255 / 70%)),
+          linear-gradient(to bottom, var(--surface) / 70%, var(--surface) / 70%),
           url("../images/hero.png");
   background-size: cover;
   background-position: center;
@@ -147,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding-inline: 28px;
   border-bottom: 1px solid var(--grid);
-  background: rgb(205 212 203 / 90%);
+  background: var(--canvas) / 90%;
   backdrop-filter: blur(12px);
 }
 
@@ -287,4 +297,24 @@ h1, h2, h3, h4, h5, h6 {
   margin: 32px 0;
   font-style: italic;
   color: var(--ink);
+}
+
+.dark .cursor-glow {
+  background: radial-gradient(circle,
+  oklch(70.5% .213 47.604 / 20%) 0%,
+  oklch(70.5% .213 47.604 / 8%) 34%,
+  transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.dark .kong-card:is(:hover, :focus-within) {
+  background:
+          linear-gradient(155deg, rgb(255 255 255 / 5%) -57.71%, transparent 100.25%),
+          var(--surface);
+}
+
+.dark .kong-card::before {
+  background:
+          radial-gradient(220px circle at var(--mx) var(--my), oklch(70.5% .213 47.604 / 30%), transparent 72%),
+          linear-gradient(155deg, rgb(255 255 255 / 8%) -57.71%, transparent 100.25%);
 }
