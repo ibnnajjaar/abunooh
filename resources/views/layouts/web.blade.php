@@ -87,9 +87,7 @@
                 </div>
                 <div class="flex flex-col gap-2">
                     <span class="technical-label">Connectivity</span>
-                    <a href="https://x.com/hucenafeef" class="text-ink hover:underline">X / Twitter</a>
                     <a href="https://github.com/hucenafeef" class="text-ink hover:underline">GitHub</a>
-                    <a href="https://linkedin.com/in/hucenafeef" class="text-ink hover:underline">LinkedIn</a>
                 </div>
             </div>
             <div class="mt-20 flex justify-between items-center text-[13px] uppercase tracking-widest text-[#4a4d49] font-bold mono">
