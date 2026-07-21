@@ -77,7 +77,7 @@
             @yield('content')
         </main>
 
-        <footer class="mt-20 border-t border-[#aeb5a7] bg-[#d7ded4] p-[var(--page-gutter)]">
+        <footer class="mt-20 border-t border-[var(--grid)] bg-[var(--surface)] p-[var(--page-gutter)]">
             <div class="flex flex-col md:flex-row justify-between items-start gap-8">
                 <div>
                     <h2 class="font-extrabold text-3xl tracking-tighter text-ink mb-4">ABU NOOH</h2>

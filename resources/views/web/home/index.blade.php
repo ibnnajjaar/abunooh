@@ -1,7 +1,7 @@
 @extends('layouts.web')
 
 @section('content')
-    <section class="hero min-h-[250px] flex flex-col items-center justify-center text-center border-b border-[var(--grid)] py-12 px-8 relative overflow-hidden bg-[var(--surface-high)]">
+    <section class="hero min-h-[250px] flex flex-col items-center justify-center text-center py-12 px-8 relative overflow-hidden">
         <div class="junction tl"></div>
         <div class="junction tr"></div>
         <div class="junction bl"></div>
