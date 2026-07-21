@@ -50,14 +50,13 @@
         <div class="junction tl"></div>
         <div class="junction tr"></div>
 
-        <nav class="site-nav flex justify-between items-center">
+        <nav class="site-nav">
             <div class="">
                 <a href="{{ route('web.home.index') }}" class="font-extrabold text-2xl tracking-tighter text-ink">
                     ABU NOOH
                 </a>
             </div>
-            <div class="flex gap-6">
-                <div>
+            <div class="flex items-center gap-6">
                 <a href="{{ route('web.home.index') }}" class="technical-label hover:text-ink transition-colors">Blog</a>
                 @php
                     $menu_items = \App\Models\Post::query()
@@ -71,7 +70,6 @@
                 @foreach ($menu_items as $menu_item)
                     <a href="{{ route('web.posts.show', $menu_item->slug) }}" class="technical-label hover:text-ink transition-colors">{{ $menu_item->title }}</a>
                 @endforeach
-                </div>
             </div>
         </nav>
 
