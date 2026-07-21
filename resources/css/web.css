@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -5,19 +6,19 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@font-face {
-  font-family: Funnel;
-  src: url("/assets/fonts/funnel.woff2") format("woff2");
-  font-style: normal;
-  font-display: swap;
-}
+/*@font-face {*/
+/*  font-family: Funnel;*/
+/*  src: url("/assets/fonts/funnel.woff2") format("woff2");*/
+/*  font-style: normal;*/
+/*  font-display: swap;*/
+/*}*/
 
-@font-face {
-  font-family: Funnel;
-  src: url("/assets/fonts/funnel-italic.woff2") format("woff2");
-  font-style: italic;
-  font-display: swap;
-}
+/*@font-face {*/
+/*  font-family: Funnel;*/
+/*  src: url("/assets/fonts/funnel-italic.woff2") format("woff2");*/
+/*  font-style: italic;*/
+/*  font-display: swap;*/
+/*}*/
 
 :root {
   --lime: oklch(70.5% .213 47.604);
@@ -41,7 +42,7 @@
 html, body {
   background: var(--canvas);
   color: var(--text);
-  font-family: Funnel, Arial, sans-serif;
+  font-family: Outfit, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
