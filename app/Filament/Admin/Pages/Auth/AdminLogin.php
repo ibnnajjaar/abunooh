@@ -15,7 +15,7 @@ class AdminLogin extends BaseLogin
 
         if (app()->environment('local')) {
             $this->form->fill([
-                'email' => 'hussain.afeef@ium.edu.mv',
+                'email' => 'ibnahnajjaar@gmail.com',
                 'password' => 'miee varah dhigu password eh',
                 'remember' => true,
             ]);
