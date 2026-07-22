@@ -18,7 +18,7 @@
                     <span class="technical-label text-[11px] opacity-40 mono">{{ $post->formatted_long_publish_date }}</span>
                 </div>
 
-                <h1 class="hero-headline text-ink mb-10">
+                <h1 class="post-headline text-ink mb-10">
                     {{ $post->title }}
                 </h1>
 

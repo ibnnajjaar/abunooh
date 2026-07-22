@@ -33,6 +33,12 @@ class PermissionsSeeder extends Seeder
                 'projects.update',
                 'projects.delete',
             ],
+            'posts' => [
+                'posts.view',
+                'posts.create',
+                'posts.update',
+                'posts.delete',
+            ],
             'tags' => [
                 'tags.view',
                 'tags.create',

@@ -31,13 +31,13 @@ enum PublishStatuses: string implements IsEnum
         ];
     }
 
-    public static function getColor(string $status): string
+    public function getColor(): string
     {
-        return self::colors()[$status] ?? 'secondary';
+        return self::colors()[$this->value] ?? 'secondary';
     }
 
     public function getBadgeColor(): string
     {
-        return self::getColor($this->value);
+        return $this->getColor();
     }
 }
