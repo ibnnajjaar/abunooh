@@ -4,6 +4,8 @@
     <div class="junction bl"></div>
     <div class="junction br"></div>
 
+    <div class="grid-line-beam hidden md:block"></div>
+
     <!-- Hero Accents -->
     <div class="absolute left-[31.25%] top-0 bottom-0 w-[1px] bg-[var(--grid)] opacity-30 hidden md:block"></div>
     <div class="absolute right-[31.25%] top-0 bottom-0 w-[1px] bg-[var(--grid)] opacity-30 hidden md:block"></div>

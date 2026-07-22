@@ -172,6 +172,70 @@ h1, h2, h3, h4, h5, h6 {
 .junction.l { left: -6px; top: calc(50% - 6px); }
 .junction.r { right: -6px; top: calc(50% - 6px); }
 
+/* Light Point Animation */
+.grid-line-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.grid-line-beam::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--lime), transparent);
+  opacity: 0;
+  animation: grid-beam-v 8s linear infinite;
+}
+
+.grid-line-beam::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, var(--lime), transparent);
+  opacity: 0;
+  animation: grid-beam-h 8s linear infinite 4s;
+}
+
+@keyframes grid-beam-v {
+  0% { transform: translateY(-100%); opacity: 0; left: 0; }
+  5% { opacity: 0.4; }
+  45% { opacity: 0.4; }
+  50% { transform: translateY(100%); opacity: 0; left: 0; }
+  51% { transform: translateY(-100%); opacity: 0; left: 100%; }
+  55% { opacity: 0.4; }
+  95% { opacity: 0.4; }
+  100% { transform: translateY(100%); opacity: 0; left: 100%; }
+}
+
+@keyframes grid-beam-h {
+  0% { transform: translateX(-100%); opacity: 0; top: 0; }
+  5% { opacity: 0.4; }
+  45% { opacity: 0.4; }
+  50% { transform: translateX(100%); opacity: 0; top: 0; }
+  51% { transform: translateX(-100%); opacity: 0; top: 100%; }
+  55% { opacity: 0.4; }
+  95% { opacity: 0.4; }
+  100% { transform: translateX(100%); opacity: 0; top: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid-line-beam::before,
+  .grid-line-beam::after {
+    animation: none;
+    display: none;
+  }
+}
+
 /* Sticky Nav */
 .site-nav {
   position: sticky;
