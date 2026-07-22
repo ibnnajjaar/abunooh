@@ -14,7 +14,7 @@
 
             <section id="projects-{{ $year }}"
                 @class([
-                    'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] relative',
+                    'grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[var(--grid)] relative',
                 ])
             >
                 <div class="grid-line-beam hidden lg:block"></div>
@@ -22,7 +22,7 @@
                 <div class="junction br"></div>
 
                 @foreach ($projects as $project)
-                    <div class="kong-card reveal flex flex-col justify-between group min-h-[400px]">
+                    <div class="kong-card reveal flex flex-col justify-between group h-auto">
                         <div class="junction tl"></div>
                         <div class="junction tr"></div>
                         <div class="junction bl"></div>
