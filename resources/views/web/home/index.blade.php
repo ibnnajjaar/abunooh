@@ -5,7 +5,7 @@
         {!! get_setting('home_page_title') !!}
     </x-web.hero>
 
-    <div class="section-stack">
+    <div class="section-stack reveal">
         @foreach ($posts as $index => $year_group)
             <x-web.stack-header
                 :index="$index"
@@ -21,7 +21,7 @@
                 <div class="junction br"></div>
                 @foreach ($year_group['posts'] as $post)
                     <a href="{{ route('web.posts.show', $post->slug) }}"
-                       class="kong-card flex flex-col justify-between group min-h-[400px]">
+                       class="kong-card reveal flex flex-col justify-between group min-h-[400px]">
                         <div class="junction tl"></div>
                         <div class="junction tr"></div>
                         <div class="junction bl"></div>

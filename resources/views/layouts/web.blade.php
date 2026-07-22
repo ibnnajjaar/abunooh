@@ -58,6 +58,15 @@
         <div class="junction tr"></div>
 
         <x-navigation />
+        <div class="cursor-glow"></div>
+        <div id="loader" class="fixed inset-0 z-[200] bg-[var(--canvas)] flex items-center justify-center transition-opacity duration-700">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-[1px] bg-[var(--grid)] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[var(--lime)] animate-loader-progress"></div>
+                </div>
+                <span class="technical-label mt-4 text-[10px] opacity-50 tracking-[0.2em] animate-pulse">Initializing Connectivity</span>
+            </div>
+        </div>
 
         <main>
             @yield('content')
@@ -90,6 +99,67 @@
 
     @livewire('notifications')
 
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('opacity-0');
+                setTimeout(() => loader.remove(), 700);
+            }
+        });
+
+        const glow = document.querySelector('.cursor-glow');
+        let x = -500, y = -500, frame = 0;
+
+        function paintGlow() {
+            glow.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            frame = 0;
+        }
+
+        window.addEventListener('pointermove', (event) => {
+            if (event.pointerType === 'touch') return;
+            x = event.clientX;
+            y = event.clientY;
+            glow.classList.add('visible');
+            if (!frame) frame = requestAnimationFrame(paintGlow);
+        }, { passive: true });
+
+        document.documentElement.addEventListener('mouseleave', () => {
+            glow.classList.remove('visible');
+        });
+
+        // Scroll Reveal logic
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.01,
+            rootMargin: '0px 0px -10px 0px'
+        });
+
+        const eagerObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0,
+            rootMargin: '200px 0px 0px 0px'
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.reveal').forEach((el, i) => {
+                el.style.setProperty('--delay', `${(i % 3) * 0.1}s`);
+                if (el.classList.contains('reveal-eager')) {
+                    eagerObserver.observe(el);
+                } else {
+                    revealObserver.observe(el);
+                }
+            });
+        });
+    </script>
+
     <style>
         @keyframes marquee {
             0% { transform: translateX(0); }
@@ -102,6 +172,58 @@
             .animate-marquee {
                 animation: none;
             }
+        }
+
+        @keyframes loader-progress {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .animate-loader-progress {
+            animation: loader-progress 1.5s var(--ease-editorial) infinite;
+        }
+
+        .cursor-glow {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 400px;
+            height: 400px;
+            margin: -200px 0 0 -200px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 55;
+            opacity: 0;
+            transform: translate3d(-500px, -500px, 0);
+            background: radial-gradient(circle,
+                oklch(70.5% .213 47.604 / 15%) 0%,
+                oklch(70.5% .213 47.604 / 5%) 45%,
+                transparent 70%);
+            filter: blur(15px);
+            mix-blend-mode: multiply;
+            transition: opacity .5s;
+            will-change: transform;
+        }
+
+        .cursor-glow.visible { opacity: 1; }
+        .dark .cursor-glow {
+            mix-blend-mode: screen;
+            background: radial-gradient(circle,
+                oklch(70.5% .213 47.604 / 8%) 0%,
+                oklch(70.5% .213 47.604 / 3%) 35%,
+                transparent 70%);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial);
+            transition-delay: var(--delay, 0s);
+            will-change: transform, opacity;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </body>

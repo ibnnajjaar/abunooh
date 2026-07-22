@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'hero min-h-[250px] flex flex-col items-center justify-center text-center py-12 px-8 relative overflow-hidden']) }}>
+<section {{ $attributes->merge(['class' => 'hero reveal min-h-[250px] flex flex-col items-center justify-center text-center py-12 px-8 relative overflow-hidden']) }}>
     <div class="junction tl"></div>
     <div class="junction tr"></div>
     <div class="junction bl"></div>

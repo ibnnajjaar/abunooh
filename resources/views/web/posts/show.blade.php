@@ -2,7 +2,7 @@
 
 @section('content')
     <article class="relative">
-        <header class="py-20 px-8 border-b border-[var(--grid)] bg-[var(--surface-high)] relative overflow-hidden">
+        <header class="reveal reveal-eager py-20 px-8 border-b border-[var(--grid)] bg-[var(--surface-high)] relative overflow-hidden">
             <div class="junction tl"></div>
             <div class="junction tr"></div>
             <div class="junction bl"></div>
@@ -40,7 +40,7 @@
             </div>
         </header>
 
-        <div class="max-w-4xl mx-auto py-20 px-8">
+        <div class="reveal reveal-eager max-w-4xl mx-auto py-20 px-8">
             <div class="post-content line-numbers">
                 {!! $post->formatted_content !!}
             </div>
