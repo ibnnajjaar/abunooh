@@ -44,7 +44,7 @@ class Settings extends Page implements HasForms
         $this->form->fill([
             'site_name' => get_setting('site_name', ''),
             'home_page_title' => get_setting('home_page_title', ''),
-            'home_page_description' => get_setting('home_page_description', ''),
+            'site_description' => get_setting('site_description', ''),
             'socials' => get_setting('socials', []),
         ]);
     }
@@ -72,7 +72,7 @@ class Settings extends Page implements HasForms
                                     ->inlineLabel()
                                ->disabled(! auth('web_admin')->user()->can('edit settings'))
                                     ->required(),
-                           TextInput::make('home_page_description')
+                           TextInput::make('site_description')
                                     ->label('Site Description')
                                     ->inlineLabel()
                                     ->disabled(! auth('web_admin')->user()->can('edit settings'))
@@ -141,7 +141,7 @@ class Settings extends Page implements HasForms
         $settings = app(SiteSettings::class);
         $settings->site_name = $data['site_name'];
         $settings->home_page_title = $data['home_page_title'];
-        $settings->home_page_description = $data['home_page_description'];
+        $settings->site_description = $data['site_description'];
         $settings->socials = $data['socials'];
         $settings->save();
 

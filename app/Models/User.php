@@ -56,7 +56,7 @@ class User extends Authenticatable implements FilamentUser
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'status' => UserStatus::class,
+//            'status' => UserStatus::class,
         ];
     }
 
@@ -84,10 +84,5 @@ class User extends Authenticatable implements FilamentUser
     public function canAccessPanel(Panel $panel): bool
     {
         return $this->canAccessAdminPanel();
-    }
-
-    public function isSupervisorOf(Employee $employee): bool
-    {
-        return $this->id == $employee->supervisor_id;
     }
 }

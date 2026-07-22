@@ -24,7 +24,7 @@
     @if (! request()->routeIs('web.posts.show'))
         <meta property="og:site_name" content="abunooh.com">
         <meta property="og:locale" content="en_US">
-        <meta property="og:description" content="Hussain Afeef is a Laravel developer at Javaabu.">
+        <meta property="og:description" content="{{ get_setting('site_description') }}">
         <meta property="og:url" content="https://abunooh.com">
         <meta property="og:image" content="{{ asset('images/site_image.jpg') }}">
     @endif
@@ -70,7 +70,7 @@
                 <div>
                     <h2 class="font-extrabold text-3xl tracking-tighter text-ink mb-4">ABU NOOH</h2>
                     <p class="max-w-md text-[17px] leading-relaxed">
-                        Hussain Afeef is a Laravel developer at Javaabu. Exploring the intersection of design and code.
+                        {{ get_setting('site_description') }}
                     </p>
                 </div>
                 <div class="flex flex-col gap-2">

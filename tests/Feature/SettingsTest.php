@@ -15,7 +15,7 @@ it('can update site settings', function () {
         ->fillForm([
             'site_name' => 'New Site Name',
             'home_page_title' => 'New Hero Title',
-            'home_page_description' => 'New Site Description',
+            'site_description' => 'New Site Description',
             'socials' => [
                 ['name' => 'Github', 'link' => 'https://github.com/ibnnajjaar'],
             ],
@@ -27,7 +27,7 @@ it('can update site settings', function () {
     $settings = app(SiteSettings::class);
     expect($settings->site_name)->toBe('New Site Name')
         ->and($settings->home_page_title)->toBe('New Hero Title')
-        ->and($settings->home_page_description)->toBe('New Site Description')
+        ->and($settings->site_description)->toBe('New Site Description')
         ->and($settings->socials)->toBe([
             ['name' => 'Github', 'link' => 'https://github.com/ibnnajjaar'],
         ]);
