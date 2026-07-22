@@ -52,16 +52,20 @@
 html, body {
   background: var(--canvas);
   background-image:
-    linear-gradient(color-mix(in srgb, var(--grid), transparent 60%) 0.5px, transparent 0.5px),
-    linear-gradient(90deg, color-mix(in srgb, var(--grid), transparent 60%) 0.5px, transparent 0.5px),
-    linear-gradient(color-mix(in srgb, var(--grid), transparent 30%) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--grid), transparent 30%) 1px, transparent 1px);
-  background-size: 24px 24px, 24px 24px, 96px 96px, 96px 96px;
+    url("data:image/svg+xml,%3Csvg width='120' height='208' viewBox='0 0 120 208' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23aeb5a7' stroke-width='0.5' stroke-opacity='0.4'%3E%3Cpath d='M60 0l60 34.64v69.28L60 138.56 0 103.92V34.64L60 0zm0 138.56l60 34.64v69.28L60 277.12l-60-34.64v-69.28l60-34.64z'/%3E%3Cpath d='M60 69.28V0m0 138.56V69.28m0 69.28l60-34.64m-60 34.64L0 103.92M60 69.28L0 34.64m60 34.64l60-34.64'/%3E%3Ccircle fill='%23aeb5a7' fill-opacity='0.6' cx='60' cy='69.28' r='1.5'/%3E%3Ccircle fill='%23aeb5a7' fill-opacity='0.6' cx='0' cy='34.64' r='1.5'/%3E%3Ccircle fill='%23aeb5a7' fill-opacity='0.6' cx='120' cy='34.64' r='1.5'/%3E%3Ccircle fill='%23aeb5a7' fill-opacity='0.6' cx='60' cy='0' r='1.5'/%3E%3Ccircle fill='%23aeb5a7' fill-opacity='0.6' cx='60' cy='138.56' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(var(--canvas), var(--canvas));
+  background-size: 60px 104px, 100% 100%;
   background-attachment: fixed;
   color: var(--text);
   font-family: Outfit, Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.dark html, .dark body {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='120' height='208' viewBox='0 0 120 208' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%231a2e22' stroke-width='0.5' stroke-opacity='0.6'%3E%3Cpath d='M60 0l60 34.64v69.28L60 138.56 0 103.92V34.64L60 0zm0 138.56l60 34.64v69.28L60 277.12l-60-34.64v-69.28l60-34.64z'/%3E%3Cpath d='M60 69.28V0m0 138.56V69.28m0 69.28l60-34.64m-60 34.64L0 103.92M60 69.28L0 34.64m60 34.64l60-34.64'/%3E%3Ccircle fill='%231a2e22' fill-opacity='0.8' cx='60' cy='69.28' r='1.5'/%3E%3Ccircle fill='%231a2e22' fill-opacity='0.8' cx='0' cy='34.64' r='1.5'/%3E%3Ccircle fill='%231a2e22' fill-opacity='0.8' cx='120' cy='34.64' r='1.5'/%3E%3Ccircle fill='%231a2e22' fill-opacity='0.8' cx='60' cy='0' r='1.5'/%3E%3Ccircle fill='%231a2e22' fill-opacity='0.8' cx='60' cy='138.56' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(var(--canvas), var(--canvas));
 }
 
 .mono {
