@@ -22,7 +22,7 @@ it('cannot access view page without view permission', function () {
 })->group('tags', 'tags.view');
 
 it('shows tag details in view page', function () {
-    $this->actingAsAdmin(['view tags']);
+    $this->actingAsAdmin(['tags.view']);
 
     $tag = Tag::create(['name' => 'Alpha', 'slug' => 'alpha', 'color' => '#123456']);
 

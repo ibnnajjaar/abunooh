@@ -10,14 +10,14 @@ use App\Filament\Admin\Resources\Projects\Pages\CreateProject;
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
 it('can access project create page', function () {
-    $this->actingAsAdmin(['view projects', 'create projects']);
+    $this->actingAsAdmin(['projects.view', 'projects.create']);
 
     Livewire::test(CreateProject::class)
         ->assertOk();
 })->group('projects', 'projects.create');
 
 it('can create a project through the form', function () {
-    $this->actingAsAdmin(['view projects', 'create projects']);
+    $this->actingAsAdmin(['projects.view', 'projects.create']);
 
     $title = 'New Portfolio Site';
 
@@ -44,7 +44,7 @@ it('can create a project through the form', function () {
 })->group('projects', 'projects.create');
 
 it('validates project create form data', function () {
-    $this->actingAsAdmin(['view projects', 'create projects']);
+    $this->actingAsAdmin(['projects.view', 'projects.create']);
 
     // Required validation
     Livewire::test(CreateProject::class)

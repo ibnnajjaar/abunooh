@@ -28,7 +28,7 @@ it('cannot load the tag edit page without update permission', function () {
 })->group('tags', 'tags.update');
 
 it('can load the tag edit page with update permission', function () {
-    $this->actingAsAdmin(['view tags', 'update tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.update']);
 
     $tag = Tag::factory()->create();
 
@@ -44,7 +44,7 @@ it('can load the tag edit page with update permission', function () {
 })->group('tags', 'tags.update');
 
 it('can update a tag through the form', function () {
-    $this->actingAsAdmin(['view tags', 'update tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.update']);
 
     $tag = Tag::create(['name' => 'Old', 'slug' => 'old', 'color' => '#000000']);
 
@@ -67,7 +67,7 @@ it('can update a tag through the form', function () {
 })->group('tags', 'tags.update');
 
 it('can validate tag form data', function () {
-    $this->actingAsAdmin(['view tags', 'update tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.update']);
 
     $tag = Tag::create(['name' => 'Test', 'slug' => 'test', 'color' => '#000000']);
 

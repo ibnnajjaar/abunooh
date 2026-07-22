@@ -70,12 +70,12 @@ class Settings extends Page implements HasForms
                        ->schema([
                            TextInput::make('site_name')
                                     ->inlineLabel()
-                               ->disabled(! auth('web_admin')->user()->can('edit settings'))
+                               ->disabled(! auth('web_admin')->user()->can('settings.update'))
                                     ->required(),
                            TextInput::make('site_description')
                                     ->label('Site Description')
                                     ->inlineLabel()
-                                    ->disabled(! auth('web_admin')->user()->can('edit settings'))
+                                    ->disabled(! auth('web_admin')->user()->can('settings.update'))
                                     ->required(),
                        ]),
                 Section::make('Hero Section')
@@ -85,7 +85,7 @@ class Settings extends Page implements HasForms
                            TextInput::make('home_page_title')
                                     ->label('Hero Section Title')
                                     ->inlineLabel()
-                                    ->disabled(! auth('web_admin')->user()->can('edit settings'))
+                                    ->disabled(! auth('web_admin')->user()->can('settings.update'))
                                     ->required(),
 
                        ]),
@@ -103,7 +103,7 @@ class Settings extends Page implements HasForms
                                    ])
                                    ->columns(2)
                                    ->inlineLabel()
-                                   ->disabled(! auth('web_admin')->user()->can('edit settings')),
+                                   ->disabled(! auth('web_admin')->user()->can('settings.update')),
                        ]),
             ]);
     }
@@ -113,7 +113,7 @@ class Settings extends Page implements HasForms
         return [
             Action::make('save')
                   ->label('Save Settings')
-                ->visible(! auth('web_admin')->user()->cannot('edit settings'))
+                ->visible(! auth('web_admin')->user()->cannot('settings.update'))
                   ->submit('save'),
         ];
     }
@@ -127,7 +127,7 @@ class Settings extends Page implements HasForms
 
     public function save(): void
     {
-        if (auth('web_admin')->user()->cannot('edit settings')) {
+        if (auth('web_admin')->user()->cannot('settings.update')) {
             Notification::make()
                         ->title('You do not have permission to edit settings.')
                         ->danger()

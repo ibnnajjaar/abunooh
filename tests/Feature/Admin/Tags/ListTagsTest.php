@@ -20,7 +20,7 @@ it('cannot view the list tags page without permissions', function () {
 });
 
 it('can view the list tags page with permissions', function () {
-    $this->actingAsAdmin(['view tags']);
+    $this->actingAsAdmin(['tags.view']);
     $tags = Tag::factory(3)->create();
 
     livewire(ListTags::class)
@@ -29,7 +29,7 @@ it('can view the list tags page with permissions', function () {
 });
 
 it('shows tags in table and can search', function () {
-    $this->actingAsAdmin(['view tags']);
+    $this->actingAsAdmin(['tags.view']);
 
     $tags = collect([
         Tag::create(['name' => 'Laravel', 'slug' => 'laravel', 'color' => '#ff2d20']),
@@ -45,14 +45,14 @@ it('shows tags in table and can search', function () {
 })->group('tags');
 
 it('shows the create action when user can create tags', function () {
-    $this->actingAsAdmin(['view tags', 'create tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.create']);
 
     Livewire::test(ListTags::class)
         ->assertActionVisible('create');
 })->group('tags');
 
 it('hides the create action when user cannot create tags', function () {
-    $this->actingAsAdmin(['view tags']);
+    $this->actingAsAdmin(['tags.view']);
 
     Livewire::test(ListTags::class)
         ->assertActionHidden('create');

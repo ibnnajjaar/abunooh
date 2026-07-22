@@ -9,26 +9,26 @@ class ProjectPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo('view projects');
+        return $user->hasPermissionTo('projects.view');
     }
 
     public function view(User $user, Project $model): bool
     {
-        return $user->hasPermissionTo('view projects');
+        return $user->hasPermissionTo('projects.view');
     }
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo('create projects');
+        return $user->hasPermissionTo('projects.create');
     }
 
     public function update(User $user, Project $model): bool
     {
-        return $user->hasPermissionTo('update projects');
+        return $user->hasPermissionTo('projects.update');
     }
 
     public function delete(User $user, Project $model): bool
     {
-        return $user->hasPermissionTo('delete projects');
+        return $user->hasPermissionTo('projects.delete');
     }
 }

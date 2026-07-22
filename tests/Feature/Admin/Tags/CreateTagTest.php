@@ -23,7 +23,7 @@ it('cannot access create page without create permission', function () {
 })->group('tags', 'tags.create');
 
 it('can access create page with create permission', function () {
-    $this->actingAsAdmin(['view tags', 'create tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.create']);
 
     Livewire::test(CreateTag::class)
             ->assertOk();
@@ -31,7 +31,7 @@ it('can access create page with create permission', function () {
 })->group('tags', 'tags.create');
 
 it('can create a tag through the form', function () {
-    $this->actingAsAdmin(['view tags', 'create tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.create']);
 
     Livewire::test(CreateTag::class)
         ->fillForm([
@@ -51,7 +51,7 @@ it('can create a tag through the form', function () {
 })->group('tags', 'tags.create');
 
 it('can validate tag form data', function () {
-    $this->actingAsAdmin(['view tags', 'create tags']);
+    $this->actingAsAdmin(['tags.view', 'tags.create']);
 
     Livewire::test(CreateTag::class)
             ->fillForm([

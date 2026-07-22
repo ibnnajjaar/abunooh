@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 uses(RefreshDatabase::class);
 
 it('can update site settings', function () {
-    $this->actingAsAdmin(['edit settings']);
+    $this->actingAsAdmin(['settings.update']);
 
     livewire(Settings::class)
         ->fillForm([
