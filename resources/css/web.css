@@ -156,6 +156,10 @@ h1, h2, h3, h4, h5, h6 {
 .junction.br { right: -6px; bottom: -6px; }
 .junction.tl { left: -6px; top: -6px; }
 .junction.tr { right: -6px; top: -6px; }
+.junction.t { left: calc(50% - 6px); top: -6px; }
+.junction.b { left: calc(50% - 6px); bottom: -6px; }
+.junction.l { left: -6px; top: calc(50% - 6px); }
+.junction.r { right: -6px; top: calc(50% - 6px); }
 
 /* Sticky Nav */
 .site-nav {

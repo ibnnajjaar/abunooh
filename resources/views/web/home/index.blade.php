@@ -25,16 +25,22 @@
     <div class="section-stack">
         @foreach ($posts as $index => $year_group)
             <div class="stack-header" style="--index: {{ $index }}">
+                <div class="junction bl"></div>
+                <div class="junction br"></div>
                 <span class="mono text-[13px] font-bold border-r border-[var(--grid)] h-full flex items-center justify-center">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
                 <span class="technical-label px-6">{{ $year_group['year'] }} // Journal</span>
                 <span class="mono text-[var(--lime)] border-l border-[var(--grid)] h-full flex items-center justify-center">+</span>
             </div>
 
-            <section id="articles-{{ $year_group['year'] }}" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] border-b border-[var(--grid)]">
+            <section id="articles-{{ $year_group['year'] }}" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] border-b border-[var(--grid)] relative">
+                <div class="junction bl"></div>
+                <div class="junction br"></div>
                 @foreach ($year_group['posts'] as $post)
                     <a href="{{ route('web.posts.show', $post->slug) }}" class="kong-card flex flex-col justify-between group min-h-[400px]">
                          <div class="junction tl"></div>
                          <div class="junction tr"></div>
+                         <div class="junction bl"></div>
+                         <div class="junction br"></div>
                          <div>
                              <span class="technical-label text-[11px] opacity-60 mono">{{ $post->formatted_publish_date }}</span>
                              <h3 class="font-bold text-3xl mt-12 leading-tight group-hover:text-ink transition-colors">{{ $post->title }}</h3>
