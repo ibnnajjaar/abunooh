@@ -33,7 +33,7 @@ it('denies access if user does not exist', function () {
     // Create a mock for the driver that handles the method chain
     $mockDriver = Mockery::mock();
     $mockDriver->shouldReceive('redirectUrl')
-               ->with(config('services.google.admin_redirect'))
+               ->with(config('services.google.redirect'))
                ->andReturnSelf(); // Return self to allow method chaining
 
     $mockDriver->shouldReceive('user')
@@ -78,7 +78,7 @@ it('updates user info and logs in admin', function () {
     // Create a mock for the driver that handles the method chain
     $mockDriver = Mockery::mock();
     $mockDriver->shouldReceive('redirectUrl')
-               ->with(config('services.google.admin_redirect'))
+               ->with(config('services.google.redirect'))
                ->andReturnSelf(); // Return self to allow method chaining
 
     $mockDriver->shouldReceive('user')
