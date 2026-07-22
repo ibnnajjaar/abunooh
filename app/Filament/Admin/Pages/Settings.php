@@ -10,6 +10,7 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use App\Support\Settings\SiteSettings;
 use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Section;
@@ -38,6 +39,9 @@ class Settings extends Page implements HasForms
     {
         $this->form->fill([
             'site_name' => get_setting('site_name', ''),
+            'home_page_title' => get_setting('home_page_title', ''),
+            'home_page_description' => get_setting('home_page_description', ''),
+            'socials' => get_setting('socials', []),
         ]);
     }
 
@@ -53,6 +57,27 @@ class Settings extends Page implements HasForms
                                     ->inlineLabel()
                                ->disabled(! auth('web_admin')->user()->can('edit settings'))
                                     ->required(),
+                           TextInput::make('home_page_title')
+                                    ->label('Hero Section Title')
+                                    ->inlineLabel()
+                                    ->disabled(! auth('web_admin')->user()->can('edit settings'))
+                                    ->required(),
+                           TextInput::make('home_page_description')
+                                    ->label('Site Description')
+                                    ->inlineLabel()
+                                    ->disabled(! auth('web_admin')->user()->can('edit settings'))
+                                    ->required(),
+                           Repeater::make('socials')
+                                   ->schema([
+                                       TextInput::make('name')
+                                                ->required(),
+                                       TextInput::make('link')
+                                                ->url()
+                                                ->required(),
+                                   ])
+                                   ->columns(2)
+                                   ->inlineLabel()
+                                   ->disabled(! auth('web_admin')->user()->can('edit settings')),
                        ]),
             ])->statePath('data');
     }
@@ -82,6 +107,9 @@ class Settings extends Page implements HasForms
         // Save to Spatie Settings
         $settings = app(SiteSettings::class);
         $settings->site_name = $data['site_name'];
+        $settings->home_page_title = $data['home_page_title'];
+        $settings->home_page_description = $data['home_page_description'];
+        $settings->socials = $data['socials'];
         $settings->save();
 
         Notification::make()
