@@ -164,6 +164,34 @@ h1, h2, h3, h4, h5, h6 {
     linear-gradient(90deg, var(--cross), var(--cross)) center / 11px 1px no-repeat;
 }
 
+.bottom-junction-left, .bottom-junction-right {
+    position: absolute;
+    width: 11px;
+    height: 6px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: .72;
+    background:
+        linear-gradient(var(--cross), var(--cross)) top center / 1px 6px no-repeat,
+        linear-gradient(90deg, var(--cross), var(--cross)) bottom center / 11px 1px no-repeat;
+}
+
+@media (max-width: 768px) {
+    .bottom-junction-left {
+        width: 6px;
+        background:
+            linear-gradient(var(--cross), var(--cross)) top left / 1px 6px no-repeat,
+            linear-gradient(90deg, var(--cross), var(--cross)) bottom left / 6px 1px no-repeat;
+    }
+
+    .bottom-junction-right {
+        width: 6px;
+        background:
+            linear-gradient(var(--cross), var(--cross)) top right / 1px 6px no-repeat,
+            linear-gradient(90deg, var(--cross), var(--cross)) bottom right / 6px 1px no-repeat;
+    }
+}
+
 .junction.bl { left: -6px; bottom: -6px; }
 .junction.br { right: -6px; bottom: -6px; }
 .junction.tl { left: -6px; top: -6px; }
@@ -173,8 +201,21 @@ h1, h2, h3, h4, h5, h6 {
 .junction.l { left: -6px; top: calc(50% - 6px); }
 .junction.r { right: -6px; top: calc(50% - 6px); }
 
+.bottom-junction-left.bl { left: -6px; bottom: 0; }
+.bottom-junction-right.br { right: -6px; bottom: 0; }
+
+@media (max-width: 768px) {
+    .bottom-junction-left.bl {
+        left: 0;
+    }
+    .bottom-junction-right.br {
+        right: 0;
+    }
+}
+
 @media (max-width: 1050px) {
-  .junction.br, .junction.tr, .junction.r {
+  .junction.br, .junction.tr, .junction.r,
+  .junction.bl, .junction.b {
     opacity: 0;
   }
 }

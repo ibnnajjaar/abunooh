@@ -92,8 +92,10 @@
             </div>
         </footer>
 
-        <div class="junction bl"></div>
-        <div class="junction br"></div>
+        <div class="after-footer">
+        <div class="bottom-junction-left bl"></div>
+        <div class="bottom-junction-right br"></div>
+        </div>
     </div>
 
     @livewire('notifications')
