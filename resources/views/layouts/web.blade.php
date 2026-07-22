@@ -51,14 +51,13 @@
     @stack('scripts')
 </head>
 <body class="antialiased selection:bg-[oklch(70.5%_.213_47.604)] selection:text-[#001408]">
-
+    <div class="cursor-glow"></div>
     <div class="framed-canvas">
         <!-- Junctions -->
         <div class="junction tl"></div>
         <div class="junction tr"></div>
 
         <x-navigation />
-        <div class="cursor-glow"></div>
         <div id="loader" class="fixed inset-0 z-[200] bg-[var(--canvas)] flex items-center justify-center transition-opacity duration-700">
             <div class="flex flex-col items-center">
                 <div class="w-16 h-[1px] bg-[var(--grid)] relative overflow-hidden">
@@ -120,7 +119,14 @@
             if (event.pointerType === 'touch') return;
             x = event.clientX;
             y = event.clientY;
-            glow.classList.add('visible');
+
+            const isOverKongCard = event.target.closest('.kong-card');
+            if (isOverKongCard) {
+                glow.classList.remove('visible');
+            } else {
+                glow.classList.add('visible');
+            }
+
             if (!frame) frame = requestAnimationFrame(paintGlow);
         }, { passive: true });
 
@@ -191,7 +197,7 @@
             margin: -200px 0 0 -200px;
             border-radius: 50%;
             pointer-events: none;
-            z-index: 55;
+            z-index: 1;
             opacity: 0;
             transform: translate3d(-500px, -500px, 0);
             background: radial-gradient(circle,

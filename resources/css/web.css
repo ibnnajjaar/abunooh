@@ -134,6 +134,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   position: relative;
   background: var(--canvas);
+  z-index: 10;
 }
 
 @media (max-width: 1050px) {
@@ -313,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: -170px 0 0 -170px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 55;
+  z-index: 1;
   opacity: 0;
   transform: translate3d(-500px, -500px, 0);
   background: radial-gradient(circle,

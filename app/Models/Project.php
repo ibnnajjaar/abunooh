@@ -53,4 +53,10 @@ class Project extends Model implements HasMedia
             }
         );
     }
+    protected function casts(): array
+    {
+        return [
+            'publish_status' => PublishStatuses::class,
+        ];
+    }
 }
