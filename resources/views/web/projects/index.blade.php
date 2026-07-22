@@ -34,9 +34,18 @@
                             <h3 class="font-bold text-3xl mt-12 leading-tight group-hover:text-ink transition-colors">
                                 {{ $project->title }}
                             </h3>
-                            <div class="mt-6 text-[18px] line-clamp-4 text-[var(--text)] leading-relaxed prose-sm">
+                            <div class="mt-6 text-[18px] text-[var(--text)] leading-relaxed prose-sm">
                                 {!! $project->formatted_description !!}
                             </div>
+                            @if($project->tags->isNotEmpty())
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    @foreach($project->tags as $tag)
+                                        <span class="technical-label text-[10px] px-2 py-1 bg-[var(--grid)] border border-[var(--grid)] opacity-80 mono">
+                                            #{{ $tag->name }}
+                                        </span>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                         <div class="mt-12 flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[11px] group-hover:text-ink transition-all mono">
                             {{ $project->status ?? 'Completed' }}

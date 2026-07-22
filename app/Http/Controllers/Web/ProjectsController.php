@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Models\Post;
 use App\Models\Project;
 use Illuminate\Http\Request;
-use App\Support\Enums\PostTypes;
 
 class ProjectsController
 {
     public function index(Request $request)
     {
         $project_groups = Project::query()
+            ->with('tags')
             ->published()
                                  ->get()
                                  ->sortByDesc('year')
