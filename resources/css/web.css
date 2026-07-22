@@ -173,6 +173,12 @@ h1, h2, h3, h4, h5, h6 {
 .junction.l { left: -6px; top: calc(50% - 6px); }
 .junction.r { right: -6px; top: calc(50% - 6px); }
 
+@media (max-width: 1050px) {
+  .junction.br, .junction.tr, .junction.r {
+    opacity: 0;
+  }
+}
+
 /* Light Point Animation */
 .grid-line-beam {
   position: absolute;
