@@ -7,7 +7,7 @@
 
     <div class="section-stack reveal">
         @foreach ($project_groups as $year => $projects)
-            <x-web.stack-header
+            <x-web.stack-header-non-stick
                 :index="$loop->index"
                 :label="$year . ' // Projects'"
             />
@@ -47,9 +47,9 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="mt-12 flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[11px] group-hover:text-ink transition-all mono">
+                        <div class="mt-12 flex items-center gap-2 technical-label text-[10px] mono opacity-80">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[var(--lime)] animate-pulse"></span>
                             {{ $project->status ?? 'Completed' }}
-                            <span class="group-hover:translate-x-2 transition-transform text-[var(--lime)]">→</span>
                         </div>
                     </div>
                 @endforeach
