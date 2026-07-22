@@ -51,6 +51,13 @@
 
 html, body {
   background: var(--canvas);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--grid), transparent 60%) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, color-mix(in srgb, var(--grid), transparent 60%) 0.5px, transparent 0.5px),
+    linear-gradient(color-mix(in srgb, var(--grid), transparent 30%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--grid), transparent 30%) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 96px 96px, 96px 96px;
+  background-attachment: fixed;
   color: var(--text);
   font-family: Outfit, Arial, sans-serif;
   margin: 0;
@@ -76,11 +83,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-  background-image:
-          linear-gradient(to bottom, var(--surface) / 70%, var(--surface) / 70%),
-          url("../images/hero.png");
-  background-size: cover;
-  background-position: center;
+  /*background-image:*/
+  /*        linear-gradient(to bottom, var(--surface) / 70%, var(--surface) / 70%),*/
+  /*        url("../images/hero.png");*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
 }
 
 .section-statement {
