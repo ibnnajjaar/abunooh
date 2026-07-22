@@ -1,12 +1,13 @@
-<nav class="site-nav">
+<nav class="site-nav px-4 md:px-6">
     <div class="junction bl"></div>
     <div class="junction br"></div>
     <div class="">
-        <a href="{{ route('web.home.index') }}" class="font-extrabold text-2xl tracking-tighter text-ink">
+        <a href="{{ route('web.home.index') }}"
+           class="font-extrabold text-xl md:text-2xl tracking-tighter text-ink">
             ABU NOOH
         </a>
     </div>
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-6 text-base">
         <a href="{{ route('web.home.index') }}" class="technical-label hover:text-ink transition-colors">Blog</a>
         <a href="{{ route('web.projects.index') }}" class="technical-label hover:text-ink transition-colors">Projects</a>
         @php
