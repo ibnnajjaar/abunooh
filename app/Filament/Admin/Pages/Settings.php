@@ -15,6 +15,8 @@ use Filament\Navigation\NavigationItem;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Pages\Enums\SubNavigationPosition;
 
@@ -72,7 +74,7 @@ class Settings extends Page implements HasForms
                                     ->inlineLabel()
                                ->disabled(! auth('web_admin')->user()->can('settings.update'))
                                     ->required(),
-                           TextInput::make('site_description')
+                           MarkdownEditor::make('site_description')
                                     ->label('Site Description')
                                     ->inlineLabel()
                                     ->disabled(! auth('web_admin')->user()->can('settings.update'))
@@ -82,7 +84,7 @@ class Settings extends Page implements HasForms
                        ->id('hero-section')
                        ->description('Update your hero section details here.')
                        ->schema([
-                           TextInput::make('home_page_title')
+                           RichEditor::make('home_page_title')
                                     ->label('Hero Section Title')
                                     ->inlineLabel()
                                     ->disabled(! auth('web_admin')->user()->can('settings.update'))
