@@ -8,6 +8,7 @@
     </div>
     <div class="flex items-center gap-6">
         <a href="{{ route('web.home.index') }}" class="technical-label hover:text-ink transition-colors">Blog</a>
+        <a href="{{ route('web.projects.index') }}" class="technical-label hover:text-ink transition-colors">Projects</a>
         @php
             $menu_items = \App\Models\Post::query()
                 ->published()

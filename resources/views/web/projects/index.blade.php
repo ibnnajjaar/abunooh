@@ -14,7 +14,7 @@
 
             <section id="projects-{{ $year }}"
                 @class([
-                    'grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[var(--grid)] relative',
+                    'project-card grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[var(--grid)] relative',
                 ])
             >
                 <div class="grid-line-beam hidden lg:block"></div>

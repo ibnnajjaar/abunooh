@@ -67,17 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.addEventListener('mouseleave', () => {
         glow.classList.remove('visible');
     });
-
-    // Card Local Spotlight
-    const updateCardSpotlight = (card, event) => {
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
-        card.style.setProperty('--my', `${event.clientY - rect.top}px`);
-    };
-
-    document.querySelectorAll('.kong-card').forEach((card) => {
-        card.addEventListener('pointermove', (event) => {
-            updateCardSpotlight(card, event);
-        }, { passive: true });
-    });
 });

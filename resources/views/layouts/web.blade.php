@@ -120,12 +120,7 @@
             x = event.clientX;
             y = event.clientY;
 
-            const isOverKongCard = event.target.closest('.kong-card');
-            if (isOverKongCard) {
-                glow.classList.remove('visible');
-            } else {
-                glow.classList.add('visible');
-            }
+            glow.classList.add('visible');
 
             if (!frame) frame = requestAnimationFrame(paintGlow);
         }, { passive: true });
