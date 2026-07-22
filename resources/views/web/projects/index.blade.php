@@ -47,8 +47,9 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="mt-12 flex items-center gap-2 technical-label text-[10px] mono opacity-80">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[var(--lime)] animate-pulse"></span>
+                        <div class="mt-12 inline-flex items-center gap-2 technical-label text-[10px] mono opacity-80 relative overflow-hidden px-2 py-1 transition-colors duration-300 group-hover:text-ink group-hover:opacity-100">
+                            <span class="absolute inset-0 bg-[var(--lime)] -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out -z-10"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-[var(--lime)] group-hover:bg-ink animate-pulse transition-colors duration-300"></span>
                             {{ $project->status ?? 'Completed' }}
                         </div>
                     </div>
