@@ -88,7 +88,6 @@
             </div>
             <div class="mt-20 flex justify-between items-center text-[13px] uppercase tracking-widest text-text font-bold mono">
                 <span>© {{ now()->year }} HUSSAIN AFEEF</span>
-                <span>BUILT WITH LARAVEL + FILAMENT</span>
             </div>
         </footer>
 
