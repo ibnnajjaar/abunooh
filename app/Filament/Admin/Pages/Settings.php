@@ -11,10 +11,12 @@ use Filament\Support\Icons\Heroicon;
 use App\Support\Settings\SiteSettings;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Components\Repeater;
+use Filament\Navigation\NavigationItem;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Pages\Enums\SubNavigationPosition;
 
 class Settings extends Page implements HasForms
 {
@@ -25,6 +27,8 @@ class Settings extends Page implements HasForms
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Cog8Tooth;
 
     protected static string | UnitEnum | null $navigationGroup = 'Configuration';
+
+    protected static ?SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Start;
 
     protected static ?int $navigationSort = 2002;
 
@@ -45,28 +49,50 @@ class Settings extends Page implements HasForms
         ]);
     }
 
+    public function getSubNavigation(): array
+    {
+        return [
+            NavigationItem::make('Site Settings')
+                          ->url('#site-settings')
+                          ->icon(Heroicon::OutlinedGlobeAlt),
+        ];
+    }
+
     public function form(Schema $schema): Schema
     {
-
         return $schema
+            ->statePath('data')
             ->components([
+
                 Section::make('Site Settings')
+                       ->id('site-settings')
                        ->description('Update your site settings here.')
                        ->schema([
                            TextInput::make('site_name')
                                     ->inlineLabel()
                                ->disabled(! auth('web_admin')->user()->can('edit settings'))
                                     ->required(),
-                           TextInput::make('home_page_title')
-                                    ->label('Hero Section Title')
-                                    ->inlineLabel()
-                                    ->disabled(! auth('web_admin')->user()->can('edit settings'))
-                                    ->required(),
                            TextInput::make('home_page_description')
                                     ->label('Site Description')
                                     ->inlineLabel()
                                     ->disabled(! auth('web_admin')->user()->can('edit settings'))
                                     ->required(),
+                       ]),
+                Section::make('Hero Section')
+                       ->id('hero-section')
+                       ->description('Update your hero section details here.')
+                       ->schema([
+                           TextInput::make('home_page_title')
+                                    ->label('Hero Section Title')
+                                    ->inlineLabel()
+                                    ->disabled(! auth('web_admin')->user()->can('edit settings'))
+                                    ->required(),
+
+                       ]),
+                Section::make('Socials')
+                       ->id('social-links')
+                       ->description('Manage your social media links.')
+                       ->schema([
                            Repeater::make('socials')
                                    ->schema([
                                        TextInput::make('name')
@@ -79,7 +105,7 @@ class Settings extends Page implements HasForms
                                    ->inlineLabel()
                                    ->disabled(! auth('web_admin')->user()->can('edit settings')),
                        ]),
-            ])->statePath('data');
+            ]);
     }
 
     protected function getFormActions(): array
@@ -90,6 +116,13 @@ class Settings extends Page implements HasForms
                 ->visible(! auth('web_admin')->user()->cannot('edit settings'))
                   ->submit('save'),
         ];
+    }
+
+    public function infolist(Schema $schema): Schema
+    {
+        return $schema
+            ->statePath('data')
+            ->columns(1);
     }
 
     public function save(): void

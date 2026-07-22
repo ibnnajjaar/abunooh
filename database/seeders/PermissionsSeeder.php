@@ -76,8 +76,8 @@ class PermissionsSeeder extends Seeder
                 'delete roles',
             ],
             'settings' => [
-                'view settings',
-                'edit settings',
+                'settings.view',
+                'settings.update',
             ]
         ];
     }
