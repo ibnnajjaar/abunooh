@@ -4,7 +4,8 @@
     <div class="">
         <a href="{{ route('web.home.index') }}"
            class="font-extrabold text-xl md:text-2xl tracking-tighter text-ink">
-            ABU NOOH
+            <span class="hidden md:block">ABU NOOH</span>
+            <span class="block md:hidden">AN</span>
         </a>
     </div>
     <div class="flex items-center gap-6 text-base">
