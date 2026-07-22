@@ -12,7 +12,8 @@
                 :label="$year_group['year'] . ' // Journal'"
             />
 
-            <section id="articles-{{ $year_group['year'] }}" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] border-b border-[var(--grid)] relative">
+            <section id="articles-{{ $year_group['year'] }}"
+                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--grid)] relative">
                 <div class="junction bl"></div>
                 <div class="junction br"></div>
                 @foreach ($year_group['posts'] as $post)
