@@ -63,7 +63,7 @@
             @yield('content')
         </main>
 
-        <footer class="mt-20 border-t border-[var(--grid)] bg-[var(--surface)] p-[var(--page-gutter)] relative">
+        <footer class="border-t border-[var(--grid)] bg-[var(--surface)] p-[var(--page-gutter)] relative">
             <div class="junction tl"></div>
             <div class="junction tr"></div>
             <div class="flex flex-col md:flex-row justify-between items-start gap-8">
