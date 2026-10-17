@@ -43,6 +43,12 @@ it('shows activity details in view page', function () {
         ->assertSeeLivewire(ChangeLogList::class);
 })->group('activities', 'activities.view');
 
-it('does not show an edit action for activities')
-    ->todo(note: 'TASK-7: ViewActivity has an EditAction although ActivityResource has no edit page')
-    ->group('activities', 'activities.view');
+it('does not show an edit action for activities', function () {
+    $this->actingAsAdmin(['activity.view']);
+
+    $activity = Activity::create(['log_name' => 'default', 'description' => 'created']);
+
+    livewire(ViewActivity::class, ['record' => $activity->getKey()])
+        ->assertOk()
+        ->assertActionDoesNotExist('edit');
+})->group('activities', 'activities.view');
