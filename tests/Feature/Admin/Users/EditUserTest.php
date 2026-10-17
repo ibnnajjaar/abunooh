@@ -114,3 +114,20 @@ it('requires the password confirmation when a password is given', function () {
 it('sets requires_password_update from the form checkbox')
     ->todo(note: 'TASK-4: the form field require_password_update_on_next_login is never read by UserPasswordData')
     ->group('users', 'users.update');
+
+it('requires a unique email but allows keeping the current one', function () {
+    $this->actingAsAdmin(['user.view', 'user.update']);
+
+    $user = User::factory()->create();
+    User::factory()->create(['email' => 'taken@example.com']);
+
+    livewire(EditUser::class, ['record' => $user->getKey()])
+        ->fillForm(['email' => 'taken@example.com'])
+        ->call('save')
+        ->assertHasFormErrors(['email' => 'unique']);
+
+    livewire(EditUser::class, ['record' => $user->getKey()])
+        ->fillForm(['email' => $user->email])
+        ->call('save')
+        ->assertHasNoFormErrors();
+})->group('users', 'users.update');

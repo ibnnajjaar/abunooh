@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Support\Enums\UserStatus;
 
 use function Pest\Livewire\livewire;
@@ -57,6 +58,13 @@ it('validates user form data', function () {
         ->assertHasFormErrors(['email' => 'email']);
 })->group('users', 'users.create');
 
-it('requires a unique email')
-    ->todo(note: 'TASK-11: the user form has no unique rule on email')
-    ->group('users', 'users.create');
+it('requires a unique email', function () {
+    $this->actingAsAdmin(['user.view', 'user.create']);
+
+    User::factory()->create(['email' => 'taken@example.com']);
+
+    livewire(CreateUser::class)
+        ->fillForm(['name' => 'Jane', 'email' => 'taken@example.com'])
+        ->call('create')
+        ->assertHasFormErrors(['email' => 'unique']);
+})->group('users', 'users.create');

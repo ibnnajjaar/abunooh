@@ -19,6 +19,7 @@ class UserDetailsForm
                 TextInput::make('email')
                     ->inlineLabel()
                     ->email()
+                    ->unique(ignoreRecord: true)
                     ->required(),
                 DateTimePicker::make('email_verified_at')
                     ->inlineLabel(),
