@@ -116,11 +116,6 @@ class Post extends Model
         return ucwords($this->title);
     }
 
-    public function registerMediaCollections(): void
-    {
-        $this->registerGraphifyMediaCollection();
-    }
-
     public function getIsPublishedAttribute(): bool
     {
         return $this->status == PublishStatuses::PUBLISHED
