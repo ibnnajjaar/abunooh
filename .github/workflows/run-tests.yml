@@ -11,7 +11,9 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ startsWith(github.event.head_commit.message, 'coverage') && 20 || 5 }}
+    timeout-minutes: 20
+    permissions:
+      contents: write
 
     steps:
       -   name: Checkout code
@@ -27,7 +29,7 @@ jobs:
           with:
             php-version: 8.4
             extensions: curl, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, iconv, gd, simplexml, soap
-            coverage: ${{ startsWith(github.event.head_commit.message, 'coverage') && 'xdebug' || 'none' }}
+            coverage: xdebug
 
       -   name: Install dependencies
           run: |
@@ -35,10 +37,10 @@ jobs:
 
       -   name: Execute tests
           run: |
-              vendor/bin/pest ${{ startsWith(github.event.head_commit.message, 'coverage') && '--coverage --coverage-clover=clover.xml' || '' }}
+              vendor/bin/pest --coverage --coverage-clover=clover.xml
 
       -   name: Make code coverage badge
-          if: startsWith(github.event.head_commit.message, 'coverage')
+          if: github.event_name == 'push'
           uses: timkrase/phpunit-coverage-badge@v1.2.1
           with:
             coverage_badge_path: .github/coverage.svg
