@@ -5,16 +5,14 @@ namespace App\Filament\Admin\Resources\Posts\Schemas;
 use Filament\Schemas\Schema;
 use App\Support\Enums\PostTypes;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Checkbox;
 use Filament\Schemas\Components\Grid;
 use App\Support\Enums\PublishStatuses;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\MarkdownEditor;
-use Filament\Schemas\Components\Utilities\Set;
 
 class PostForm
 {
@@ -62,8 +60,10 @@ class PostForm
                                        Select::make('author_id')
                                              ->label('Author')
                                              ->relationship('author', 'name')
+                                             ->default(fn () => auth('web_admin')->id())
                                              ->searchable()
-                                             ->preload(),
+                                             ->preload()
+                                             ->required(),
                                        DateTimePicker::make('published_at'),
                                        Select::make('status')
                                              ->searchable()

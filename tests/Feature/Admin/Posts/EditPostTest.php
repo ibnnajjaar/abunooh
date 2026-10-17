@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Post;
+use App\Models\User;
 use App\Support\Enums\PostTypes;
 
 use function Pest\Livewire\livewire;
@@ -86,6 +87,16 @@ it('validates post edit form data', function () {
         ->assertHasNoFormErrors();
 })->group('posts', 'posts.update');
 
-it('can change the post author')
-    ->todo(note: 'TASK-10: author_id is not fillable, so changing the author is silently ignored')
-    ->group('posts', 'posts.update');
+it('can change the post author', function () {
+    $this->actingAsAdmin(['posts.view', 'posts.update']);
+
+    $post = Post::factory()->create();
+    $newAuthor = User::factory()->create();
+
+    livewire(EditPost::class, ['record' => $post->getKey()])
+        ->fillForm(['author_id' => $newAuthor->id])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($post->refresh()->author_id)->toBe($newAuthor->id);
+})->group('posts', 'posts.update');
