@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Tag;
+use App\Models\Post;
 use App\Models\Role;
 use App\Models\User;
+use App\Models\Project;
 use App\Models\Activity;
 use App\Models\Employee;
 use App\Policies\ExportPolicy;
@@ -41,6 +44,9 @@ class AppServiceProvider extends ServiceProvider
         \Illuminate\Database\Eloquent\Relations\Relation::enforceMorphMap([
             'activity'         => Activity::class,
             'user'             => User::class,
+            'post'             => Post::class,
+            'project'          => Project::class,
+            'tag'              => Tag::class,
             'employee'         => Employee::class,
             'role'             => Role::class,
             'permission'       => Permission::class,

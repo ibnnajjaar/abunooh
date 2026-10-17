@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Tag;
+use App\Models\Post;
 use App\Models\Project;
 use App\Support\Enums\PublishStatuses;
 
@@ -46,5 +47,14 @@ it('renders the description as markdown', function () {
     expect(trim($project->formatted_description))->toBe('<h1>Title</h1>');
 });
 
-it('returns an empty featured image without media')
-    ->todo(note: 'TASK-9: Project is missing from the enforced morph map, so reading media throws ClassMorphViolationException');
+it('returns an empty featured image without media', function () {
+    $project = Project::factory()->create();
+
+    expect($project->featured_image)->toBe('');
+});
+
+it('uses morph aliases for content models', function () {
+    expect((new Project())->getMorphClass())->toBe('project')
+        ->and((new Tag())->getMorphClass())->toBe('tag')
+        ->and((new Post())->getMorphClass())->toBe('post');
+});
