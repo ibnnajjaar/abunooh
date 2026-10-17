@@ -35,11 +35,7 @@ jobs:
 
       -   name: Execute tests
           run: |
-            if [[ "${{ github.event.head_commit.message }}" == coverage* ]]; then
               vendor/bin/pest --coverage --coverage-clover=clover.xml
-            else
-              vendor/bin/pest
-            fi
 
       -   name: Make code coverage badge
           if: startsWith(github.event.head_commit.message, 'coverage')

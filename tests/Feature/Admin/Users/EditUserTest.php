@@ -5,21 +5,12 @@ use App\Models\User;
 use function Pest\Livewire\livewire;
 
 use Illuminate\Support\Facades\Hash;
-use Database\Seeders\PermissionsSeeder;
-use Spatie\Permission\Models\Permission;
 
 use function Pest\Laravel\assertDatabaseHas;
 
 use App\Filament\Admin\Resources\Users\Pages\EditUser;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
-
-beforeEach(function () {
-    // TASK-3: UserPolicy::delete checks `user.delete`, which PermissionsSeeder never creates,
-    // so the edit page crashes while rendering its DeleteAction. Create it until the policy is fixed.
-    $this->seed(PermissionsSeeder::class);
-    Permission::findOrCreate('user.delete', 'web_admin');
-});
 
 it('cannot load the user edit page without update permission', function () {
     $this->actingAsAdmin(['user.view']);
@@ -122,8 +113,4 @@ it('requires the password confirmation when a password is given', function () {
 
 it('sets requires_password_update from the form checkbox')
     ->todo(note: 'TASK-4: the form field require_password_update_on_next_login is never read by UserPasswordData')
-    ->group('users', 'users.update');
-
-it('renders the edit page without a manually created user.delete permission')
-    ->todo(note: 'TASK-3: the edit page throws PermissionDoesNotExist for user.delete')
     ->group('users', 'users.update');

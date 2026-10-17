@@ -6,8 +6,6 @@ use Filament\Actions\DeleteAction;
 use function Pest\Livewire\livewire;
 
 use Filament\Actions\DeleteBulkAction;
-use Database\Seeders\PermissionsSeeder;
-use Spatie\Permission\Models\Permission;
 
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
@@ -16,13 +14,6 @@ use App\Filament\Admin\Resources\Users\Pages\EditUser;
 use App\Filament\Admin\Resources\Users\Pages\ListUsers;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
-
-beforeEach(function () {
-    // TASK-3: UserPolicy::delete checks `user.delete`, which PermissionsSeeder never creates,
-    // so the edit page crashes while rendering its DeleteAction. Create it until the policy is fixed.
-    $this->seed(PermissionsSeeder::class);
-    Permission::findOrCreate('user.delete', 'web_admin');
-});
 
 it('can bulk delete users with delete any permission', function () {
     $this->actingAsAdmin(['user.view', 'user.delete.any']);
@@ -52,7 +43,7 @@ it('hides the bulk delete action without delete any permission', function () {
 })->group('users', 'users.delete');
 
 it('can delete a user from the edit page with delete permission', function () {
-    $this->actingAsAdmin(['user.view', 'user.update', 'user.delete']);
+    $this->actingAsAdmin(['user.view', 'user.update', 'user.delete.any']);
 
     $user = User::factory()->create();
 
@@ -71,4 +62,16 @@ it('hides the delete action on the edit page without delete permission', functio
 
     livewire(EditUser::class, ['record' => $user->getKey()])
         ->assertActionHidden(DeleteAction::class);
+})->group('users', 'users.delete');
+
+it('can only delete their own account with the delete own permission', function () {
+    $admin = $this->actingAsAdmin(['user.view', 'user.update', 'user.delete.own']);
+
+    $other = User::factory()->create();
+
+    livewire(EditUser::class, ['record' => $other->getKey()])
+        ->assertActionHidden(DeleteAction::class);
+
+    livewire(EditUser::class, ['record' => $admin->getKey()])
+        ->assertActionVisible(DeleteAction::class);
 })->group('users', 'users.delete');

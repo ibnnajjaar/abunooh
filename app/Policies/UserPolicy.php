@@ -28,7 +28,8 @@ class UserPolicy
 
     public function delete(User $user, User $model): bool
     {
-        return $user->hasPermissionTo('user.delete');
+        return $user->hasPermissionTo('user.delete.any')
+            || ($user->is($model) && $user->hasPermissionTo('user.delete.own'));
     }
 
     public function deleteAny(User $user): User|bool
@@ -38,12 +39,13 @@ class UserPolicy
 
     public function restore(User $user, User $model): bool
     {
-        return $user->hasPermissionTo('user.force_delete');
+        return $this->forceDelete($user, $model);
     }
 
     public function forceDelete(User $user, User $model): bool
     {
-        return $user->hasPermissionTo('user.force_delete');
+        return $user->hasPermissionTo('user.force_delete.any')
+            || ($user->is($model) && $user->hasPermissionTo('user.force_delete.own'));
     }
 
     public function forceDeleteAny(User $user): bool

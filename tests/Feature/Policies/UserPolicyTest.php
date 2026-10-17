@@ -32,5 +32,34 @@ it('grants each ability only with its permission', function (string $ability, st
     ['forceDeleteAny', 'user.force_delete.any', false],
 ]);
 
-it('authorizes delete, restore and force delete with seeded permissions')
-    ->todo(note: 'TASK-3: delete, restore and forceDelete check user.delete / user.force_delete, which are not seeded');
+it('authorizes deleting any user with the any permission', function (string $ability, string $permission) {
+    $policy = new UserPolicy();
+    $user = User::factory()->create();
+    $other = User::factory()->create();
+
+    expect($policy->{$ability}($user, $other))->toBeFalse();
+
+    $user->givePermissionTo($permission);
+
+    expect($policy->{$ability}($user, $other))->toBeTrue()
+        ->and($policy->{$ability}($user, $user))->toBeTrue();
+})->with([
+    ['delete', 'user.delete.any'],
+    ['restore', 'user.force_delete.any'],
+    ['forceDelete', 'user.force_delete.any'],
+]);
+
+it('authorizes deleting only their own account with the own permission', function (string $ability, string $permission) {
+    $policy = new UserPolicy();
+    $user = User::factory()->create();
+    $other = User::factory()->create();
+
+    $user->givePermissionTo($permission);
+
+    expect($policy->{$ability}($user, $user))->toBeTrue()
+        ->and($policy->{$ability}($user, $other))->toBeFalse();
+})->with([
+    ['delete', 'user.delete.own'],
+    ['restore', 'user.force_delete.own'],
+    ['forceDelete', 'user.force_delete.own'],
+]);
