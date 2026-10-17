@@ -10,11 +10,16 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('provider_id')->nullable()->after('email');
-            $table->string('provider_name')->nullable()->after('provider_id');
-            $table->string('provider_token')->nullable()->after('provider_name');
-            $table->string('provider_refresh_token')->nullable()->after('provider_token');
+        // The legacy production schema already has the provider columns
+        $hasProviderColumns = Schema::hasColumn('users', 'provider_id');
+
+        Schema::table('users', function (Blueprint $table) use ($hasProviderColumns) {
+            if (! $hasProviderColumns) {
+                $table->string('provider_id')->nullable()->after('email');
+                $table->string('provider_name')->nullable()->after('provider_id');
+                $table->string('provider_token')->nullable()->after('provider_name');
+                $table->string('provider_refresh_token')->nullable()->after('provider_token');
+            }
 
             // make password nullable
             $table->string('password')->nullable()->change();
