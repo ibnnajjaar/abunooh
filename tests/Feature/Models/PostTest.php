@@ -92,5 +92,9 @@ it('returns null formatted dates without a publish date', function () {
         ->and($post->formatted_long_publish_date)->toBeNull();
 });
 
-it('returns its public url')
-    ->todo(note: "TASK-5: Post::getUrlAttribute uses route('posts.show') but the route is web.posts.show");
+it('returns its public url', function () {
+    $post = Post::factory()->make(['slug' => 'my-post']);
+
+    expect($post->url)->toBe(route('web.posts.show', 'my-post'))
+        ->and($post->url)->toEndWith('/my-post');
+});

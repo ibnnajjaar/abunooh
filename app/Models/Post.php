@@ -88,7 +88,7 @@ class Post extends Model
 
     public function getUrlAttribute(): string
     {
-        return route('posts.show', $this);
+        return route('web.posts.show', $this->slug);
     }
 
     public function getFormattedContentAttribute(): string
