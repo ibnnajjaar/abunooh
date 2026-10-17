@@ -29,3 +29,4 @@ Thumbs.db
 /backups
 .env.before_lerd
 *.sql.gz
+*.tar.gz
