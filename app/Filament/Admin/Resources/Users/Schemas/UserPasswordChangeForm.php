@@ -50,7 +50,8 @@ class UserPasswordChangeForm
                             $set('password_confirmation', $rand);
                             $set('show_password', true);
                         }),
-                    Checkbox::make('require_password_update_on_next_login'),
+                    Checkbox::make('requires_password_update')
+                        ->label('Require password update on next login'),
                     Checkbox::make('email_password')->label('Send password by email'),
                 ])
                 ->columnSpan(1)

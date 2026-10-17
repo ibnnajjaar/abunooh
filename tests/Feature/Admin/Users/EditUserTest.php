@@ -111,9 +111,23 @@ it('requires the password confirmation when a password is given', function () {
         ->assertHasFormErrors(['password_confirmation' => 'required_with']);
 })->group('users', 'users.update');
 
-it('sets requires_password_update from the form checkbox')
-    ->todo(note: 'TASK-4: the form field require_password_update_on_next_login is never read by UserPasswordData')
-    ->group('users', 'users.update');
+it('sets requires_password_update from the form checkbox', function () {
+    config(['auth.allow_admin_password_login' => true]);
+    $this->actingAsAdmin(['user.view', 'user.update']);
+
+    $user = User::factory()->create();
+
+    livewire(EditUser::class, ['record' => $user->getKey()])
+        ->fillForm([
+            'password' => 'new-secret-password',
+            'password_confirmation' => 'new-secret-password',
+            'requires_password_update' => true,
+        ])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($user->refresh()->requires_password_update)->toBeTruthy();
+})->group('users', 'users.update');
 
 it('requires a unique email but allows keeping the current one', function () {
     $this->actingAsAdmin(['user.view', 'user.update']);
