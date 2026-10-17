@@ -7,6 +7,7 @@ use function Pest\Livewire\livewire;
 
 use Filament\Actions\DeleteBulkAction;
 
+use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 
 use App\Filament\Admin\Resources\Projects\Pages\EditProject;
@@ -61,6 +62,15 @@ it('detaches tags when a project is deleted', function () {
     assertDatabaseMissing('project_tag', ['project_id' => $project->id]);
 })->group('projects', 'projects.delete');
 
-it('cannot bulk delete projects without delete permission')
-    ->todo(note: 'TASK-8: ProjectPolicy has no deleteAny, so bulk delete is allowed for any admin')
-    ->group('projects', 'projects.delete');
+it('cannot bulk delete projects without delete permission', function () {
+    $this->actingAsAdmin(['projects.view']);
+
+    $projects = Project::factory(2)->create();
+
+    livewire(ListProjects::class)
+        ->assertTableBulkActionHidden(DeleteBulkAction::class);
+
+    foreach ($projects as $record) {
+        assertDatabaseHas('projects', ['id' => $record->id]);
+    }
+})->group('projects', 'projects.delete');

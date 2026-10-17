@@ -30,4 +30,5 @@ it('grants each ability only with its permission', function (string $ability, st
     ['create', 'tags.create', false],
     ['update', 'tags.update', true],
     ['delete', 'tags.delete', true],
+    ['deleteAny', 'tags.delete', false],
 ]);

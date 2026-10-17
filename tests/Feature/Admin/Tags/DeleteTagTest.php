@@ -6,6 +6,7 @@ use function Pest\Livewire\livewire;
 
 use Filament\Actions\DeleteBulkAction;
 
+use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 
 use App\Filament\Admin\Resources\Tags\Pages\ListTags;
@@ -26,6 +27,15 @@ it('can bulk delete tags with delete permission', function () {
     }
 })->group('tags', 'tags.delete');
 
-it('cannot bulk delete tags without delete permission')
-    ->todo(note: 'TASK-8: TagPolicy has no deleteAny, so bulk delete is allowed for any admin')
-    ->group('tags', 'tags.delete');
+it('cannot bulk delete tags without delete permission', function () {
+    $this->actingAsAdmin(['tags.view']);
+
+    $tags = Tag::factory(2)->create();
+
+    livewire(ListTags::class)
+        ->assertTableBulkActionHidden(DeleteBulkAction::class);
+
+    foreach ($tags as $record) {
+        assertDatabaseHas('tags', ['id' => $record->id]);
+    }
+})->group('tags', 'tags.delete');

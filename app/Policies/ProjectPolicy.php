@@ -31,4 +31,9 @@ class ProjectPolicy
     {
         return $user->hasPermissionTo('projects.delete');
     }
+
+    public function deleteAny(User $user): bool
+    {
+        return $user->hasPermissionTo('projects.delete');
+    }
 }
