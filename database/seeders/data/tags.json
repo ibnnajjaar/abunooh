@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "name": "Javaabu",
+        "slug": "javaabu",
+        "color": "#F97316"
+    },
+    {
+        "id": 2,
+        "name": "Freelance",
+        "slug": "freelance",
+        "color": "#F97316"
+    },
+    {
+        "id": 3,
+        "name": "PHP",
+        "slug": "php",
+        "color": "#2F3758"
+    },
+    {
+        "id": 4,
+        "name": "Laravel",
+        "slug": "laravel",
+        "color": "#ED4F45"
+    },
+    {
+        "id": 5,
+        "name": "jQuery",
+        "slug": "jquery",
+        "color": "#0868AC"
+    },
+    {
+        "id": 6,
+        "name": "Tailwind CSS",
+        "slug": "tailwind-css",
+        "color": "#38BDF8"
+    },
+    {
+        "id": 7,
+        "name": "Vue Js",
+        "slug": "vue-js",
+        "color": "#41B883"
+    },
+    {
+        "id": 8,
+        "name": "Blade",
+        "slug": "blade",
+        "color": "#ED4F45"
+    },
+    {
+        "id": 9,
+        "name": "Filament",
+        "slug": "filament",
+        "color": "#FBBF24"
+    },
+    {
+        "id": 10,
+        "name": "Livewire",
+        "slug": "livewire",
+        "color": "#4E56A6"
+    },
+    {
+        "id": 11,
+        "name": "Alpine Js",
+        "slug": "alpine-js",
+        "color": "#77C1D2"
+    },
+    {
+        "id": 12,
+        "name": "Bootstrap",
+        "slug": "bootstrap",
+        "color": "#7B11F3"
+    },
+    {
+        "id": 13,
+        "name": "WordPress",
+        "slug": "wordpress",
+        "color": "#1A6F95"
+    }
+]

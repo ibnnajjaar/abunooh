@@ -1,0 +1,122 @@
+[
+    {
+        "id": 2,
+        "title": "Criminal Justice Database",
+        "slug": "criminal-justice-database",
+        "year": 2022,
+        "order_column": 1,
+        "client": "Prosecutor General's Office",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "In 2022, Javaabu Pvt Ltd, the company I work for, was awarded a contract by the Prosecutor General's Office to develop a comprehensive criminal justice sector database in Maldives. The objective of this project was to increase access to data, improve accountability, and identify potential bottlenecks within the system, allowing policy makers to effectively address these issues.\n\nI served as the project lead and a senior developer within a team of three developers. We partnered with key stakeholders such as UNICEF, Maldives Police Service, Correctional Service, National Bureau of Statistics, Attorney General's Office, Human Rights Commission of the Maldives, Anti-corruption Commission, National Integrity Commission, and the Child Ombudsperson.\n\nThe project comprised of two major components: a secure database accessible only via government networks and a public-facing statistics portal displaying key performance indicators (KPIs) determined by stakeholders. This initiative aimed to streamline the criminal justice sector's data management and enhance transparency for the public.\n\nWe built the database using the Laravel framework, ensuring its stability, security, and efficiency. Our team diligently worked to identify existing data collection processes, recognized redundancies and inefficiencies, and modernized the methods to improve overall performance.\n\nThis project is a proud addition to my portfolio, showcasing both my technical expertise and ability to lead a team to achieve crucial, impactful results.",
+        "tags": [1, 4, 8, 3, 12, 5]
+    },
+    {
+        "id": 3,
+        "title": "Mees Portal",
+        "slug": "mees-portal",
+        "year": 2021,
+        "order_column": 1,
+        "client": "Ministry of Youth, Sports and Community Empowerment",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Developed an official platform for non-profit organizations to request and manage registrations, memberships, asset booking, grant management, proposal processing, report submissions, and communication with ministry staff. \nThe application utilizes Laravel 8 to test and implement its complex business logic.",
+        "tags": [1, 4, 8, 10, 5, 3, 12]
+    },
+    {
+        "id": 4,
+        "title": "ISIMS - Student Information Management System",
+        "slug": "isims-student-information-management-system",
+        "year": 2019,
+        "order_column": 1,
+        "client": "Islamic University of Maldives",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Maintained and developed ISIMS, the current student management system utilized by the Islamic University of Maldives. This system features admission, student, and staff portals, serving thousands of users. Complex business logic is managed using Laravel 8, while the Bootstrap framework ensures a user-friendly presentation of front-end data.",
+        "tags": [1, 4, 8, 12, 5, 3]
+    },
+    {
+        "id": 5,
+        "title": "Alchemy Website",
+        "slug": "alchemy-website",
+        "year": 2021,
+        "order_column": 1,
+        "client": "Alchemy",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Designed and developed a fully customized website using Laravel 8 and Tailwind CSS for a small business, Alchemy Academy, featuring information about their teachers, programs, and courses.",
+        "tags": [2, 11, 9, 10, 4, 3, 6, 8]
+    },
+    {
+        "id": 6,
+        "title": "Faaru News Website",
+        "slug": "faaru-news-website",
+        "year": 2021,
+        "order_column": 1,
+        "client": "Faaru",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Developed Faaru, a local news website based in Hulhudhufaaru, using Laravel 8 and Tailwind CSS.",
+        "tags": [2, 11, 8, 9, 4, 10, 3, 6]
+    },
+    {
+        "id": 7,
+        "title": "Personal Blog",
+        "slug": "personal-blog",
+        "year": 2023,
+        "order_column": 2021,
+        "client": "Myself",
+        "status": "Ongoing",
+        "publish_status": "published",
+        "description": "Introducing my personal website - a reflection of my growth as a developer and a platform to showcase my work. It all started as a static site with no backend, built using Vue.js, featuring an about me page and a gallery of logo designs I had created.\n\nAs time passed and my skills evolved, the website underwent a complete transformation. I incorporated a Laravel backend with a custom theme that I designed myself. This update added a blog section, allowing me to share my thoughts and insights with the world, while retaining the about me page. The logo page, however, was removed to make way for more diverse content.\n\nFinally, in its latest iteration, the website now utilizes filamentphp, an open-source Laravel backend powered by Livewire. The introduction of a portfolio page has made it possible to showcase all of my completed projects in one place, demonstrating my expertise and accomplishments.\n\nWith a visually appealing frontend that uses Tailwind and a dark mode switcher, the website has come a long way since its inception. It stands as a testament to my continuous learning and adaptability while providing a platform to connect with others and share my professional journey.",
+        "tags": [2, 3, 4, 6, 10, 9, 8]
+    },
+    {
+        "id": 8,
+        "title": "Run for Maldives",
+        "slug": "run-for-maldives",
+        "year": 2020,
+        "order_column": 1,
+        "client": "Unix Sporting",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Developed the frontend with TailwindCSS for Run for Maldives; a unique web application allowing users to log in, join runs, compete with others, and showcase their wins and progress.",
+        "tags": [1, 8, 11, 6]
+    },
+    {
+        "id": 9,
+        "title": "Crowd Data (Initial Development)",
+        "slug": "crowd-data-initial-development",
+        "year": 2020,
+        "order_column": 1,
+        "client": "International Client",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Contributed to the development of an international platform for crowdsourcing datasets; currently handed over to another developer as I was assigned to another project that required more urgency. \nEmployed domain-driven development architecture to manage its complexity and used test driven development approach to ensure its code quality.",
+        "tags": [1, 4, 8, 3]
+    },
+    {
+        "id": 10,
+        "title": "Hulhudhufaaru Council Website",
+        "slug": "hulhudhufaaru-council-website",
+        "year": 2017,
+        "order_column": 1,
+        "client": "Hulhudhuffaaru Council",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Planned, designed, and led the development of a council website providing valuable information about the island. This project was completed by a team of four people using WordPress and Bootstrap.",
+        "tags": [2, 12, 5, 3, 13]
+    },
+    {
+        "id": 11,
+        "title": "Sexual Offenders Registry",
+        "slug": "sexual-offenders-registry",
+        "year": 2022,
+        "order_column": 1,
+        "client": "Family Protection Authority",
+        "status": "Completed",
+        "publish_status": "published",
+        "description": "Developed a comprehensive national sexual offender registry, which is currently being maintained by the FPA. This registry serves the crucial purpose of tracking all sexual offenders, including their addresses and relevant criminal cases. The FPA has implemented an internal hosting system to ensure the secure management of this database.",
+        "tags": [1, 4, 8, 12, 3, 5]
+    }
+]

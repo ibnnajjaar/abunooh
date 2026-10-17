@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Post;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class PostSeeder extends Seeder
@@ -14,7 +12,7 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        $jsonPath = database_path('seeders/posts/posts.json');
+        $jsonPath = database_path('seeders/data/posts.json');
 
         if (! file_exists($jsonPath)) {
             throw new \RuntimeException('Posts JSON file not found');
@@ -23,7 +21,7 @@ class PostSeeder extends Seeder
         $posts = json_decode(file_get_contents($jsonPath), true);
 
         foreach ($posts as $post) {
-            Post::create($post);
+            Post::updateOrCreate(['id' => $post['id']], $post);
         }
     }
 }

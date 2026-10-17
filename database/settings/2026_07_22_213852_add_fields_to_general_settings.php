@@ -6,8 +6,14 @@ return new class extends SettingsMigration
 {
     public function up(): void
     {
-        $this->migrator->add('general.site_description', '');
-        $this->migrator->add('general.socials', []);
-        $this->migrator->delete('general.home_page_description', '');
+        if (! $this->migrator->exists('general.site_description')) {
+            $this->migrator->add('general.site_description', '');
+        }
+
+        if (! $this->migrator->exists('general.socials')) {
+            $this->migrator->add('general.socials', []);
+        }
+
+        $this->migrator->deleteIfExists('general.home_page_description');
     }
 };
