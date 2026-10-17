@@ -1,0 +1,1898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1792247852">
+  <project timestamp="1792247852" name="Clover Coverage">
+    <package name="App\DataObjects">
+      <file name="/home/runner/work/abunooh/abunooh/app/DataObjects/UserData.php">
+        <class name="App\DataObjects\UserData" namespace="App\DataObjects">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="18" type="stmt" count="14"/>
+        <line num="20" type="method" name="fromArray" visibility="public" complexity="2" crap="2" count="9"/>
+        <line num="22" type="stmt" count="9"/>
+        <line num="23" type="stmt" count="9"/>
+        <line num="24" type="stmt" count="9"/>
+        <line num="25" type="stmt" count="9"/>
+        <line num="26" type="stmt" count="9"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/DataObjects/UserPasswordData.php">
+        <class name="App\DataObjects\UserPasswordData" namespace="App\DataObjects">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="17"/>
+        <line num="18" type="stmt" count="17"/>
+        <line num="20" type="method" name="fromArray" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="22" type="stmt" count="9"/>
+        <line num="23" type="stmt" count="9"/>
+        <line num="24" type="stmt" count="9"/>
+        <line num="25" type="stmt" count="9"/>
+        <line num="26" type="stmt" count="9"/>
+        <line num="27" type="stmt" count="9"/>
+        <metrics loc="30" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Pages\Auth">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Pages/Auth/AdminLogin.php">
+        <class name="App\Filament\Admin\Pages\Auth\AdminLogin" namespace="App\Filament\Admin\Pages\Auth">
+          <metrics complexity="4" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="10" elements="17" coveredelements="11"/>
+        </class>
+        <line num="12" type="method" name="mount" visibility="public" complexity="2" crap="3.46" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="25" type="method" name="content" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <metrics loc="42" ncloc="42" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="10" elements="17" coveredelements="11"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Pages/Settings.php">
+        <class name="App\Filament\Admin\Pages\Settings" namespace="App\Filament\Admin\Pages">
+          <metrics complexity="8" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="82" coveredstatements="82" elements="89" coveredelements="89"/>
+        </class>
+        <line num="39" type="method" name="canAccess" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="41" type="stmt" count="7"/>
+        <line num="44" type="method" name="mount" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="46" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="49" type="stmt" count="6"/>
+        <line num="50" type="stmt" count="6"/>
+        <line num="51" type="stmt" count="6"/>
+        <line num="54" type="method" name="getSubNavigation" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="56" type="stmt" count="6"/>
+        <line num="57" type="stmt" count="6"/>
+        <line num="58" type="stmt" count="6"/>
+        <line num="59" type="stmt" count="6"/>
+        <line num="60" type="stmt" count="6"/>
+        <line num="63" type="method" name="form" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="65" type="stmt" count="6"/>
+        <line num="66" type="stmt" count="6"/>
+        <line num="67" type="stmt" count="6"/>
+        <line num="69" type="stmt" count="6"/>
+        <line num="70" type="stmt" count="6"/>
+        <line num="71" type="stmt" count="6"/>
+        <line num="72" type="stmt" count="6"/>
+        <line num="73" type="stmt" count="6"/>
+        <line num="74" type="stmt" count="6"/>
+        <line num="75" type="stmt" count="6"/>
+        <line num="76" type="stmt" count="6"/>
+        <line num="77" type="stmt" count="6"/>
+        <line num="78" type="stmt" count="6"/>
+        <line num="79" type="stmt" count="6"/>
+        <line num="80" type="stmt" count="6"/>
+        <line num="81" type="stmt" count="6"/>
+        <line num="82" type="stmt" count="6"/>
+        <line num="83" type="stmt" count="6"/>
+        <line num="84" type="stmt" count="6"/>
+        <line num="85" type="stmt" count="6"/>
+        <line num="86" type="stmt" count="6"/>
+        <line num="87" type="stmt" count="6"/>
+        <line num="88" type="stmt" count="6"/>
+        <line num="89" type="stmt" count="6"/>
+        <line num="90" type="stmt" count="6"/>
+        <line num="91" type="stmt" count="6"/>
+        <line num="93" type="stmt" count="6"/>
+        <line num="94" type="stmt" count="6"/>
+        <line num="95" type="stmt" count="6"/>
+        <line num="96" type="stmt" count="6"/>
+        <line num="97" type="stmt" count="6"/>
+        <line num="98" type="stmt" count="6"/>
+        <line num="99" type="stmt" count="6"/>
+        <line num="100" type="stmt" count="6"/>
+        <line num="101" type="stmt" count="6"/>
+        <line num="102" type="stmt" count="6"/>
+        <line num="103" type="stmt" count="6"/>
+        <line num="104" type="stmt" count="6"/>
+        <line num="105" type="stmt" count="6"/>
+        <line num="106" type="stmt" count="6"/>
+        <line num="107" type="stmt" count="6"/>
+        <line num="108" type="stmt" count="6"/>
+        <line num="109" type="stmt" count="6"/>
+        <line num="110" type="stmt" count="6"/>
+        <line num="113" type="method" name="getFormActions" visibility="protected" complexity="1" crap="1" count="4"/>
+        <line num="115" type="stmt" count="4"/>
+        <line num="116" type="stmt" count="4"/>
+        <line num="117" type="stmt" count="4"/>
+        <line num="118" type="stmt" count="4"/>
+        <line num="119" type="stmt" count="4"/>
+        <line num="120" type="stmt" count="4"/>
+        <line num="123" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="125" type="stmt" count="2"/>
+        <line num="126" type="stmt" count="2"/>
+        <line num="127" type="stmt" count="2"/>
+        <line num="130" type="method" name="save" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="132" type="stmt" count="4"/>
+        <line num="133" type="stmt" count="1"/>
+        <line num="134" type="stmt" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="140" type="stmt" count="3"/>
+        <line num="143" type="stmt" count="1"/>
+        <line num="144" type="stmt" count="1"/>
+        <line num="145" type="stmt" count="1"/>
+        <line num="146" type="stmt" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="150" type="stmt" count="1"/>
+        <line num="151" type="stmt" count="1"/>
+        <line num="152" type="stmt" count="1"/>
+        <line num="153" type="stmt" count="1"/>
+        <metrics loc="156" ncloc="155" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="82" coveredstatements="82" elements="89" coveredelements="89"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Activities">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Activities/ActivityResource.php">
+        <class name="App\Filament\Admin\Resources\Activities\ActivityResource" namespace="App\Filament\Admin\Resources\Activities">
+          <metrics complexity="5" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="15" coveredelements="13"/>
+        </class>
+        <line num="28" type="method" name="form" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="33" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="38" type="method" name="table" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="40" type="stmt" count="6"/>
+        <line num="43" type="method" name="getRelations" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="45" type="stmt" count="252"/>
+        <line num="46" type="stmt" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="50" type="method" name="getPages" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="52" type="stmt" count="252"/>
+        <line num="53" type="stmt" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <metrics loc="58" ncloc="58" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="15" coveredelements="13"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Activities\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Activities/Pages/ListActivities.php">
+        <class name="App\Filament\Admin\Resources\Activities\Pages\ListActivities" namespace="App\Filament\Admin\Resources\Activities\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="12" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="14" type="stmt" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Activities/Pages/ViewActivity.php">
+        <class name="App\Filament\Admin\Resources\Activities\Pages\ViewActivity" namespace="App\Filament\Admin\Resources\Activities\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Activities\Schemas">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Activities/Schemas/ActivityInfolist.php">
+        <class name="App\Filament\Admin\Resources\Activities\Schemas\ActivityInfolist" namespace="App\Filament\Admin\Resources\Activities\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="24" coveredelements="24"/>
+        </class>
+        <line num="14" type="method" name="configure" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <metrics loc="41" ncloc="41" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="24" coveredelements="24"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Activities\Tables">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Activities/Tables/ActivitiesTable.php">
+        <class name="App\Filament\Admin\Resources\Activities\Tables\ActivitiesTable" namespace="App\Filament\Admin\Resources\Activities\Tables">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="85" coveredstatements="85" elements="86" coveredelements="86"/>
+        </class>
+        <line num="19" type="method" name="configure" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="33" type="stmt" count="6"/>
+        <line num="34" type="stmt" count="6"/>
+        <line num="35" type="stmt" count="6"/>
+        <line num="36" type="stmt" count="6"/>
+        <line num="37" type="stmt" count="6"/>
+        <line num="38" type="stmt" count="6"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="40" type="stmt" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="43" type="stmt" count="6"/>
+        <line num="44" type="stmt" count="6"/>
+        <line num="45" type="stmt" count="6"/>
+        <line num="46" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="49" type="stmt" count="6"/>
+        <line num="50" type="stmt" count="6"/>
+        <line num="51" type="stmt" count="6"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="53" type="stmt" count="6"/>
+        <line num="54" type="stmt" count="6"/>
+        <line num="55" type="stmt" count="6"/>
+        <line num="56" type="stmt" count="6"/>
+        <line num="57" type="stmt" count="6"/>
+        <line num="58" type="stmt" count="6"/>
+        <line num="59" type="stmt" count="6"/>
+        <line num="60" type="stmt" count="6"/>
+        <line num="61" type="stmt" count="6"/>
+        <line num="62" type="stmt" count="6"/>
+        <line num="63" type="stmt" count="6"/>
+        <line num="64" type="stmt" count="6"/>
+        <line num="65" type="stmt" count="6"/>
+        <line num="66" type="stmt" count="6"/>
+        <line num="67" type="stmt" count="6"/>
+        <line num="68" type="stmt" count="6"/>
+        <line num="69" type="stmt" count="6"/>
+        <line num="70" type="stmt" count="6"/>
+        <line num="71" type="stmt" count="6"/>
+        <line num="72" type="stmt" count="6"/>
+        <line num="73" type="stmt" count="6"/>
+        <line num="74" type="stmt" count="6"/>
+        <line num="75" type="stmt" count="6"/>
+        <line num="76" type="stmt" count="6"/>
+        <line num="77" type="stmt" count="6"/>
+        <line num="78" type="stmt" count="6"/>
+        <line num="79" type="stmt" count="6"/>
+        <line num="80" type="stmt" count="6"/>
+        <line num="81" type="stmt" count="6"/>
+        <line num="82" type="stmt" count="6"/>
+        <line num="83" type="stmt" count="6"/>
+        <line num="84" type="stmt" count="6"/>
+        <line num="85" type="stmt" count="6"/>
+        <line num="86" type="stmt" count="6"/>
+        <line num="87" type="stmt" count="6"/>
+        <line num="88" type="stmt" count="6"/>
+        <line num="89" type="stmt" count="6"/>
+        <line num="90" type="stmt" count="6"/>
+        <line num="91" type="stmt" count="6"/>
+        <line num="92" type="stmt" count="6"/>
+        <line num="94" type="stmt" count="6"/>
+        <line num="95" type="stmt" count="6"/>
+        <line num="96" type="stmt" count="6"/>
+        <line num="97" type="stmt" count="6"/>
+        <line num="98" type="stmt" count="6"/>
+        <line num="99" type="stmt" count="6"/>
+        <line num="100" type="stmt" count="6"/>
+        <line num="101" type="stmt" count="6"/>
+        <line num="102" type="stmt" count="6"/>
+        <line num="103" type="stmt" count="6"/>
+        <line num="104" type="stmt" count="6"/>
+        <line num="105" type="stmt" count="6"/>
+        <line num="106" type="stmt" count="6"/>
+        <metrics loc="109" ncloc="109" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="85" coveredstatements="85" elements="86" coveredelements="86"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Posts\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Pages/CreatePost.php">
+        <class name="App\Filament\Admin\Resources\Posts\Pages\CreatePost" namespace="App\Filament\Admin\Resources\Posts\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Pages/EditPost.php">
+        <class name="App\Filament\Admin\Resources\Posts\Pages\EditPost" namespace="App\Filament\Admin\Resources\Posts\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="14" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="16" type="stmt" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <metrics loc="22" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Pages/ListPosts.php">
+        <class name="App\Filament\Admin\Resources\Posts\Pages\ListPosts" namespace="App\Filament\Admin\Resources\Posts\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <line num="16" type="stmt" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Pages/ViewPost.php">
+        <class name="App\Filament\Admin\Resources\Posts\Pages\ViewPost" namespace="App\Filament\Admin\Resources\Posts\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Posts">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/PostResource.php">
+        <class name="App\Filament\Admin\Resources\Posts\PostResource" namespace="App\Filament\Admin\Resources\Posts">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+        </class>
+        <line num="30" type="method" name="form" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="32" type="stmt" count="12"/>
+        <line num="35" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="40" type="method" name="table" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="45" type="method" name="getRelations" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="49" type="stmt" count="252"/>
+        <line num="52" type="method" name="getPages" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="58" type="stmt" count="252"/>
+        <line num="59" type="stmt" count="252"/>
+        <metrics loc="62" ncloc="62" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Posts\Schemas">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Schemas/PostForm.php">
+        <class name="App\Filament\Admin\Resources\Posts\Schemas\PostForm" namespace="App\Filament\Admin\Resources\Posts\Schemas">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="57" elements="59" coveredelements="59"/>
+        </class>
+        <line num="19" type="method" name="configure" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="21" type="stmt" count="12"/>
+        <line num="22" type="stmt" count="12"/>
+        <line num="23" type="stmt" count="12"/>
+        <line num="26" type="method" name="render" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="28" type="stmt" count="12"/>
+        <line num="29" type="stmt" count="12"/>
+        <line num="30" type="stmt" count="12"/>
+        <line num="31" type="stmt" count="12"/>
+        <line num="32" type="stmt" count="12"/>
+        <line num="33" type="stmt" count="12"/>
+        <line num="34" type="stmt" count="12"/>
+        <line num="35" type="stmt" count="12"/>
+        <line num="36" type="stmt" count="12"/>
+        <line num="37" type="stmt" count="12"/>
+        <line num="38" type="stmt" count="12"/>
+        <line num="39" type="stmt" count="12"/>
+        <line num="40" type="stmt" count="12"/>
+        <line num="41" type="stmt" count="12"/>
+        <line num="42" type="stmt" count="12"/>
+        <line num="43" type="stmt" count="12"/>
+        <line num="44" type="stmt" count="12"/>
+        <line num="45" type="stmt" count="12"/>
+        <line num="46" type="stmt" count="12"/>
+        <line num="47" type="stmt" count="12"/>
+        <line num="48" type="stmt" count="12"/>
+        <line num="49" type="stmt" count="12"/>
+        <line num="50" type="stmt" count="12"/>
+        <line num="51" type="stmt" count="12"/>
+        <line num="52" type="stmt" count="12"/>
+        <line num="53" type="stmt" count="12"/>
+        <line num="54" type="stmt" count="12"/>
+        <line num="55" type="stmt" count="12"/>
+        <line num="56" type="stmt" count="12"/>
+        <line num="57" type="stmt" count="12"/>
+        <line num="58" type="stmt" count="12"/>
+        <line num="59" type="stmt" count="12"/>
+        <line num="60" type="stmt" count="12"/>
+        <line num="61" type="stmt" count="12"/>
+        <line num="62" type="stmt" count="12"/>
+        <line num="63" type="stmt" count="12"/>
+        <line num="64" type="stmt" count="12"/>
+        <line num="65" type="stmt" count="12"/>
+        <line num="66" type="stmt" count="12"/>
+        <line num="67" type="stmt" count="12"/>
+        <line num="68" type="stmt" count="12"/>
+        <line num="69" type="stmt" count="12"/>
+        <line num="70" type="stmt" count="12"/>
+        <line num="71" type="stmt" count="12"/>
+        <line num="72" type="stmt" count="12"/>
+        <line num="73" type="stmt" count="12"/>
+        <line num="74" type="stmt" count="12"/>
+        <line num="75" type="stmt" count="12"/>
+        <line num="76" type="stmt" count="12"/>
+        <line num="77" type="stmt" count="12"/>
+        <line num="79" type="stmt" count="12"/>
+        <line num="80" type="stmt" count="12"/>
+        <line num="81" type="stmt" count="12"/>
+        <line num="82" type="stmt" count="12"/>
+        <metrics loc="85" ncloc="85" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="57" elements="59" coveredelements="59"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Schemas/PostInfolist.php">
+        <class name="App\Filament\Admin\Resources\Posts\Schemas\PostInfolist" namespace="App\Filament\Admin\Resources\Posts\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="26" coveredelements="26"/>
+        </class>
+        <line num="13" type="method" name="configure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <metrics loc="42" ncloc="42" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="26" coveredelements="26"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Posts\Tables">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Posts/Tables/PostsTable.php">
+        <class name="App\Filament\Admin\Resources\Posts\Tables\PostsTable" namespace="App\Filament\Admin\Resources\Posts\Tables">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="43" elements="44" coveredelements="44"/>
+        </class>
+        <line num="16" type="method" name="configure" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="33" type="stmt" count="6"/>
+        <line num="34" type="stmt" count="6"/>
+        <line num="35" type="stmt" count="6"/>
+        <line num="36" type="stmt" count="6"/>
+        <line num="37" type="stmt" count="6"/>
+        <line num="38" type="stmt" count="6"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="40" type="stmt" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="43" type="stmt" count="6"/>
+        <line num="44" type="stmt" count="6"/>
+        <line num="45" type="stmt" count="6"/>
+        <line num="46" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="49" type="stmt" count="6"/>
+        <line num="50" type="stmt" count="6"/>
+        <line num="51" type="stmt" count="6"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="53" type="stmt" count="6"/>
+        <line num="54" type="stmt" count="6"/>
+        <line num="55" type="stmt" count="6"/>
+        <line num="56" type="stmt" count="6"/>
+        <line num="57" type="stmt" count="6"/>
+        <line num="58" type="stmt" count="6"/>
+        <line num="59" type="stmt" count="6"/>
+        <line num="60" type="stmt" count="6"/>
+        <metrics loc="63" ncloc="63" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="43" elements="44" coveredelements="44"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Projects\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Pages/CreateProject.php">
+        <class name="App\Filament\Admin\Resources\Projects\Pages\CreateProject" namespace="App\Filament\Admin\Resources\Projects\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Pages/EditProject.php">
+        <class name="App\Filament\Admin\Resources\Projects\Pages\EditProject" namespace="App\Filament\Admin\Resources\Projects\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="14" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="16" type="stmt" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <metrics loc="22" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Pages/ListProjects.php">
+        <class name="App\Filament\Admin\Resources\Projects\Pages\ListProjects" namespace="App\Filament\Admin\Resources\Projects\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="8"/>
+        <line num="15" type="stmt" count="8"/>
+        <line num="16" type="stmt" count="8"/>
+        <line num="17" type="stmt" count="8"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Pages/ViewProject.php">
+        <class name="App\Filament\Admin\Resources\Projects\Pages\ViewProject" namespace="App\Filament\Admin\Resources\Projects\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Projects">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/ProjectResource.php">
+        <class name="App\Filament\Admin\Resources\Projects\ProjectResource" namespace="App\Filament\Admin\Resources\Projects">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+        </class>
+        <line num="30" type="method" name="form" visibility="public" complexity="1" crap="1" count="15"/>
+        <line num="32" type="stmt" count="15"/>
+        <line num="35" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="40" type="method" name="table" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="42" type="stmt" count="8"/>
+        <line num="45" type="method" name="getRelations" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="49" type="stmt" count="252"/>
+        <line num="52" type="method" name="getPages" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="58" type="stmt" count="252"/>
+        <line num="59" type="stmt" count="252"/>
+        <metrics loc="62" ncloc="62" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Projects\Schemas">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Schemas/ProjectForm.php">
+        <class name="App\Filament\Admin\Resources\Projects\Schemas\ProjectForm" namespace="App\Filament\Admin\Resources\Projects\Schemas">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="51" coveredstatements="51" elements="53" coveredelements="53"/>
+        </class>
+        <line num="14" type="method" name="configure" visibility="public" complexity="1" crap="1" count="15"/>
+        <line num="16" type="stmt" count="15"/>
+        <line num="17" type="stmt" count="15"/>
+        <line num="18" type="stmt" count="15"/>
+        <line num="21" type="method" name="render" visibility="public" complexity="2" crap="2" count="15"/>
+        <line num="23" type="stmt" count="15"/>
+        <line num="24" type="stmt" count="15"/>
+        <line num="25" type="stmt" count="15"/>
+        <line num="26" type="stmt" count="15"/>
+        <line num="27" type="stmt" count="15"/>
+        <line num="28" type="stmt" count="15"/>
+        <line num="29" type="stmt" count="15"/>
+        <line num="30" type="stmt" count="15"/>
+        <line num="31" type="stmt" count="15"/>
+        <line num="32" type="stmt" count="15"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="34" type="stmt" count="15"/>
+        <line num="35" type="stmt" count="15"/>
+        <line num="36" type="stmt" count="15"/>
+        <line num="37" type="stmt" count="15"/>
+        <line num="38" type="stmt" count="15"/>
+        <line num="39" type="stmt" count="15"/>
+        <line num="40" type="stmt" count="15"/>
+        <line num="41" type="stmt" count="15"/>
+        <line num="42" type="stmt" count="15"/>
+        <line num="43" type="stmt" count="15"/>
+        <line num="44" type="stmt" count="15"/>
+        <line num="45" type="stmt" count="15"/>
+        <line num="46" type="stmt" count="15"/>
+        <line num="47" type="stmt" count="15"/>
+        <line num="48" type="stmt" count="15"/>
+        <line num="49" type="stmt" count="15"/>
+        <line num="50" type="stmt" count="15"/>
+        <line num="51" type="stmt" count="15"/>
+        <line num="52" type="stmt" count="15"/>
+        <line num="53" type="stmt" count="15"/>
+        <line num="54" type="stmt" count="15"/>
+        <line num="55" type="stmt" count="15"/>
+        <line num="56" type="stmt" count="15"/>
+        <line num="57" type="stmt" count="15"/>
+        <line num="58" type="stmt" count="15"/>
+        <line num="59" type="stmt" count="15"/>
+        <line num="60" type="stmt" count="15"/>
+        <line num="61" type="stmt" count="15"/>
+        <line num="62" type="stmt" count="15"/>
+        <line num="63" type="stmt" count="15"/>
+        <line num="64" type="stmt" count="15"/>
+        <line num="65" type="stmt" count="15"/>
+        <line num="66" type="stmt" count="15"/>
+        <line num="67" type="stmt" count="15"/>
+        <line num="68" type="stmt" count="15"/>
+        <line num="69" type="stmt" count="15"/>
+        <line num="70" type="stmt" count="15"/>
+        <metrics loc="73" ncloc="73" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="51" coveredstatements="51" elements="53" coveredelements="53"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Schemas/ProjectInfolist.php">
+        <class name="App\Filament\Admin\Resources\Projects\Schemas\ProjectInfolist" namespace="App\Filament\Admin\Resources\Projects\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="21" coveredelements="21"/>
+        </class>
+        <line num="11" type="method" name="configure" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="13" type="stmt" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <metrics loc="35" ncloc="35" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="21" coveredelements="21"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Projects\Tables">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Projects/Tables/ProjectsTable.php">
+        <class name="App\Filament\Admin\Resources\Projects\Tables\ProjectsTable" namespace="App\Filament\Admin\Resources\Projects\Tables">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="41" elements="42" coveredelements="42"/>
+        </class>
+        <line num="14" type="method" name="configure" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="16" type="stmt" count="8"/>
+        <line num="17" type="stmt" count="8"/>
+        <line num="18" type="stmt" count="8"/>
+        <line num="19" type="stmt" count="8"/>
+        <line num="20" type="stmt" count="8"/>
+        <line num="21" type="stmt" count="8"/>
+        <line num="22" type="stmt" count="8"/>
+        <line num="23" type="stmt" count="8"/>
+        <line num="24" type="stmt" count="8"/>
+        <line num="25" type="stmt" count="8"/>
+        <line num="26" type="stmt" count="8"/>
+        <line num="27" type="stmt" count="8"/>
+        <line num="28" type="stmt" count="8"/>
+        <line num="29" type="stmt" count="8"/>
+        <line num="30" type="stmt" count="8"/>
+        <line num="31" type="stmt" count="8"/>
+        <line num="32" type="stmt" count="8"/>
+        <line num="33" type="stmt" count="8"/>
+        <line num="34" type="stmt" count="8"/>
+        <line num="35" type="stmt" count="8"/>
+        <line num="36" type="stmt" count="8"/>
+        <line num="37" type="stmt" count="8"/>
+        <line num="38" type="stmt" count="8"/>
+        <line num="39" type="stmt" count="8"/>
+        <line num="40" type="stmt" count="8"/>
+        <line num="41" type="stmt" count="8"/>
+        <line num="42" type="stmt" count="8"/>
+        <line num="43" type="stmt" count="8"/>
+        <line num="44" type="stmt" count="8"/>
+        <line num="45" type="stmt" count="8"/>
+        <line num="46" type="stmt" count="8"/>
+        <line num="47" type="stmt" count="8"/>
+        <line num="48" type="stmt" count="8"/>
+        <line num="49" type="stmt" count="8"/>
+        <line num="50" type="stmt" count="8"/>
+        <line num="51" type="stmt" count="8"/>
+        <line num="52" type="stmt" count="8"/>
+        <line num="53" type="stmt" count="8"/>
+        <line num="54" type="stmt" count="8"/>
+        <line num="55" type="stmt" count="8"/>
+        <line num="56" type="stmt" count="8"/>
+        <metrics loc="59" ncloc="59" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="41" elements="42" coveredelements="42"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Roles\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Pages/CreateRole.php">
+        <class name="App\Filament\Admin\Resources\Roles\Pages\CreateRole" namespace="App\Filament\Admin\Resources\Roles\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Pages/EditRole.php">
+        <class name="App\Filament\Admin\Resources\Roles\Pages\EditRole" namespace="App\Filament\Admin\Resources\Roles\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="14" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <metrics loc="22" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Pages/ListRoles.php">
+        <class name="App\Filament\Admin\Resources\Roles\Pages\ListRoles" namespace="App\Filament\Admin\Resources\Roles\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Pages/ViewRole.php">
+        <class name="App\Filament\Admin\Resources\Roles\Pages\ViewRole" namespace="App\Filament\Admin\Resources\Roles\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Roles">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/RoleResource.php">
+        <class name="App\Filament\Admin\Resources\Roles\RoleResource" namespace="App\Filament\Admin\Resources\Roles">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+        </class>
+        <line num="30" type="method" name="form" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="32" type="stmt" count="10"/>
+        <line num="35" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="40" type="method" name="table" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="42" type="stmt" count="5"/>
+        <line num="45" type="method" name="getRelations" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="49" type="stmt" count="252"/>
+        <line num="52" type="method" name="getPages" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="58" type="stmt" count="252"/>
+        <line num="59" type="stmt" count="252"/>
+        <metrics loc="62" ncloc="62" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Roles\Schemas">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Schemas/RoleForm.php">
+        <class name="App\Filament\Admin\Resources\Roles\Schemas\RoleForm" namespace="App\Filament\Admin\Resources\Roles\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="24" coveredelements="24"/>
+        </class>
+        <line num="12" type="method" name="configure" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="18" type="stmt" count="10"/>
+        <line num="19" type="stmt" count="10"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="22" type="stmt" count="10"/>
+        <line num="23" type="stmt" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="10"/>
+        <line num="31" type="stmt" count="10"/>
+        <line num="32" type="stmt" count="10"/>
+        <line num="33" type="stmt" count="10"/>
+        <line num="34" type="stmt" count="10"/>
+        <line num="35" type="stmt" count="10"/>
+        <line num="36" type="stmt" count="10"/>
+        <metrics loc="39" ncloc="39" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="24" coveredelements="24"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Schemas/RoleInfolist.php">
+        <class name="App\Filament\Admin\Resources\Roles\Schemas\RoleInfolist" namespace="App\Filament\Admin\Resources\Roles\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="9" type="method" name="configure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="11" type="stmt" count="1"/>
+        <line num="12" type="stmt" count="1"/>
+        <line num="13" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <metrics loc="17" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Roles\Tables">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Roles/Tables/RolesTable.php">
+        <class name="App\Filament\Admin\Resources\Roles\Tables\RolesTable" namespace="App\Filament\Admin\Resources\Roles\Tables">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="20" coveredelements="20"/>
+        </class>
+        <line num="14" type="method" name="configure" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <metrics loc="37" ncloc="37" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="20" coveredelements="20"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Tags\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Pages/CreateTag.php">
+        <class name="App\Filament\Admin\Resources\Tags\Pages\CreateTag" namespace="App\Filament\Admin\Resources\Tags\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Pages/EditTag.php">
+        <class name="App\Filament\Admin\Resources\Tags\Pages\EditTag" namespace="App\Filament\Admin\Resources\Tags\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Pages/ListTags.php">
+        <class name="App\Filament\Admin\Resources\Tags\Pages\ListTags" namespace="App\Filament\Admin\Resources\Tags\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <line num="16" type="stmt" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Pages/ViewTag.php">
+        <class name="App\Filament\Admin\Resources\Tags\Pages\ViewTag" namespace="App\Filament\Admin\Resources\Tags\Pages">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Tags\Schemas">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Schemas/TagForm.php">
+        <class name="App\Filament\Admin\Resources\Tags\Schemas\TagForm" namespace="App\Filament\Admin\Resources\Tags\Schemas">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="27" coveredelements="27"/>
+        </class>
+        <line num="12" type="method" name="configure" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="14" type="stmt" count="11"/>
+        <line num="15" type="stmt" count="11"/>
+        <line num="16" type="stmt" count="11"/>
+        <line num="19" type="method" name="render" visibility="public" complexity="2" crap="2" count="11"/>
+        <line num="21" type="stmt" count="11"/>
+        <line num="22" type="stmt" count="11"/>
+        <line num="23" type="stmt" count="11"/>
+        <line num="24" type="stmt" count="11"/>
+        <line num="25" type="stmt" count="11"/>
+        <line num="27" type="stmt" count="11"/>
+        <line num="28" type="stmt" count="11"/>
+        <line num="29" type="stmt" count="11"/>
+        <line num="30" type="stmt" count="11"/>
+        <line num="31" type="stmt" count="11"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="33" type="stmt" count="11"/>
+        <line num="34" type="stmt" count="11"/>
+        <line num="35" type="stmt" count="11"/>
+        <line num="36" type="stmt" count="11"/>
+        <line num="37" type="stmt" count="11"/>
+        <line num="38" type="stmt" count="11"/>
+        <line num="39" type="stmt" count="11"/>
+        <line num="40" type="stmt" count="11"/>
+        <line num="41" type="stmt" count="11"/>
+        <line num="42" type="stmt" count="11"/>
+        <line num="43" type="stmt" count="11"/>
+        <metrics loc="46" ncloc="46" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="27" coveredelements="27"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Schemas/TagInfolist.php">
+        <class name="App\Filament\Admin\Resources\Tags\Schemas\TagInfolist" namespace="App\Filament\Admin\Resources\Tags\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
+        </class>
+        <line num="12" type="method" name="configure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <metrics loc="31" ncloc="31" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Tags\Tables">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/Tables/TagsTable.php">
+        <class name="App\Filament\Admin\Resources\Tags\Tables\TagsTable" namespace="App\Filament\Admin\Resources\Tags\Tables">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="30" coveredelements="30"/>
+        </class>
+        <line num="15" type="method" name="configure" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="33" type="stmt" count="6"/>
+        <line num="34" type="stmt" count="6"/>
+        <line num="35" type="stmt" count="6"/>
+        <line num="36" type="stmt" count="6"/>
+        <line num="37" type="stmt" count="6"/>
+        <line num="38" type="stmt" count="6"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="40" type="stmt" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="43" type="stmt" count="6"/>
+        <line num="44" type="stmt" count="6"/>
+        <line num="45" type="stmt" count="6"/>
+        <metrics loc="48" ncloc="48" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="30" coveredelements="30"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Tags">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Tags/TagResource.php">
+        <class name="App\Filament\Admin\Resources\Tags\TagResource" namespace="App\Filament\Admin\Resources\Tags">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+        </class>
+        <line num="30" type="method" name="form" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="32" type="stmt" count="11"/>
+        <line num="35" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="40" type="method" name="table" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="45" type="method" name="getRelations" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="49" type="stmt" count="252"/>
+        <line num="52" type="method" name="getPages" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="58" type="stmt" count="252"/>
+        <line num="59" type="stmt" count="252"/>
+        <metrics loc="62" ncloc="62" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Users\Pages">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Pages/CreateUser.php">
+        <class name="App\Filament\Admin\Resources\Users\Pages\CreateUser" namespace="App\Filament\Admin\Resources\Users\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="16" type="method" name="handleRecordCreation" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="18" type="stmt" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <metrics loc="24" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Pages/EditUser.php">
+        <class name="App\Filament\Admin\Resources\Users\Pages\EditUser" namespace="App\Filament\Admin\Resources\Users\Pages">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+        </class>
+        <line num="20" type="method" name="handleRecordUpdate" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="32" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="11"/>
+        <line num="34" type="stmt" count="11"/>
+        <line num="35" type="stmt" count="11"/>
+        <line num="36" type="stmt" count="11"/>
+        <line num="37" type="stmt" count="11"/>
+        <metrics loc="40" ncloc="39" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Pages/ListUsers.php">
+        <class name="App\Filament\Admin\Resources\Users\Pages\ListUsers" namespace="App\Filament\Admin\Resources\Users\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Pages/ViewUser.php">
+        <class name="App\Filament\Admin\Resources\Users\Pages\ViewUser" namespace="App\Filament\Admin\Resources\Users\Pages">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="13" type="method" name="getHeaderActions" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Users\Schemas">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Schemas/UserDetailsForm.php">
+        <class name="App\Filament\Admin\Resources\Users\Schemas\UserDetailsForm" namespace="App\Filament\Admin\Resources\Users\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="17" coveredelements="17"/>
+        </class>
+        <line num="11" type="method" name="render" visibility="public" complexity="1" crap="1" count="17"/>
+        <line num="13" type="stmt" count="17"/>
+        <line num="14" type="stmt" count="17"/>
+        <line num="15" type="stmt" count="17"/>
+        <line num="16" type="stmt" count="17"/>
+        <line num="17" type="stmt" count="17"/>
+        <line num="18" type="stmt" count="17"/>
+        <line num="19" type="stmt" count="17"/>
+        <line num="20" type="stmt" count="17"/>
+        <line num="21" type="stmt" count="17"/>
+        <line num="22" type="stmt" count="17"/>
+        <line num="23" type="stmt" count="17"/>
+        <line num="24" type="stmt" count="17"/>
+        <line num="25" type="stmt" count="17"/>
+        <line num="27" type="stmt" count="17"/>
+        <line num="28" type="stmt" count="17"/>
+        <line num="29" type="stmt" count="17"/>
+        <metrics loc="32" ncloc="32" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="17" coveredelements="17"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Schemas/UserForm.php">
+        <class name="App\Filament\Admin\Resources\Users\Schemas\UserForm" namespace="App\Filament\Admin\Resources\Users\Schemas">
+          <metrics complexity="6" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="20" elements="27" coveredelements="22"/>
+        </class>
+        <line num="11" type="method" name="configure" visibility="public" complexity="2" crap="2" count="17"/>
+        <line num="13" type="stmt" count="17"/>
+        <line num="14" type="stmt" count="17"/>
+        <line num="15" type="stmt" count="17"/>
+        <line num="18" type="method" name="renderCreateForm" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="26" type="method" name="renderEditForm" visibility="public" complexity="3" crap="3" count="17"/>
+        <line num="28" type="stmt" count="17"/>
+        <line num="29" type="stmt" count="17"/>
+        <line num="30" type="stmt" count="13"/>
+        <line num="32" type="stmt" count="17"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="17"/>
+        <metrics loc="49" ncloc="49" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="20" elements="27" coveredelements="22"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Schemas/UserInfolist.php">
+        <class name="App\Filament\Admin\Resources\Users\Schemas\UserInfolist" namespace="App\Filament\Admin\Resources\Users\Schemas">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="15" coveredelements="15"/>
+        </class>
+        <line num="11" type="method" name="configure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="13" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Schemas/UserPasswordChangeForm.php">
+        <class name="App\Filament\Admin\Resources\Users\Schemas\UserPasswordChangeForm" namespace="App\Filament\Admin\Resources\Users\Schemas">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="34" elements="41" coveredelements="34"/>
+        </class>
+        <line num="17" type="method" name="render" visibility="public" complexity="2" crap="2.01" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="21" type="stmt" count="4"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="23" type="stmt" count="4"/>
+        <line num="24" type="stmt" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="26" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="4"/>
+        <line num="53" type="stmt" count="4"/>
+        <line num="54" type="stmt" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="56" type="stmt" count="4"/>
+        <line num="57" type="stmt" count="4"/>
+        <line num="58" type="stmt" count="4"/>
+        <metrics loc="61" ncloc="61" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="34" elements="41" coveredelements="34"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Users\Tables">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/Tables/UsersTable.php">
+        <class name="App\Filament\Admin\Resources\Users\Tables\UsersTable" namespace="App\Filament\Admin\Resources\Users\Tables">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="30" coveredelements="30"/>
+        </class>
+        <line num="14" type="method" name="configure" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="37" type="stmt" count="5"/>
+        <line num="38" type="stmt" count="5"/>
+        <line num="39" type="stmt" count="5"/>
+        <line num="40" type="stmt" count="5"/>
+        <line num="41" type="stmt" count="5"/>
+        <line num="42" type="stmt" count="5"/>
+        <line num="43" type="stmt" count="5"/>
+        <line num="44" type="stmt" count="5"/>
+        <line num="45" type="stmt" count="5"/>
+        <metrics loc="48" ncloc="48" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="30" coveredelements="30"/>
+      </file>
+    </package>
+    <package name="App\Filament\Admin\Resources\Users">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Admin/Resources/Users/UserResource.php">
+        <class name="App\Filament\Admin\Resources\Users\UserResource" namespace="App\Filament\Admin\Resources\Users">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+        </class>
+        <line num="29" type="method" name="form" visibility="public" complexity="1" crap="1" count="17"/>
+        <line num="31" type="stmt" count="17"/>
+        <line num="34" type="method" name="infolist" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="39" type="method" name="table" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="41" type="stmt" count="5"/>
+        <line num="44" type="method" name="getRelations" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="46" type="stmt" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="51" type="method" name="getPages" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="53" type="stmt" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="58" type="stmt" count="252"/>
+        <metrics loc="61" ncloc="61" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="17" coveredelements="17"/>
+      </file>
+    </package>
+    <package name="App\Filament\Infolists\Components">
+      <file name="/home/runner/work/abunooh/abunooh/app/Filament/Infolists/Components/DividerEntry.php">
+        <class name="App\Filament\Infolists\Components\DividerEntry" namespace="App\Filament\Infolists\Components">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Admin">
+      <file name="/home/runner/work/abunooh/abunooh/app/Http/Controllers/Admin/AdminSocialiteController.php">
+        <class name="App\Http\Controllers\Admin\AdminSocialiteController" namespace="App\Http\Controllers\Admin">
+          <metrics complexity="8" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="26" elements="30" coveredelements="28"/>
+        </class>
+        <line num="13" type="method" name="showLoginForm" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="18" type="method" name="redirect" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="31" type="method" name="callback" visibility="public" complexity="4" crap="4" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="4"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <metrics loc="68" ncloc="64" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="26" elements="30" coveredelements="28"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers">
+      <file name="/home/runner/work/abunooh/abunooh/app/Http/Controllers/Controller.php">
+        <class name="App\Http\Controllers\Controller" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Web">
+      <file name="/home/runner/work/abunooh/abunooh/app/Http/Controllers/Web/HomeController.php">
+        <class name="App\Http\Controllers\Web\HomeController" namespace="App\Http\Controllers\Web">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="14" coveredelements="14"/>
+        </class>
+        <line num="12" type="method" name="index" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="4"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="14" coveredelements="14"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Http/Controllers/Web/PostController.php">
+        <class name="App\Http\Controllers\Web\PostController" namespace="App\Http\Controllers\Web">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="10" type="method" name="show" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="12" type="stmt" count="7"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <metrics loc="26" ncloc="26" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Http/Controllers/Web/ProjectsController.php">
+        <class name="App\Http\Controllers\Web\ProjectsController" namespace="App\Http\Controllers\Web">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="10" type="method" name="index" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="12" type="stmt" count="5"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <metrics loc="21" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <package name="App\Livewire">
+      <file name="/home/runner/work/abunooh/abunooh/app/Livewire/ChangeLogList.php">
+        <class name="App\Livewire\ChangeLogList" namespace="App\Livewire">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="24" coveredelements="24"/>
+        </class>
+        <line num="25" type="method" name="mount" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="39" type="method" name="table" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="4"/>
+        <line num="49" type="stmt" count="4"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="53" type="method" name="render" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <metrics loc="58" ncloc="58" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="24" coveredelements="24"/>
+      </file>
+    </package>
+    <package name="App\Models">
+      <file name="/home/runner/work/abunooh/abunooh/app/Models/Activity.php">
+        <class name="App\Models\Activity" namespace="App\Models">
+          <metrics complexity="5" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+        </class>
+        <line num="9" type="method" name="boot" visibility="public" complexity="1" crap="1" count="199"/>
+        <line num="11" type="stmt" count="199"/>
+        <line num="13" type="stmt" count="199"/>
+        <line num="14" type="stmt" count="198"/>
+        <line num="15" type="stmt" count="199"/>
+        <line num="18" type="method" name="getFormattedCreatedAtAttribute" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="20" type="stmt" count="8"/>
+        <line num="21" type="stmt" count="7"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="27" type="method" name="getFormattedSubjectMetaAttribute" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="32" type="method" name="getFormattedCauserMetaAttribute" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="34" type="stmt" count="7"/>
+        <metrics loc="37" ncloc="37" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Models/Post.php">
+        <class name="App\Models\Post" namespace="App\Models">
+          <metrics complexity="16" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="42" coveredelements="42"/>
+        </class>
+        <line num="37" type="method" name="author" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="39" type="stmt" count="19"/>
+        <line num="42" type="method" name="scopeSearch" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="51" type="method" name="scopePublished" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="53" type="stmt" count="13"/>
+        <line num="54" type="stmt" count="13"/>
+        <line num="57" type="method" name="scopePending" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="62" type="method" name="scopePastSchedule" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="64" type="stmt" count="13"/>
+        <line num="67" type="method" name="hasOgImage" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="69" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="74" type="method" name="getFormattedPublishDateAttribute" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="76" type="stmt" count="6"/>
+        <line num="79" type="method" name="getFormattedLongPublishDateAttribute" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="81" type="stmt" count="3"/>
+        <line num="84" type="method" name="getAuthorNameAttribute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="89" type="method" name="getUrlAttribute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="94" type="method" name="getFormattedContentAttribute" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="96" type="stmt" count="3"/>
+        <line num="99" type="method" name="formattedStatus" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="101" type="stmt" count="2"/>
+        <line num="102" type="stmt" count="2"/>
+        <line num="103" type="stmt" count="2"/>
+        <line num="106" type="method" name="formattedPostType" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="108" type="stmt" count="2"/>
+        <line num="109" type="stmt" count="2"/>
+        <line num="110" type="stmt" count="2"/>
+        <line num="114" type="method" name="getFormattedTitleAttribute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="119" type="method" name="getIsPublishedAttribute" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="121" type="stmt" count="8"/>
+        <line num="122" type="stmt" count="8"/>
+        <metrics loc="125" ncloc="125" classes="1" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="42" coveredelements="42"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Models/Project.php">
+        <class name="App\Models\Project" namespace="App\Models">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="22" coveredelements="22"/>
+        </class>
+        <line num="24" type="method" name="tags" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="26" type="stmt" count="18"/>
+        <line num="29" type="method" name="scopePublished" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="34" type="method" name="scopePending" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="39" type="method" name="featuredImage" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="48" type="method" name="formattedDescription" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="50" type="stmt" count="7"/>
+        <line num="51" type="stmt" count="7"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="53" type="stmt" count="7"/>
+        <line num="54" type="stmt" count="7"/>
+        <line num="56" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="41"/>
+        <line num="58" type="stmt" count="41"/>
+        <line num="59" type="stmt" count="41"/>
+        <line num="60" type="stmt" count="41"/>
+        <metrics loc="63" ncloc="63" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="22" coveredelements="22"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Models/Role.php">
+        <class name="App\Models\Role" namespace="App\Models">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="13" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Models/Tag.php">
+        <class name="App\Models\Tag" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="16" type="method" name="projects" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <metrics loc="21" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Models/User.php">
+        <class name="App\Models\User" namespace="App\Models">
+          <metrics complexity="6" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="16" coveredelements="14"/>
+        </class>
+        <line num="54" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="197"/>
+        <line num="56" type="stmt" count="197"/>
+        <line num="57" type="stmt" count="197"/>
+        <line num="58" type="stmt" count="197"/>
+        <line num="59" type="stmt" count="197"/>
+        <line num="60" type="stmt" count="197"/>
+        <line num="63" type="method" name="sendUpdatedPasswordNotification" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="66" type="stmt" count="0"/>
+        <line num="68" type="method" name="getAdminUrlAttribute" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="70" type="stmt" count="8"/>
+        <line num="73" type="method" name="getAdminUrlLabelAttribute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="78" type="method" name="canAccessAdminPanel" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="80" type="stmt" count="8"/>
+        <line num="84" type="method" name="canAccessPanel" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="86" type="stmt" count="5"/>
+        <metrics loc="89" ncloc="71" classes="1" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="16" coveredelements="14"/>
+      </file>
+    </package>
+    <package name="App\Observers">
+      <file name="/home/runner/work/abunooh/abunooh/app/Observers/DatabaseNotificationObserver.php">
+        <class name="App\Observers\DatabaseNotificationObserver" namespace="App\Observers">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+        </class>
+        <line num="10" type="method" name="deleting" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="12" type="stmt" count="1"/>
+        <line num="15" type="method" name="deleted" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="20" type="method" name="saving" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="25" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+      </file>
+    </package>
+    <package name="App\Policies">
+      <file name="/home/runner/work/abunooh/abunooh/app/Policies/ActivityPolicy.php">
+        <class name="App\Policies\ActivityPolicy" namespace="App\Policies">
+          <metrics complexity="6" methods="6" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="2" elements="12" coveredelements="4"/>
+        </class>
+        <line num="10" type="method" name="viewAny" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="12" type="stmt" count="10"/>
+        <line num="15" type="method" name="view" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="17" type="stmt" count="9"/>
+        <line num="20" type="method" name="create" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="25" type="method" name="update" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="30" type="method" name="delete" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="method" name="deleteAny" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="6" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="2" elements="12" coveredelements="4"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Policies/PostPolicy.php">
+        <class name="App\Policies\PostPolicy" namespace="App\Policies">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+        </class>
+        <line num="10" type="method" name="viewAny" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="12" type="stmt" count="19"/>
+        <line num="15" type="method" name="view" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="17" type="stmt" count="13"/>
+        <line num="20" type="method" name="create" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="22" type="stmt" count="12"/>
+        <line num="25" type="method" name="update" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="27" type="stmt" count="12"/>
+        <line num="30" type="method" name="delete" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="35" type="method" name="deleteAny" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="37" type="stmt" count="6"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Policies/ProjectPolicy.php">
+        <class name="App\Policies\ProjectPolicy" namespace="App\Policies">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+        </class>
+        <line num="10" type="method" name="viewAny" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="12" type="stmt" count="25"/>
+        <line num="15" type="method" name="view" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="17" type="stmt" count="18"/>
+        <line num="20" type="method" name="create" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="22" type="stmt" count="16"/>
+        <line num="25" type="method" name="update" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="27" type="stmt" count="16"/>
+        <line num="30" type="method" name="delete" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <line num="35" type="method" name="deleteAny" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="37" type="stmt" count="9"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Policies/RolePolicy.php">
+        <class name="App\Policies\RolePolicy" namespace="App\Policies">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+        </class>
+        <line num="10" type="method" name="viewAny" visibility="public" complexity="1" crap="1" count="15"/>
+        <line num="12" type="stmt" count="15"/>
+        <line num="15" type="method" name="view" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="17" type="stmt" count="11"/>
+        <line num="20" type="method" name="create" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="22" type="stmt" count="9"/>
+        <line num="25" type="method" name="update" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="30" type="method" name="delete" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="35" type="method" name="deleteAny" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="37" type="stmt" count="5"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Policies/TagPolicy.php">
+        <class name="App\Policies\TagPolicy" namespace="App\Policies">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+        </class>
+        <line num="10" type="method" name="viewAny" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="12" type="stmt" count="19"/>
+        <line num="15" type="method" name="view" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="17" type="stmt" count="8"/>
+        <line num="20" type="method" name="create" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="22" type="stmt" count="13"/>
+        <line num="25" type="method" name="update" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="30" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="35" type="method" name="deleteAny" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="37" type="stmt" count="7"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Policies/UserPolicy.php">
+        <class name="App\Policies\UserPolicy" namespace="App\Policies">
+          <metrics complexity="13" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="20" coveredelements="20"/>
+        </class>
+        <line num="9" type="method" name="viewAny" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="11" type="stmt" count="25"/>
+        <line num="14" type="method" name="view" visibility="public" complexity="1" crap="1" count="21"/>
+        <line num="16" type="stmt" count="21"/>
+        <line num="19" type="method" name="create" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="21" type="stmt" count="12"/>
+        <line num="24" type="method" name="update" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="26" type="stmt" count="19"/>
+        <line num="29" type="method" name="delete" visibility="public" complexity="3" crap="3" count="13"/>
+        <line num="31" type="stmt" count="13"/>
+        <line num="32" type="stmt" count="13"/>
+        <line num="35" type="method" name="deleteAny" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="37" type="stmt" count="6"/>
+        <line num="40" type="method" name="restore" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="45" type="method" name="forceDelete" visibility="public" complexity="3" crap="3" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="4"/>
+        <line num="51" type="method" name="forceDeleteAny" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <metrics loc="56" ncloc="56" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="20" coveredelements="20"/>
+      </file>
+    </package>
+    <package name="App\Providers">
+      <file name="/home/runner/work/abunooh/abunooh/app/Providers/AppServiceProvider.php">
+        <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="24" coveredelements="24"/>
+        </class>
+        <line num="29" type="method" name="register" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="32" type="stmt" count="252"/>
+        <line num="37" type="method" name="boot" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="39" type="stmt" count="252"/>
+        <line num="41" type="stmt" count="252"/>
+        <line num="44" type="stmt" count="252"/>
+        <line num="45" type="stmt" count="252"/>
+        <line num="46" type="stmt" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="49" type="stmt" count="252"/>
+        <line num="50" type="stmt" count="252"/>
+        <line num="51" type="stmt" count="252"/>
+        <line num="52" type="stmt" count="252"/>
+        <line num="53" type="stmt" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="59" type="stmt" count="252"/>
+        <line num="60" type="stmt" count="252"/>
+        <line num="61" type="stmt" count="252"/>
+        <line num="62" type="stmt" count="252"/>
+        <line num="63" type="stmt" count="252"/>
+        <metrics loc="66" ncloc="58" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="24" coveredelements="24"/>
+      </file>
+    </package>
+    <package name="App\Providers\Filament">
+      <file name="/home/runner/work/abunooh/abunooh/app/Providers/Filament/AdminPanelProvider.php">
+        <class name="App\Providers\Filament\AdminPanelProvider" namespace="App\Providers\Filament">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="34" elements="35" coveredelements="35"/>
+        </class>
+        <line num="24" type="method" name="panel" visibility="public" complexity="1" crap="1" count="252"/>
+        <line num="26" type="stmt" count="252"/>
+        <line num="27" type="stmt" count="252"/>
+        <line num="28" type="stmt" count="252"/>
+        <line num="29" type="stmt" count="252"/>
+        <line num="30" type="stmt" count="252"/>
+        <line num="31" type="stmt" count="252"/>
+        <line num="32" type="stmt" count="252"/>
+        <line num="33" type="stmt" count="252"/>
+        <line num="34" type="stmt" count="252"/>
+        <line num="35" type="stmt" count="252"/>
+        <line num="36" type="stmt" count="252"/>
+        <line num="37" type="stmt" count="252"/>
+        <line num="38" type="stmt" count="252"/>
+        <line num="39" type="stmt" count="252"/>
+        <line num="40" type="stmt" count="252"/>
+        <line num="41" type="stmt" count="252"/>
+        <line num="42" type="stmt" count="252"/>
+        <line num="43" type="stmt" count="252"/>
+        <line num="44" type="stmt" count="252"/>
+        <line num="45" type="stmt" count="252"/>
+        <line num="46" type="stmt" count="252"/>
+        <line num="47" type="stmt" count="252"/>
+        <line num="48" type="stmt" count="252"/>
+        <line num="49" type="stmt" count="252"/>
+        <line num="50" type="stmt" count="252"/>
+        <line num="51" type="stmt" count="252"/>
+        <line num="52" type="stmt" count="252"/>
+        <line num="53" type="stmt" count="252"/>
+        <line num="54" type="stmt" count="252"/>
+        <line num="55" type="stmt" count="252"/>
+        <line num="56" type="stmt" count="252"/>
+        <line num="57" type="stmt" count="252"/>
+        <line num="58" type="stmt" count="252"/>
+        <line num="59" type="stmt" count="252"/>
+        <metrics loc="62" ncloc="62" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="34" elements="35" coveredelements="35"/>
+      </file>
+    </package>
+    <package name="App\Services">
+      <file name="/home/runner/work/abunooh/abunooh/app/Services/UserService.php">
+        <class name="App\Services\UserService" namespace="App\Services">
+          <metrics complexity="8" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="25" coveredelements="25"/>
+        </class>
+        <line num="11" type="method" name="create" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="13" type="stmt" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="15" type="stmt" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="23" type="method" name="update" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="36" type="method" name="updatePassword" visibility="public" complexity="4" crap="4" count="14"/>
+        <line num="38" type="stmt" count="14"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="8"/>
+        <line num="43" type="stmt" count="8"/>
+        <line num="45" type="stmt" count="8"/>
+        <line num="46" type="stmt" count="5"/>
+        <line num="49" type="stmt" count="8"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="8"/>
+        <metrics loc="56" ncloc="56" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="25" coveredelements="25"/>
+      </file>
+    </package>
+    <file name="/home/runner/work/abunooh/abunooh/app/Support/Enums/IsEnum.php">
+      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="App\Support\Enums">
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Enums/NativeEnumsTrait.php">
+        <class name="App\Support\Enums\NativeEnumsTrait" namespace="App\Support\Enums">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+        </class>
+        <line num="7" type="method" name="getLabel" visibility="public" complexity="1" crap="1" count="23"/>
+        <line num="9" type="stmt" count="23"/>
+        <line num="11" type="method" name="getKeys" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="13" type="stmt" count="3"/>
+        <line num="15" type="method" name="options" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="17" type="stmt" count="18"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Enums/PostTypes.php">
+        <class name="App\Support\Enums\PostTypes" namespace="App\Support\Enums">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="16" coveredelements="16"/>
+        </class>
+        <line num="14" type="method" name="labels" visibility="public" complexity="1" crap="1" count="22"/>
+        <line num="16" type="stmt" count="22"/>
+        <line num="17" type="stmt" count="22"/>
+        <line num="18" type="stmt" count="22"/>
+        <line num="19" type="stmt" count="22"/>
+        <line num="20" type="stmt" count="22"/>
+        <line num="21" type="stmt" count="22"/>
+        <line num="24" type="method" name="colors" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="10"/>
+        <line num="31" type="stmt" count="10"/>
+        <line num="34" type="method" name="getColor" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="36" type="stmt" count="10"/>
+        <metrics loc="39" ncloc="39" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="16" coveredelements="16"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Enums/PublishStatuses.php">
+        <class name="App\Support\Enums\PublishStatuses" namespace="App\Support\Enums">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
+        </class>
+        <line num="14" type="method" name="labels" visibility="public" complexity="1" crap="1" count="44"/>
+        <line num="16" type="stmt" count="44"/>
+        <line num="17" type="stmt" count="44"/>
+        <line num="18" type="stmt" count="44"/>
+        <line num="19" type="stmt" count="44"/>
+        <line num="20" type="stmt" count="44"/>
+        <line num="21" type="stmt" count="44"/>
+        <line num="24" type="method" name="colors" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="26" type="stmt" count="19"/>
+        <line num="27" type="stmt" count="19"/>
+        <line num="28" type="stmt" count="19"/>
+        <line num="29" type="stmt" count="19"/>
+        <line num="30" type="stmt" count="19"/>
+        <line num="31" type="stmt" count="19"/>
+        <line num="34" type="method" name="getColorForState" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="36" type="stmt" count="19"/>
+        <line num="39" type="method" name="getColor" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="41" type="stmt" count="18"/>
+        <line num="44" type="method" name="getBadgeColor" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <metrics loc="49" ncloc="49" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Enums/UserStatus.php">
+        <class name="App\Support\Enums\UserStatus" namespace="App\Support\Enums">
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="14" coveredelements="14"/>
+        </class>
+        <line num="12" type="method" name="labels" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="20" type="method" name="colors" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="28" type="method" name="isActive" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="30" type="stmt" count="9"/>
+        <line num="33" type="method" name="getColor" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="14" coveredelements="14"/>
+      </file>
+    </package>
+    <package name="App\Support\Settings">
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Settings/SiteSettings.php">
+        <class name="App\Support\Settings\SiteSettings" namespace="App\Support\Settings">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="group" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="17" type="stmt" count="19"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="App\Support\Traits">
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Traits/CanConvertToArray.php">
+        <class name="App\Support\Traits\CanConvertToArray" namespace="App\Support\Traits">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="12" type="method" name="toArray" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <metrics loc="31" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/home/runner/work/abunooh/abunooh/app/Support/Traits/HasActivityLogs.php">
+        <class name="App\Support\Traits\HasActivityLogs" namespace="App\Support\Traits">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="12" type="method" name="getActivitylogOptions" visibility="public" complexity="1" crap="1" count="196"/>
+        <line num="14" type="stmt" count="196"/>
+        <line num="15" type="stmt" count="196"/>
+        <line num="16" type="stmt" count="196"/>
+        <line num="17" type="stmt" count="196"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+    </package>
+    <metrics files="82" loc="3242" ncloc="3202" classes="71" methods="190" coveredmethods="180" conditionals="0" coveredconditionals="0" statements="1131" coveredstatements="1109" elements="1321" coveredelements="1289"/>
+  </project>
+</coverage>
