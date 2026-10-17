@@ -63,7 +63,10 @@ class PermissionsSeeder extends Seeder
             'settings' => [
                 'settings.view',
                 'settings.update',
-            ]
+            ],
+            'activity' => [
+                'activity.view',
+            ],
         ];
     }
 }

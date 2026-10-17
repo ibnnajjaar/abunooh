@@ -9,9 +9,12 @@ use App\Filament\Admin\Resources\Posts\Pages\ListPosts;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
-it('cannot view the list posts page without permissions')
-    ->todo(note: 'TASK-2: PostResource has no policy, so the list page is open to any admin')
-    ->group('posts');
+it('cannot view the list posts page without permissions', function () {
+    $this->actingAsAdmin();
+
+    livewire(ListPosts::class)
+        ->assertForbidden();
+})->group('posts');
 
 it('can view the list posts page', function () {
     $this->actingAsAdmin(['posts.view']);

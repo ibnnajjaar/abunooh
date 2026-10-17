@@ -23,12 +23,15 @@ function logActivity(User $causer, $subject, string $description = 'updated', ar
     ], $attributes));
 }
 
-it('cannot view the activity log without permissions')
-    ->todo(note: 'TASK-2: ActivityResource has no policy, so the activity log is open to any admin')
-    ->group('activities');
+it('cannot view the activity log without permissions', function () {
+    $this->actingAsAdmin();
+
+    livewire(ListActivities::class)
+        ->assertForbidden();
+})->group('activities');
 
 it('can view the activity log', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
     Activity::query()->delete();
 
     $activities = collect([
@@ -42,7 +45,7 @@ it('can view the activity log', function () {
 })->group('activities');
 
 it('lists the newest activities first', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
     Activity::query()->delete();
 
     $old = logActivity($admin, $admin, 'old', ['created_at' => now()->subDays(2)]);
@@ -53,7 +56,7 @@ it('lists the newest activities first', function () {
 })->group('activities');
 
 it('can search activities by ip address', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
     Activity::query()->delete();
 
     $match = logActivity($admin, $admin);
@@ -68,7 +71,7 @@ it('can search activities by ip address', function () {
 })->group('activities');
 
 it('can filter activities by subject type and subject id', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
 
     $role = Role::create(['name' => 'Editor', 'guard_name' => 'web_admin']);
     $otherUser = User::factory()->create();
@@ -90,7 +93,7 @@ it('can filter activities by subject type and subject id', function () {
 })->group('activities');
 
 it('can filter activities by causer type and causer id', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
     $otherAdmin = User::factory()->create();
     Activity::query()->delete();
 
@@ -108,7 +111,7 @@ it('can filter activities by causer type and causer id', function () {
 })->group('activities');
 
 it('can filter activities by created date range', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
     Activity::query()->delete();
 
     $old = logActivity($admin, $admin, 'old', ['created_at' => '2024-01-01 10:00:00']);

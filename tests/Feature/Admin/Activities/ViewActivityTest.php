@@ -10,12 +10,17 @@ use App\Filament\Admin\Resources\Activities\Pages\ViewActivity;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
-it('cannot view an activity without permissions')
-    ->todo(note: 'TASK-2: ActivityResource has no policy, so activities are visible to any admin')
-    ->group('activities', 'activities.view');
+it('cannot view an activity without permissions', function () {
+    $this->actingAsAdmin();
+
+    $activity = Activity::create(['log_name' => 'default', 'description' => 'created']);
+
+    livewire(ViewActivity::class, ['record' => $activity->getKey()])
+        ->assertForbidden();
+})->group('activities', 'activities.view');
 
 it('shows activity details in view page', function () {
-    $admin = $this->actingAsAdmin();
+    $admin = $this->actingAsAdmin(['activity.view']);
 
     $subject = User::factory()->create(['name' => 'Subject User']);
     $activity = Activity::create([

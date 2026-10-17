@@ -7,6 +7,7 @@ use function Pest\Livewire\livewire;
 
 use Filament\Actions\DeleteBulkAction;
 
+use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 
 use App\Filament\Admin\Resources\Roles\Pages\EditRole;
@@ -44,6 +45,16 @@ it('can bulk delete roles', function () {
     }
 })->group('roles', 'roles.delete');
 
-it('cannot delete roles without delete permission')
-    ->todo(note: 'TASK-2: RoleResource has no policy, so delete is allowed for any admin')
-    ->group('roles', 'roles.delete');
+it('cannot delete roles without delete permission', function () {
+    $this->actingAsAdmin(['role.view', 'role.update']);
+
+    $role = Role::create(['name' => 'Editor', 'guard_name' => 'web_admin']);
+
+    livewire(EditRole::class, ['record' => $role->getKey()])
+        ->assertActionHidden(DeleteAction::class);
+
+    livewire(ListRoles::class)
+        ->assertTableBulkActionHidden(DeleteBulkAction::class);
+
+    assertDatabaseHas('roles', ['id' => $role->id]);
+})->group('roles', 'roles.delete');

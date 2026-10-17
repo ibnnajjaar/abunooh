@@ -14,9 +14,12 @@ use App\Filament\Admin\Resources\Posts\Pages\CreatePost;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
-it('cannot access create page without create permission')
-    ->todo(note: 'TASK-2: PostResource has no policy, so the create page is open to any admin')
-    ->group('posts', 'posts.create');
+it('cannot access create page without create permission', function () {
+    $this->actingAsAdmin(['posts.view']);
+
+    livewire(CreatePost::class)
+        ->assertForbidden();
+})->group('posts', 'posts.create');
 
 it('can access create page with create permission', function () {
     $this->actingAsAdmin(['posts.view', 'posts.create']);

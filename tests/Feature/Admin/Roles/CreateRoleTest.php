@@ -12,9 +12,12 @@ use App\Filament\Admin\Resources\Roles\Pages\CreateRole;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
-it('cannot access create page without create permission')
-    ->todo(note: 'TASK-2: RoleResource has no policy, so the create page is open to any admin')
-    ->group('roles', 'roles.create');
+it('cannot access create page without create permission', function () {
+    $this->actingAsAdmin(['role.view']);
+
+    livewire(CreateRole::class)
+        ->assertForbidden();
+})->group('roles', 'roles.create');
 
 it('can access create page', function () {
     $this->actingAsAdmin(['role.view', 'role.create']);

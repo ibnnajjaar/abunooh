@@ -14,9 +14,14 @@ use App\Filament\Admin\Resources\Posts\Pages\EditPost;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
-it('cannot load the post edit page without update permission')
-    ->todo(note: 'TASK-2: PostResource has no policy, so the edit page is open to any admin')
-    ->group('posts', 'posts.update');
+it('cannot load the post edit page without update permission', function () {
+    $this->actingAsAdmin(['posts.view']);
+
+    $post = Post::factory()->create();
+
+    livewire(EditPost::class, ['record' => $post->getKey()])
+        ->assertForbidden();
+})->group('posts', 'posts.update');
 
 it('can load the post edit page', function () {
     $this->actingAsAdmin(['posts.view', 'posts.update']);

@@ -9,9 +9,12 @@ use App\Filament\Admin\Resources\Roles\Pages\ListRoles;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 
-it('cannot view the list roles page without permissions')
-    ->todo(note: 'TASK-2: RoleResource has no policy, so the list page is open to any admin')
-    ->group('roles');
+it('cannot view the list roles page without permissions', function () {
+    $this->actingAsAdmin();
+
+    livewire(ListRoles::class)
+        ->assertForbidden();
+})->group('roles');
 
 it('can view the list roles page', function () {
     $this->actingAsAdmin(['role.view']);
