@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Tag;
 use Livewire\Livewire;
+use App\Models\Project;
 use App\Support\Enums\PublishStatuses;
 
 use function Pest\Laravel\assertDatabaseHas;
@@ -104,5 +106,68 @@ it('validates project create form data', function () {
         ->call('create')
         ->assertHasFormErrors([
             'year' => 'numeric',
+        ]);
+})->group('projects', 'projects.create');
+
+it('cannot access project create page without create permission', function () {
+    $this->actingAsAdmin(['projects.view']);
+
+    Livewire::test(CreateProject::class)
+        ->assertForbidden();
+})->group('projects', 'projects.create');
+
+it('auto-fills the slug from the title', function () {
+    $this->actingAsAdmin(['projects.view', 'projects.create']);
+
+    Livewire::test(CreateProject::class)
+        ->fillForm(['title' => 'My Great Project'])
+        ->assertSchemaStateSet(['slug' => 'my-great-project']);
+})->group('projects', 'projects.create');
+
+it('can attach tags when creating a project', function () {
+    $this->actingAsAdmin(['projects.view', 'projects.create']);
+
+    $tags = Tag::factory(2)->create();
+
+    Livewire::test(CreateProject::class)
+        ->fillForm([
+            'title' => 'Tagged Project',
+            'client' => 'Acme',
+            'status' => 'Completed',
+            'year' => (int) date('Y'),
+            'publish_status' => PublishStatuses::PUBLISHED->value,
+            'tags' => $tags->pluck('id')->all(),
+            'description' => 'Tagged',
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    $project = Project::where('slug', 'tagged-project')->firstOrFail();
+
+    expect($project->tags->pluck('id')->sort()->values()->all())
+        ->toBe($tags->pluck('id')->sort()->values()->all());
+})->group('projects', 'projects.create');
+
+it('requires a unique slug and max lengths', function () {
+    $this->actingAsAdmin(['projects.view', 'projects.create']);
+
+    Project::factory()->create(['slug' => 'taken']);
+
+    Livewire::test(CreateProject::class)
+        ->fillForm([
+            'title' => str_repeat('a', 256),
+            'slug' => 'taken',
+            'client' => str_repeat('a', 256),
+            'status' => str_repeat('a', 256),
+            'year' => (int) date('Y'),
+            'publish_status' => PublishStatuses::DRAFT->value,
+        ])
+        ->set('data.slug', 'taken')
+        ->call('create')
+        ->assertHasFormErrors([
+            'title' => 'max',
+            'slug' => 'unique',
+            'client' => 'max',
+            'status' => 'max',
         ]);
 })->group('projects', 'projects.create');

@@ -1,13 +1,7 @@
 <?php
 
 use App\Models\Tag;
-use App\Models\User;
 use Livewire\Livewire;
-
-use App\Filament\Admin\Resources\Users\Pages\EditUser;
-use function Pest\Laravel\actingAs;
-
-use Spatie\Permission\Models\Permission;
 
 use function Pest\Livewire\livewire;
 use function Pest\Laravel\assertDatabaseHas;
@@ -99,3 +93,19 @@ it('can validate tag form data', function () {
 })->group('tags', 'tags.update');
 
 
+it('allows keeping the same slug but rejects another tag slug', function () {
+    $this->actingAsAdmin(['tags.view', 'tags.update']);
+
+    $tag = Tag::factory()->create(['slug' => 'mine']);
+    Tag::factory()->create(['slug' => 'other']);
+
+    livewire(EditTag::class, ['record' => $tag->getKey()])
+        ->fillForm(['slug' => 'mine'])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    livewire(EditTag::class, ['record' => $tag->getKey()])
+        ->fillForm(['slug' => 'other'])
+        ->call('save')
+        ->assertHasFormErrors(['slug' => 'unique']);
+})->group('tags', 'tags.update');

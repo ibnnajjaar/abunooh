@@ -1,11 +1,7 @@
 <?php
 
-use App\Models\User;
+use App\Models\Tag;
 use Livewire\Livewire;
-
-use function Pest\Laravel\actingAs;
-
-use Spatie\Permission\Models\Permission;
 
 use function Pest\Laravel\assertDatabaseHas;
 
@@ -79,4 +75,27 @@ it('can validate tag form data', function () {
                 'color' => 'regex',
             ]);
 
+})->group('tags', 'tags.create');
+
+it('auto-fills the slug from the name', function () {
+    $this->actingAsAdmin(['tags.view', 'tags.create']);
+
+    Livewire::test(CreateTag::class)
+        ->fillForm(['name' => 'Hello World Tag'])
+        ->assertSchemaStateSet(['slug' => 'hello-world-tag']);
+})->group('tags', 'tags.create');
+
+it('requires a unique slug', function () {
+    $this->actingAsAdmin(['tags.view', 'tags.create']);
+
+    Tag::factory()->create(['slug' => 'taken']);
+
+    Livewire::test(CreateTag::class)
+        ->fillForm([
+            'name' => 'Taken',
+            'slug' => 'taken',
+            'color' => '#abcdef',
+        ])
+        ->call('create')
+        ->assertHasFormErrors(['slug' => 'unique']);
 })->group('tags', 'tags.create');

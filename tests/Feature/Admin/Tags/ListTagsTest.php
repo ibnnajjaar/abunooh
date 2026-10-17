@@ -1,13 +1,10 @@
 <?php
 
 use App\Models\Tag;
-use App\Models\User;
 use Livewire\Livewire;
 
-use function Pest\Laravel\actingAs;
 use function Pest\Livewire\livewire;
 
-use Spatie\Permission\Models\Permission;
 use App\Filament\Admin\Resources\Tags\Pages\ListTags;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);

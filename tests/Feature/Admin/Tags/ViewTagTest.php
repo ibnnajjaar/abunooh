@@ -1,14 +1,10 @@
 <?php
 
 use App\Models\Tag;
-use App\Models\User;
-use Livewire\Livewire;
 
-use function Pest\Laravel\actingAs;
-
-use Spatie\Permission\Models\Permission;
-use App\Filament\Admin\Resources\Tags\Pages\ViewTag;
 use function Pest\Livewire\livewire;
+
+use App\Filament\Admin\Resources\Tags\Pages\ViewTag;
 
 uses(\Illuminate\Foundation\Testing\LazilyRefreshDatabase::class);
 it('cannot access view page without view permission', function () {
