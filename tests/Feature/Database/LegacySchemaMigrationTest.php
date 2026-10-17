@@ -111,6 +111,39 @@ test('migrate fills the gaps in the legacy production schema', function () {
         ->and(Schema::hasTable('posts'))->toBeFalse(); // recorded as run, so not recreated
 });
 
+test('migrate keeps notifications and media tables that already exist', function () {
+    createLegacySchema();
+
+    Schema::create('notifications', function (Blueprint $table) {
+        $table->uuid('id')->primary();
+        $table->string('type');
+        $table->morphs('notifiable');
+        $table->text('data');
+        $table->timestamp('read_at')->nullable();
+        $table->timestamps();
+    });
+
+    Schema::create('media', function (Blueprint $table) {
+        $table->id();
+        $table->morphs('model');
+        $table->string('file_name');
+    });
+
+    DB::table('notifications')->insert([
+        'id' => 'b6f4c1de-0000-4000-8000-000000000001',
+        'type' => 'existing',
+        'notifiable_type' => 'user',
+        'notifiable_id' => 1,
+        'data' => '{}',
+    ]);
+
+    expect(Artisan::call('migrate', ['--force' => true]))->toBe(0);
+
+    expect(DB::table('notifications')->count())->toBe(1)
+        ->and(Schema::hasColumn('media', 'collection_name'))->toBeFalse() // left unchanged
+        ->and(Schema::hasColumn('activity_log', 'batch_uuid'))->toBeTrue();
+});
+
 test('migrate keeps existing rows in the legacy production schema', function () {
     createLegacySchema();
 

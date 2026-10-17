@@ -8,6 +8,11 @@ return new class extends Migration
 {
     public function up(): void
     {
+        // The production database may already have this table
+        if (Schema::hasTable('media')) {
+            return;
+        }
+
         Schema::create('media', function (Blueprint $table) {
             $table->id();
 
